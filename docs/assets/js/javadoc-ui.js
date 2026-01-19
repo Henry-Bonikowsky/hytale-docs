@@ -78,18 +78,57 @@ document.addEventListener('DOMContentLoaded', function() {
     let searchTimeout = null;
     let originalContent = null;
 
-    // Save original content AFTER package collapse setup is done
-    setTimeout(() => {
-      originalContent = sidebarNav.innerHTML;
-    }, 100);
-
     // Load search index
     fetch('../assets/search-index.json')
       .then(response => response.json())
       .then(data => {
         searchIndex = data;
+
+        // Populate sidebar with nearby classes (same package as current class)
+        populateNearbyClasses();
+
+        // Save original content AFTER populating
+        setTimeout(() => {
+          originalContent = sidebarNav.innerHTML;
+        }, 200);
       })
       .catch(err => console.error('Failed to load search index:', err));
+
+    function populateNearbyClasses() {
+      // Get current class name from page title
+      const pageTitle = document.title.split(' - ')[0];
+
+      if (!pageTitle || pageTitle === 'Hytale API - All Classes') return;
+
+      // Find current class in search index
+      const currentClass = searchIndex.find(entry => entry.type === 'class' && entry.name === pageTitle);
+
+      if (!currentClass || !currentClass.package) return;
+
+      // Find all classes in the same package
+      const nearbyClasses = searchIndex.filter(entry => {
+        if (entry.type !== 'class') return false;
+        if (entry.name === pageTitle) return false;
+        return entry.package === currentClass.package;
+      });
+
+      // Sort alphabetically
+      nearbyClasses.sort((a, b) => a.name.localeCompare(b.name));
+
+      // Replace sidebar content with nearby classes
+      const packageDisplay = currentClass.package || 'Default Package';
+      sidebarNav.innerHTML = `
+        <div class="package-group">
+          <div class="package-title">${packageDisplay}</div>
+          <div style="margin-top: 1rem;">
+            <a href="${currentClass.file}" class="class-link active">${currentClass.name}</a>
+            ${nearbyClasses.map(entry => {
+              return `<a href="${entry.file}" class="class-link">${entry.name}</a>`;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
 
     searchInput.addEventListener('input', function(e) {
       const query = e.target.value.trim();

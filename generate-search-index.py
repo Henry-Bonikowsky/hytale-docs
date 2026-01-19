@@ -44,6 +44,26 @@ def extract_methods_from_html(html_path):
 
     return list(set(methods))  # Remove duplicates
 
+def extract_package_from_html(html_path):
+    """Extract package path from breadcrumb navigation"""
+    with open(html_path, 'r', encoding='utf-8') as f:
+        soup = BeautifulSoup(f.read(), 'html.parser')
+
+    breadcrumb = soup.find('div', class_='navbar-breadcrumb')
+    if not breadcrumb:
+        return ''
+
+    # Get all links in breadcrumb (package components)
+    links = breadcrumb.find_all('a')
+    if not links:
+        return ''
+
+    # Build package path from breadcrumb links
+    package_parts = [link.get_text().strip() for link in links]
+
+    # Join with dots to create full package name
+    return '.'.join(package_parts)
+
 def generate_search_index(docs_dir):
     """Generate search index from all class HTML files"""
     classes_dir = Path(docs_dir) / 'classes'
@@ -63,11 +83,13 @@ def generate_search_index(docs_dir):
 
         try:
             methods = extract_methods_from_html(html_file)
+            package = extract_package_from_html(html_file)
 
             # Add class entry
             index.append({
                 'type': 'class',
                 'name': class_name,
+                'package': package,
                 'file': f'classes/{class_name}.html'
             })
 
@@ -77,6 +99,7 @@ def generate_search_index(docs_dir):
                     'type': 'method',
                     'name': method,
                     'class': class_name,
+                    'package': package,
                     'file': f'classes/{class_name}.html#methods'
                 })
         except Exception as e:
