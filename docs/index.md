@@ -1,19 +1,18 @@
 # Hytale Plugin API Documentation
 
-Welcome to the complete API reference for Hytale server plugins. This documentation covers all public classes and interfaces available for plugin development.
+Complete API reference for Hytale server plugins - **4,735 documented classes** from `hytale-server-2026.01.15.jar`.
 
-## What is this?
-
-This is a comprehensive, searchable API reference extracted from the Hytale server JAR file. It includes:
-
-- **5,200+ classes** fully documented
-- Method signatures and field definitions
-- Class hierarchies and relationships
-- Dark theme optimized for readability
-
-## Quick Links
+## Browse the Documentation
 
 <div class="grid cards" markdown>
+
+-   :material-file-document-multiple:{ .lg .middle } __All Classes__
+
+    ---
+
+    Browse or search all 4,735 documented classes
+
+    [:octicons-arrow-right-24: View All Classes](classes/index.html)
 
 -   :material-clock-fast:{ .lg .middle } __Quick Start__
 
@@ -21,42 +20,27 @@ This is a comprehensive, searchable API reference extracted from the Hytale serv
 
     Get started with your first Hytale plugin in 5 minutes
 
-    [:octicons-arrow-right-24: Quick Start Guide](getting-started/quickstart.md)
+    [:octicons-arrow-right-24: Quick Start](getting-started/quickstart.md)
 
--   :material-book-open-variant:{ .lg .middle } __API Reference__
-
-    ---
-
-    Browse the complete API documentation
-
-    [:octicons-arrow-right-24: API Overview](api-reference.md)
-
--   :material-code-braces:{ .lg .middle } __Guides__
+-   :material-school:{ .lg .middle } __Guides__
 
     ---
 
-    Step-by-step tutorials for common tasks
+    Step-by-step tutorials for common plugin tasks
 
     [:octicons-arrow-right-24: Plugin Guides](guides/first-plugin.md)
 
--   :material-github:{ .lg .middle } __Source Code__
-
-    ---
-
-    View examples and contribute
-
-    [:octicons-arrow-right-24: GitHub](https://github.com/Henry-Bonikowsky/hytale-plugin-docs)
-
 </div>
 
-## About
+## Key Classes to Start With
 
-This documentation is **not officially affiliated with Hypixel Studios**. It is an independent project to help developers create plugins for Hytale servers.
+- [JavaPlugin](classes/JavaPlugin.html) - Base class for all plugins
+- [PluginBase](classes/PluginBase.html) - Abstract plugin foundation
+- [EventRegistry](classes/EventRegistry.html) - Event system
+- [AssetModule](classes/AssetModule.html) - Asset management
 
-Generated from: `hytale-server-2026.01.15.jar`
+## About This Documentation
 
-## Getting Help
+Generated using `javap` from the official Hytale server JAR. All signatures are extracted directly from bytecode - no decompilation, no guessing.
 
-- Browse the [API Reference](api-reference.md) for class details
-- Check the [Guides](guides/first-plugin.md) for tutorials
-- Report issues on [GitHub](https://github.com/Henry-Bonikowsky/hytale-plugin-docs/issues)
+**Not affiliated with Hypixel Studios** - This is an independent community project.
