@@ -4816,7 +4816,16 @@
         }
 
         searchBox.addEventListener('input', filterClasses);
-        renderClasses(classes);
+
+        // Check for query parameter from landing page
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        if (query) {
+            searchBox.value = query;
+            filterClasses();
+        } else {
+            renderClasses(classes);
+        }
     </script>
 </body>
 </html>

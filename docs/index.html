@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hytale Plugin API Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #1a1f2e;
+            color: #e8e9ed;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+        .header h1 {
+            color: #e8e9ed;
+            margin-bottom: 20px;
+            font-size: 48px;
+            font-weight: 600;
+        }
+        .header p {
+            color: #a8adb8;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .search-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .search-box {
+            background: #252b3d;
+            border: 2px solid #2d3548;
+            color: #e8e9ed;
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .search-box:focus {
+            border-color: #A3B50B;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(163, 181, 11, 0.1);
+        }
+        .search-box::placeholder {
+            color: #6c717d;
+        }
+        .search-hint {
+            color: #6c717d;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .search-wrapper {
+            position: relative;
+        }
+        .results-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: none;
+        }
+        .results-container.show {
+            display: block;
+        }
+        .result-item {
+            background: #252b3d;
+            border: 1px solid #2d3548;
+            padding: 16px 24px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .result-item:hover {
+            border-color: #A3B50B;
+            background: #2d3548;
+            transform: translateX(4px);
+        }
+        .result-item .item-name {
+            color: #A3B50B;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .result-item .item-type {
+            color: #6c717d;
+            font-size: 12px;
+            margin-left: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .result-item .item-class {
+            color: #a8adb8;
+            font-size: 14px;
+            margin-top: 6px;
+            display: block;
+        }
+        .cta-container {
+            text-align: center;
+            margin: 30px auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #252b3d;
+            color: #A3B50B;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 8px;
+            border: 2px solid #A3B50B;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-button:hover {
+            background: #2d3548;
+            color: #e8e9ed;
+            border-color: #e8e9ed;
+        }
+        .links-container {
+            text-align: center;
+            margin: 30px auto;
+            color: #a8adb8;
+        }
+        .secondary-link {
+            color: #A3B50B;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        .secondary-link:hover {
+            color: #7a8808;
+        }
+        .separator {
+            color: #6c717d;
+            margin: 0 10px;
+        }
+        .footer {
+            margin-top: 80px;
+            padding: 30px 20px;
+            border-top: 1px solid #2d3548;
+            text-align: center;
+            color: #6c717d;
+            font-size: 14px;
+        }
+        .footer code {
+            background: #252b3d;
+            color: #A3B50B;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        .footer a {
+            color: #A3B50B;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #7a8808;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hytale Plugin API</h1>
+        <p>Complete documentation for Hytale's server plugin API. Build powerful server-side plugins with 4,735+ documented classes from the official Hytale server JAR.</p>
+    </div>
+
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search classes and methods... (e.g., JavaPlugin, onEnable)" autocomplete="off" autofocus>
+        </div>
+        <p class="search-hint">Type to see suggestions</p>
+    </div>
+
+    <div id="resultsContainer" class="results-container"></div>
+
+    <div id="ctaContainer" class="cta-container">
+        <a href="classes/index.html" class="cta-button">Browse All Classes</a>
+    </div>
+
+    <div class="links-container">
+        <a href="https://github.com/Henry-Bonikowsky/test-plugins" class="secondary-link" target="_blank">View Example Plugins →</a>
+        <span class="separator">•</span>
+        <a href="https://github.com/Henry-Bonikowsky/hytale-docs" class="secondary-link" target="_blank">GitHub Repository →</a>
+    </div>
+
+    <div class="footer">
+        <p>Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+        Not affiliated with Hypixel Studios.</p>
+        <p>Built with <a href="https://claude.ai/claude-code" target="_blank">Claude Code</a></p>
+    </div>
+
+    <script>
+        let searchIndex = [];
+
+        // Load search index
+        fetch('assets/search-index.json')
+            .then(response => response.json())
+            .then(data => {
+                searchIndex = data;
+                console.log(`Loaded ${searchIndex.length} search entries`);
+            })
+            .catch(err => console.error('Failed to load search index:', err));
+
+        const searchBox = document.getElementById('searchBox');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const ctaContainer = document.getElementById('ctaContainer');
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function searchEntries(query) {
+            if (!query || query.length < 1) return [];
+
+            const lowerQuery = query.toLowerCase();
+
+            // Prioritize: exact matches > starts with > contains
+            const exactMatches = [];
+            const startsWith = [];
+            const contains = [];
+
+            for (const entry of searchIndex) {
+                const lowerName = entry.name.toLowerCase();
+
+                if (lowerName === lowerQuery) {
+                    exactMatches.push(entry);
+                } else if (lowerName.startsWith(lowerQuery)) {
+                    startsWith.push(entry);
+                } else if (lowerName.includes(lowerQuery)) {
+                    contains.push(entry);
+                }
+
+                // Limit to top 5 results
+                if (exactMatches.length + startsWith.length + contains.length >= 5) {
+                    break;
+                }
+            }
+
+            return [...exactMatches, ...startsWith, ...contains].slice(0, 5);
+        }
+
+        function renderResults(results) {
+            if (results.length === 0) {
+                resultsContainer.classList.remove('show');
+                ctaContainer.style.display = 'block';
+                return;
+            }
+
+            resultsContainer.innerHTML = results.map(entry => {
+                const typeLabel = entry.type === 'class' ? 'class' : 'method';
+                const classInfo = entry.type === 'method' ? `<div class="item-class">in ${escapeHtml(entry.class)}</div>` : '';
+
+                return `
+                    <a href="${escapeHtml(entry.file)}" class="result-item">
+                        <div>
+                            <span class="item-name">${escapeHtml(entry.name)}</span>
+                            <span class="item-type">${typeLabel}</span>
+                        </div>
+                        ${classInfo}
+                    </a>
+                `;
+            }).join('');
+
+            resultsContainer.classList.add('show');
+            ctaContainer.style.display = 'none';
+        }
+
+        // Search on input
+        searchBox.addEventListener('input', function() {
+            const query = this.value.trim();
+            console.log('Search query:', query);
+
+            if (query.length < 1) {
+                resultsContainer.classList.remove('show');
+                ctaContainer.style.display = 'block';
+                return;
+            }
+
+            const results = searchEntries(query);
+            console.log('Search results:', results);
+            renderResults(results);
+        });
+    </script>
+</body>
+</html>
