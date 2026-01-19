@@ -192,25 +192,18 @@
                     }).join('');
 
                     return `
-                        <div class="package-node">
+                        <div class="package-node collapsed">
                             <div class="package-header" onclick="togglePackage(this)">
                                 <span class="package-chevron">▼</span>
                                 <span class="package-name-text">${pkg}</span>
                                 <span class="package-count">(${classes.length} classes)</span>
                             </div>
-                            <div class="package-classes">${classesHtml}</div>
+                            <div class="package-classes" style="max-height: 0;">${classesHtml}</div>
                         </div>
                     `;
                 }).join('');
 
                 document.getElementById('stats').textContent = `${allPackages.length} packages, ${totalClasses} classes`;
-
-                // Set initial max-heights after render
-                setTimeout(() => {
-                    document.querySelectorAll('.package-classes').forEach(el => {
-                        el.style.maxHeight = el.scrollHeight + 'px';
-                    });
-                }, 10);
             }
         }
 
