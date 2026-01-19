@@ -12,20 +12,20 @@ theme:
   name: material
   language: en
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: deep-purple
-      accent: deep-purple
-      toggle:
-        icon: material/brightness-7
-        name: Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep-purple
-      accent: deep-purple
+      primary: black
+      accent: lime
       toggle:
         icon: material/brightness-4
         name: Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: lime
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
 
   features:
     - navigation.instant
@@ -66,6 +66,9 @@ nav:
   - Guides:
       - Creating Your First Plugin: guides/first-plugin.md
   - About: about.md
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:
