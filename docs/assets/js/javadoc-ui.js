@@ -60,11 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Global search with autocomplete
+  // Global search with sidebar replacement
   const searchInput = document.querySelector('.sidebar-search input');
-  if (searchInput) {
+  const sidebarNav = document.querySelector('.sidebar-nav');
+
+  if (searchInput && sidebarNav) {
     let searchIndex = [];
     let searchTimeout = null;
+    const originalContent = sidebarNav.innerHTML;
 
     // Load search index
     fetch('../assets/search-index.json')
@@ -74,19 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(err => console.error('Failed to load search index:', err));
 
-    // Create dropdown for results
-    const dropdown = document.createElement('div');
-    dropdown.style.cssText = 'position: absolute; top: 100%; left: 0; right: 0; background: #252b3d; border: 2px solid #A3B50B; border-top: none; border-radius: 0 0 6px 6px; max-height: 300px; overflow-y: auto; z-index: 1000; display: none;';
-    searchInput.parentElement.style.position = 'relative';
-    searchInput.parentElement.appendChild(dropdown);
-
     searchInput.addEventListener('input', function(e) {
       const query = e.target.value.trim();
 
       clearTimeout(searchTimeout);
 
       if (query.length < 1) {
-        dropdown.style.display = 'none';
+        // Restore original sidebar content
+        sidebarNav.innerHTML = originalContent;
         return;
       }
 
@@ -100,29 +98,28 @@ document.addEventListener('DOMContentLoaded', function() {
             const lowerName = entry.name.toLowerCase();
             if (lowerName.includes(lowerQuery)) {
               results.push(entry);
-              if (results.length >= 10) break;
+              if (results.length >= 20) break;
             }
           }
         }
 
         if (results.length === 0) {
-          dropdown.style.display = 'none';
+          sidebarNav.innerHTML = '<div style="color: #6c717d; text-align: center; padding: 2rem;">No classes found</div>';
           return;
         }
 
-        dropdown.innerHTML = results.map(entry => {
-          return `<a href="${entry.file}" style="display: block; color: #A3B50B; text-decoration: none; padding: 8px 12px; border-bottom: 1px solid #2d3548; font-family: 'Courier New', monospace; transition: background 0.1s;" onmouseover="this.style.background='#2d3548'" onmouseout="this.style.background='transparent'">${entry.name}</a>`;
-        }).join('');
-
-        dropdown.style.display = 'block';
+        // Replace sidebar content with search results
+        sidebarNav.innerHTML = `
+          <div class="package-group">
+            <div class="package-title">Search Results (${results.length})</div>
+            <div style="margin-top: 1rem;">
+              ${results.map(entry => {
+                return `<a href="${entry.file}" class="class-link" style="display: block; color: #A3B50B; text-decoration: none; padding: 0.375rem 0.75rem; margin: 0.125rem 0; border-radius: 0.25rem; transition: all 0.15s; font-family: 'Courier New', monospace;">${entry.name}</a>`;
+              }).join('')}
+            </div>
+          </div>
+        `;
       }, 150);
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-      }
     });
   }
 
