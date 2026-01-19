@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuilderCodec - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">codec</a>
+<span class="separator">›</span>
+<a href="index.html">builder</a>
+<span class="separator">›</span>
+<span class="current">BuilderCodec</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">BuilderCodec</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> implements <a href="Codec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.Codec">Codec</a><T>, <a href="DirectDecodeCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.DirectDecodeCodec">DirectDecodeCodec</a><T>, <a href="RawJsonCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.RawJsonCodec">RawJsonCodec</a><T>, <a href="InheritCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.InheritCodec">InheritCodec</a><T>, <a href="ValidatableCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.validation.ValidatableCodec">ValidatableCodec</a><T></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>BuilderCodec</code> is a class that extends <code>Object</code> and implements <code>Codec</code>, <code>T</code>, <code>DirectDecodeCodec</code>, <code>T</code>, <code>RawJsonCodec</code>, <code>T</code>, <code>InheritCodec</code>, <code>T</code>, <code>ValidatableCodec</code> and <code>T</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int UNSET_VERSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>UNSET_VERSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int UNSET_MAX_VERSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>UNSET_MAX_VERSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int INITIAL_VERSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INITIAL_VERSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><?>[] EMPTY_ARRAY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY_ARRAY</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="KeyedCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.KeyedCodec">KeyedCodec</a><<a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>> VERSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>VERSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T> tClass</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tClass</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><T> supplier</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>supplier</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><? super T> parentCodec</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>parentCodec</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>>> entries</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>entries</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>>> unmodifiableEntries</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>unmodifiableEntries</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.BiConsumer">BiConsumer</a><T, <a href="ValidationResults.html" class="type-link" data-full-name="com.hypixel.hytale.codec.validation.ValidationResults">ValidationResults</a>> validator</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validator</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.BiConsumer">BiConsumer</a><T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>> afterDecode</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>afterDecode</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean hasNonNullValidator</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasNonNullValidator</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> documentation</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>documentation</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="Metadata.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.metadata.Metadata">Metadata</a>> metadata</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>metadata</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final int codecVersion</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>codecVersion</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final int minCodecVersion</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minCodecVersion</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean versioned</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>versioned</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean useLegacyVersion</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>useLegacyVersion</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="StringTreeMap.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.StringTreeMap">StringTreeMap</a><<a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$KeyEntry<T>> stringTreeMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>stringTreeMap</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>(<a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$BuilderBase<T, ?>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BuilderCodec</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T> getInnerClass()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getInnerClass()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><T> getSupplier()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSupplier()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T getDefaultValue()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDefaultValue()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T getDefaultValue(<a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDefaultValue()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>>> getEntries()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEntries()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.function.BiConsumer">BiConsumer</a><T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>> getAfterDecode()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAfterDecode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><? super T> getParent()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getParent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getDocumentation()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDocumentation()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getCodecVersion()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCodecVersion()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void inherit(T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>inherit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void afterDecode(T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>afterDecode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void afterDecodeAndValidate(T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>afterDecodeAndValidate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T decode(org.bson.BsonValue, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public org.bson.BsonDocument encode(T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>encode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decode(org.bson.BsonValue, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void decode0(org.bson.BsonDocument, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decode0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected org.bson.BsonDocument encode0(T, org.bson.BsonDocument, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>encode0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T decodeJson(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeJson()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decodeJson0(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeJson0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void readEntry(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readEntry()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void skipField(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>skipField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void readField(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void readUnknownField(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readUnknownField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decodeJson(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeJson()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T decodeAndInherit(org.bson.BsonDocument, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInherit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decodeAndInherit(org.bson.BsonDocument, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInherit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void decodeAndInherit0(org.bson.BsonDocument, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInherit0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <Type extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, FieldType extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> void decodeAndInherit(<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><Type, FieldType>, org.bson.BsonDocument, Type, Type, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInherit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T decodeAndInheritJson(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInheritJson()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decodeAndInheritJson(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInheritJson()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void decodeAndInheritJson0(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInheritJson0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void readAndInheritEntry(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readAndInheritEntry()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void readAndInheritField(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T, T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readAndInheritField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <Type extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, FieldType extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> void decodeAndInheritJson(<a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><Type, FieldType>, <a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, Type, Type, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAndInheritJson()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a> decodeVersion(org.bson.BsonDocument, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeVersion()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a> decodeVersion(<a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeVersion()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void validate(T, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void validateDefaults(<a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="Codec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.Codec">Codec</a><?>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validateDefaults()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ObjectSchema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.ObjectSchema">ObjectSchema</a> toSchema(<a href="SchemaContext.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.SchemaContext">SchemaContext</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toSchema()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ObjectSchema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.ObjectSchema">ObjectSchema</a> toSchema(<a href="SchemaContext.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.SchemaContext">SchemaContext</a>, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toSchema()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> void createSchemaFields(<a href="SchemaContext.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.SchemaContext">SchemaContext</a>, T, <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>createSchemaFields()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><? super T, ?> findEntry(<a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><? super T>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>findEntry()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, F extends <a href="BuilderField.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderField">BuilderField</a><T, ?>> F findField(<a href="#" class="type-link" data-full-name="java.util.List">List</a><F>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>findField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$Builder<T> builder(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T>, <a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>builder()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$Builder<T> builder(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T>, <a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><T>, <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><? super T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>builder()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$Builder<T> abstractBuilder(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>abstractBuilder()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a>$Builder<T> abstractBuilder(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T>, <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><? super T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>abstractBuilder()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public org.bson.BsonValue encode(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>encode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> toSchema(<a href="SchemaContext.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.SchemaContext">SchemaContext</a>, <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toSchema()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> toSchema(<a href="SchemaContext.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.SchemaContext">SchemaContext</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toSchema()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

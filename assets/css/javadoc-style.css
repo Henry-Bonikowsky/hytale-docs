@@ -1,0 +1,422 @@
+/* Hytale Plugin Documentation - Dark Theme */
+
+:root {
+  /* Hytale dark theme colors (from hytale.com) */
+  --hytale-bg-dark: #1a1f2e;
+  --hytale-bg-darker: #131820;
+  --hytale-card-bg: #252b3d;
+  --hytale-accent: #A3B50B;
+  --hytale-accent-dim: #7a8808;
+
+  /* Text colors for dark theme */
+  --text-primary: #e8e9ed;
+  --text-secondary: #a8adb8;
+  --text-muted: #6c717d;
+
+  /* Code colors for dark theme */
+  --code-bg: #1e2332;
+  --code-border: #2d3548;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  background: var(--hytale-bg-darker);
+  min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+  background: var(--hytale-bg-dark) !important;
+  border-bottom: 1px solid #2d3548;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+/* Navbar breadcrumb */
+.navbar-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.navbar-breadcrumb a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.navbar-breadcrumb a:hover {
+  color: var(--hytale-accent);
+}
+
+.navbar-breadcrumb .separator {
+  margin: 0 0.5rem;
+  color: var(--text-muted);
+}
+
+.navbar-breadcrumb .current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* GitHub icon */
+.navbar-github {
+  color: var(--hytale-card-bg);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.navbar-github:hover {
+  color: var(--text-secondary);
+}
+
+/* Main content container */
+.content-wrapper {
+  background: var(--hytale-card-bg);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: 1px solid #2d3548;
+}
+
+/* Package breadcrumb */
+.package-breadcrumb {
+  background: var(--hytale-bg-dark);
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  border-left: 3px solid var(--hytale-accent);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.package-breadcrumb a {
+  color: var(--hytale-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.package-breadcrumb a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+/* Class header */
+.class-header {
+  border-bottom: 3px solid var(--hytale-accent);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.class-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.class-signature {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-left: 4px solid var(--hytale-accent);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.class-signature code,
+.class-signature code *,
+.class-signature a {
+  font-size: 0.9rem !important;
+}
+
+/* Modifier badges */
+.modifier {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modifier.public { background: #2d4a2f; color: #90ee90; }
+.modifier.private { background: #4a2d2d; color: #ff8080; }
+.modifier.protected { background: #4a4a2d; color: #ffd700; }
+.modifier.abstract { background: #2d2d4a; color: #9090ff; }
+.modifier.final { background: #2d3f4a; color: #80d8ff; }
+.modifier.static { background: #3d2d4a; color: #d580ff; }
+
+/* Member sections */
+.member-section {
+  margin-bottom: 3rem;
+}
+
+.member-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid #2d3548;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.member-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--hytale-bg-dark);
+  border: 1px solid var(--code-border);
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.member-item:hover {
+  border-color: var(--hytale-accent);
+  box-shadow: 0 2px 8px rgba(163, 181, 11, 0.2);
+}
+
+.member-item.private-member {
+  opacity: 0.6;
+}
+
+.member-signature {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  background: var(--code-bg);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border-left: 3px solid var(--hytale-accent);
+  overflow-x: auto;
+  color: var(--text-primary);
+}
+
+/* Fix Prism.js variable name sizing */
+.member-signature code,
+.member-signature code * {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Type links */
+.type-link {
+  color: var(--hytale-accent) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border-bottom: 1px dotted var(--hytale-accent);
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
+.type-link:hover {
+  color: var(--text-primary) !important;
+  border-bottom-style: solid;
+  text-decoration: none !important;
+}
+
+/* Ensure links in code blocks are clickable */
+code .type-link,
+pre code .type-link,
+.member-signature .type-link {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Toggle control */
+.visibility-toggle {
+  margin-bottom: 1.5rem;
+}
+
+.visibility-toggle .form-check-label {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.visibility-toggle .form-check-input {
+  background-color: var(--hytale-bg-dark);
+  border-color: var(--code-border);
+}
+
+.visibility-toggle .form-check-input:checked {
+  background-color: var(--hytale-accent);
+  border-color: var(--hytale-accent);
+}
+
+.visibility-toggle .form-check-input:focus {
+  border-color: var(--hytale-accent);
+  box-shadow: 0 0 0 0.25rem rgba(163, 181, 11, 0.25);
+}
+
+/* Paragraphs */
+p {
+  color: var(--text-secondary);
+}
+
+/* Strong text */
+strong {
+  color: var(--text-primary);
+}
+
+/* Code inline */
+code {
+  background: var(--code-bg);
+  color: var(--hytale-accent);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Lists */
+ul {
+  color: var(--text-secondary);
+}
+
+/* Empty state */
+.empty-section {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* API Navigation Sidebar */
+.sidebar {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  min-width: 250px;
+  width: 250px;
+  background: var(--hytale-bg-dark);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* Search box */
+.sidebar-search {
+  margin-bottom: 1rem;
+}
+
+.sidebar-search input {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.sidebar-search input:focus {
+  background: var(--code-bg);
+  border-color: var(--hytale-accent);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(163, 181, 11, 0.25);
+}
+
+.sidebar-search input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Package tree */
+.sidebar-nav {
+  font-size: 0.875rem;
+}
+
+.package-group {
+  margin-bottom: 1.5rem;
+}
+
+.package-title {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--code-border);
+}
+
+.package-section {
+  margin-bottom: 1rem;
+}
+
+.package-name {
+  color: var(--hytale-accent);
+  font-weight: 600;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.package-name:hover {
+  background: var(--code-bg);
+}
+
+.package-name .chevron {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+  margin-right: 0.25rem;
+}
+
+.package-section.collapsed .chevron {
+  transform: rotate(-90deg);
+}
+
+.package-classes {
+  margin-left: 0.5rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.package-section.collapsed .package-classes {
+  max-height: 0 !important;
+}
+
+.class-link {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.375rem 0.75rem;
+  margin: 0.125rem 0;
+  border-radius: 0.25rem;
+  transition: all 0.15s;
+}
+
+.class-link:hover {
+  color: var(--text-primary);
+  background: var(--code-bg);
+}
+
+.class-link.active {
+  color: var(--text-primary);
+  background: var(--hytale-accent);
+  font-weight: 600;
+}
+
+/* Footer */
+.docs-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid #2d3548;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}

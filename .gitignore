@@ -1,0 +1,36 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.log
+.cache/
+
+# Input files used for generation
+all-public-classes.txt
+server-classes.txt
+*.jar
+
+# Don't ignore the generated classes
+!classes/

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BucketList - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">common</a>
+<span class="separator">›</span>
+<a href="index.html">collection</a>
+<span class="separator">›</span>
+<span class="current">BucketList</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">BucketList</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="BucketList.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketList">BucketList</a><E extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>BucketList</code> is a class that extends <code>Object</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int INITIAL_BUCKET_ITEM_ARRAY_SIZE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INITIAL_BUCKET_ITEM_ARRAY_SIZE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.util.Comparator">Comparator</a><<a href="BucketItem.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketItem">BucketItem</a><?>> CLOSER_TO_SELF</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CLOSER_TO_SELF</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final byte[] EMPTY_INDICES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY_INDICES</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BucketItemPool.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketItemPool">BucketItemPool</a><E> bucketItemPool</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>bucketItemPool</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BucketList.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketList">BucketList</a>$Bucket<E>[] buckets</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buckets</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected byte[] bucketIndices</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>bucketIndices</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int bucketCount</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>bucketCount</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int squaredMaxDistance</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>squaredMaxDistance</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BucketList.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketList">BucketList</a>(<a href="BucketItemPool.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketItemPool">BucketItemPool</a><E>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BucketList</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setBucketItemPool(<a href="BucketItemPool.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketItemPool">BucketItemPool</a><E>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setBucketItemPool()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void clear()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clear()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void reset()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>reset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void configure(int[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>configure()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void configure(int[], int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>configure()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void configureWithPreSortedArray(int[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>configureWithPreSortedArray()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void configureWithPreSortedArray(int[], int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>configureWithPreSortedArray()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void configureWithPresortedArray(it.unimi.dsi.fastutil.ints.IntArrayList, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>configureWithPresortedArray()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean add(E, double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>add()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getBucketCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBucketCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BucketList.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketList">BucketList</a>$Bucket<E> getBucket(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBucket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getFirstBucketIndex(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFirstBucketIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getLastBucketIndex(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLastBucketIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public E getClosestInRange(int, int, <a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><E>, <a href="BucketList.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketList">BucketList</a>$SortBufferProvider)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClosestInRange()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void addBucketDistance(it.unimi.dsi.fastutil.ints.IntArrayList, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBucketDistance()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void addBucketDistance(it.unimi.dsi.fastutil.ints.IntArrayList, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBucketDistance()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static int area(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>area()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static double lambda$static$0(<a href="BucketItem.html" class="type-link" data-full-name="com.hypixel.hytale.common.collection.BucketItem">BucketItem</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

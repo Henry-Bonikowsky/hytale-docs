@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetStore - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">assetstore</a>
+<span class="separator">›</span>
+<span class="current">AssetStore</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">AssetStore</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> <span class="modifier abstract">abstract</span> class <a href="AssetStore.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetStore">AssetStore</a><K extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, T extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a><K, M>, M extends <a href="AssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetMap">AssetMap</a><K, T>> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>AssetStore</code> is an abstract class that extends <code>Object</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static boolean DISABLE_ASSET_COMPARE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DISABLE_ASSET_COMPARE</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> logger</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logger</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><K> kClass</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>kClass</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T> tClass</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tClass</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> path</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>path</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> extension</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>extension</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="AssetCodec.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.codec.AssetCodec">AssetCodec</a><K, T> codec</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>codec</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><T, K> keyFunction</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>keyFunction</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>>> loadsAfter</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadsAfter</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>>> unmodifiableLoadsAfter</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>unmodifiableLoadsAfter</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>>> loadsBefore</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadsBefore</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final M assetMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>assetMap</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><K, T> replaceOnRemove</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>replaceOnRemove</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><T> isUnknown</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isUnknown</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean unmodifiable</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>unmodifiable</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.List">List</a><T> preAddedAssets</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>preAddedAssets</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>> idProvider</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>idProvider</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a><?, ?>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>>>> childAssetsMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>childAssetsMap</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>>> loadedContainedAssetsFor</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadedContainedAssetsFor</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static boolean DISABLE_DYNAMIC_DEPENDENCIES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DISABLE_DYNAMIC_DEPENDENCIES</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetStore.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetStore">AssetStore</a>(<a href="AssetStore.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetStore">AssetStore</a>$Builder<K, T, M, ?>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>AssetStore</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <a href="IEventBus.html" class="type-link" data-full-name="com.hypixel.hytale.event.IEventBus">IEventBus</a> getEventBus()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEventBus()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract void addFileMonitor(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addFileMonitor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract void removeFileMonitor(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeFileMonitor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract void handleRemoveOrUpdate(<a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleRemoveOrUpdate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><K> getKeyClass()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getKeyClass()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><T> getAssetClass()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAssetClass()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getExtension()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getExtension()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetCodec.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.codec.AssetCodec">AssetCodec</a><K, T> getCodec()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCodec()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><T, K> getKeyFunction()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getKeyFunction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>>> getLoadsAfter()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLoadsAfter()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public M getAssetMap()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAssetMap()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><K, T> getReplaceOnRemove()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getReplaceOnRemove()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isUnmodifiable()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isUnmodifiable()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><T> getPreAddedAssets()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPreAddedAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <X extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>> boolean hasLoadedContainedAssetsFor(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><X>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasLoadedContainedAssetsFor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>> getIdProvider()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getIdProvider()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> getLogger()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLogger()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void simplifyLoadBeforeDependencies()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>simplifyLoadBeforeDependencies()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <D extends <a href="JsonAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.JsonAsset">JsonAsset</a><?>> void injectLoadsAfter(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><D>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>injectLoadsAfter()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public K decodeFilePathKey(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeFilePathKey()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public K decodeStringKey(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeStringKey()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public K transformKey(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>transformKey()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void validate(K, <a href="ValidationResults.html" class="type-link" data-full-name="com.hypixel.hytale.codec.validation.ValidationResults">ValidationResults</a>, <a href="ExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.codec.ExtraInfo">ExtraInfo</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void validateCodecDefaults()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validateCodecDefaults()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void logDependencies()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logDependencies()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsFromDirectory(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsFromDirectory()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsFromPaths(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsFromPaths()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsFromPaths(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsFromPaths()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsFromPaths(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsFromPaths()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadBuffersWithKeys(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadBuffersWithKeys()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><T>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><T>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsWithReferences(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><T, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AssetReferences.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetReferences">AssetReferences</a><?, ?>>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsWithReferences()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsWithReferences(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><T, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AssetReferences.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetReferences">AssetReferences</a><?, ?>>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsWithReferences()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> loadAssetsWithReferences(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><T, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AssetReferences.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetReferences">AssetReferences</a><?, ?>>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssetsWithReferences()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssetWithPaths(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssetWithPaths()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssetWithPaths(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssetWithPaths()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssetWithPath(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssetWithPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssetWithPath(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssetWithPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssets(<a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K> removeAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, boolean, <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><K>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void removeAssetPack(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> writeAssetToDisk(<a href="AssetPack.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetPack">AssetPack</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, T>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeAssetToDisk()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a><K, T> writeAssetToDisk(<a href="AssetPack.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetPack">AssetPack</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, T>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeAssetToDisk()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public T decode(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, K, org.bson.BsonDocument)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <CK extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> void addChildAssetReferences(K, <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a><CK, ?>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><CK>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addChildAssetReferences()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void loadAssets0(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>>, <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAssets0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void reloadChildrenContainerAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>reloadChildrenContainerAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void collectChildrenInDifferentFile(K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a><?, ?>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>collectChildrenInDifferentFile()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void removeChildrenAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeChildrenAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void loadContainedAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>>, <a href="AssetLoadResult.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetLoadResult">AssetLoadResult</a>>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadContainedAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void decodeAssets(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, M, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="DecodedAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.DecodedAsset">DecodedAsset</a><K, T>> executeAssetDecode(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, M, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>>, <a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>executeAssetDecode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="AssetHolder.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetHolder">AssetHolder</a><K> decodeAsset0(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, M, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>, <a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAsset0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="DecodedAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.DecodedAsset">DecodedAsset</a><K, T> decodeAssetWithParent0(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, M, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a><K>, <a href="RawJsonReader.html" class="type-link" data-full-name="com.hypixel.hytale.codec.util.RawJsonReader">RawJsonReader</a>, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>decodeAssetWithParent0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void loadAllChildren(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, T>, <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><T>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAllChildren()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean loadAllChildren(<a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, K)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadAllChildren()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void collectAllChildren(K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>collectAllChildren()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean collectAllChildren0(K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>collectAllChildren0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void logChildTree(<a href="#" class="type-link" data-full-name="java.lang.StringBuilder">StringBuilder</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logChildTree()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void logRemoveChildren(K, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logRemoveChildren()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void logRemoveChildren(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><K, K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logRemoveChildren()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void testKeyFormat(K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>testKeyFormat()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void logUnusedKeys(K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="AssetExtraInfo.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetExtraInfo">AssetExtraInfo</a><K>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logUnusedKeys()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void logLoadedAsset(K, K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logLoadedAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void logRemoveAsset(K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logRemoveAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void recordFailedToLoad(<a href="#" class="type-link" data-full-name="java.util.Set">Set</a><K>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>>, K, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>recordFailedToLoad()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$decodeAssetWithParent0$0(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$decodeAssetWithParent0$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="DecodedAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.DecodedAsset">DecodedAsset</a> lambda$executeAssetDecode$0(<a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a>, <a href="AssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetMap">AssetMap</a>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$executeAssetDecode$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[] lambda$decodeAssets$1(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$decodeAssets$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="DecodedAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.DecodedAsset">DecodedAsset</a> lambda$decodeAssets$0(<a href="RawAsset.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.RawAsset">RawAsset</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a>, <a href="AssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetMap">AssetMap</a>, <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>, boolean, <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>, <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$decodeAssets$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$loadContainedAssets$3(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadContainedAssets$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Map">Map</a> lambda$loadContainedAssets$2(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadContainedAssets$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$loadContainedAssets$1(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadContainedAssets$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Map">Map</a> lambda$loadContainedAssets$0(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadContainedAssets$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$collectChildrenInDifferentFile$0(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$collectChildrenInDifferentFile$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a> lambda$loadAssets0$1(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadAssets0$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$loadAssets0$0(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$loadAssets0$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$addChildAssetReferences$1(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$addChildAssetReferences$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Map">Map</a> lambda$addChildAssetReferences$0(<a href="#" class="type-link" data-full-name="java.lang.Class">Class</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$addChildAssetReferences$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a> lambda$removeAssets$0(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$removeAssets$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static boolean lambda$new$0(<a href="JsonAssetWithMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.JsonAssetWithMap">JsonAssetWithMap</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$new$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

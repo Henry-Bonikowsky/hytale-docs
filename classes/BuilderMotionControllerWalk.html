@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuilderMotionControllerWalk - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">npc</a>
+<span class="separator">›</span>
+<a href="index.html">movement</a>
+<span class="separator">›</span>
+<a href="index.html">controllers</a>
+<span class="separator">›</span>
+<a href="index.html">builders</a>
+<span class="separator">›</span>
+<span class="current">BuilderMotionControllerWalk</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">BuilderMotionControllerWalk</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="BuilderMotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.builders.BuilderMotionControllerWalk">BuilderMotionControllerWalk</a> extends <a href="BuilderMotionControllerBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.builders.BuilderMotionControllerBase">BuilderMotionControllerBase</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>BuilderMotionControllerWalk</code> is a class that extends <code>BuilderMotionControllerBase</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final double[] DEFAULT_JUMP_RANGE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_JUMP_RANGE</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double minHorizontalSpeed</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minHorizontalSpeed</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double maxVerticalSpeed</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxVerticalSpeed</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> acceleration</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>acceleration</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double gravity</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>gravity</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> maxRotationSpeed</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxRotationSpeed</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="FloatHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.FloatHolder">FloatHolder</a> maxMoveTurnAngle</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxMoveTurnAngle</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="FloatHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.FloatHolder">FloatHolder</a> blendRestTurnAngle</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blendRestTurnAngle</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> blendRestRelativeSpeed</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blendRestRelativeSpeed</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> maxClimbHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxClimbHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> jumpHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> jumpForce</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpForce</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> jumpDescentSteepness</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpDescentSteepness</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> minJumpHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minJumpHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> minJumpDistance</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minJumpDistance</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> jumpBlending</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpBlending</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> jumpDescentBlending</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpDescentBlending</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> climbSpeedMult</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>climbSpeedMult</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> climbSpeedPow</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>climbSpeedPow</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> climbSpeedConst</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>climbSpeedConst</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> minDescentAnimationHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minDescentAnimationHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> descendFlatness</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>descendFlatness</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> descendSpeedCompensation</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>descendSpeedCompensation</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> descentSteepness</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>descentSteepness</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> descentBlending</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>descentBlending</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="DoubleHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.DoubleHolder">DoubleHolder</a> maxDropHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxDropHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double maxVerticalSpeedFluid</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxVerticalSpeedFluid</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="NumberArrayHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.NumberArrayHolder">NumberArrayHolder</a> jumpRange</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>jumpRange</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double minHover</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minHover</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double maxHover</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxHover</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double minHoverClimb</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minHoverClimb</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double minHoverDrop</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>minHoverDrop</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean floatsDown</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>floatsDown</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private float hoverFreq</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hoverFreq</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double maxWalkSpeedAfterHitMultiplier</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxWalkSpeedAfterHitMultiplier</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> fenceBlockSet</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fenceBlockSet</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="EnumHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.EnumHolder">EnumHolder</a><<a href="MotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk">MotionControllerWalk</a>$DescentAnimationType> descentAnimationType</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>descentAnimationType</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="EnumHolder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.holder.EnumHolder">EnumHolder</a><<a href="MotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk">MotionControllerWalk</a>$AscentAnimationType> ascentAnimationType</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ascentAnimationType</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BuilderMotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.builders.BuilderMotionControllerWalk">BuilderMotionControllerWalk</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BuilderMotionControllerWalk</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk">MotionControllerWalk</a> build(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>build()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getShortDescription()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getShortDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getLongDescription()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLongDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BuilderDescriptorState.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderDescriptorState">BuilderDescriptorState</a> getBuilderDescriptorState()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBuilderDescriptorState()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BuilderMotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.builders.BuilderMotionControllerWalk">BuilderMotionControllerWalk</a> readConfig(com.google.gson.JsonElement)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readConfig()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><<a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>> category()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>category()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinHorizontalSpeed()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinHorizontalSpeed()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getAcceleration(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAcceleration()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxVerticalSpeed()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxVerticalSpeed()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxVerticalSpeedFluid()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxVerticalSpeedFluid()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getGravity()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getGravity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getMaxMoveTurnAngle(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxMoveTurnAngle()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxRotationSpeed(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxRotationSpeed()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getBlendRestTurnAngle(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlendRestTurnAngle()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getBlendRestRelativeSpeed(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlendRestRelativeSpeed()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxClimbHeight(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxClimbHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getClimbSpeedMult(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClimbSpeedMult()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getClimbSpeedPow(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClimbSpeedPow()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getClimbSpeedConst(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClimbSpeedConst()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getDescendForwardAmount(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescendForwardAmount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getDescendSpeedCompensation(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescendSpeedCompensation()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxDropHeight(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxDropHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getFenceBlockSet()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFenceBlockSet()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinHover()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinHover()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxHover()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxHover()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getHoverFreq()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHoverFreq()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinHoverClimb()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinHoverClimb()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinHoverDrop()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinHoverDrop()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isFloatsDown()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isFloatsDown()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaxWalkSpeedAfterHitMultiplier()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaxWalkSpeedAfterHitMultiplier()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getJumpHeight(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinJumpHeight(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinJumpHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinJumpDistance(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinJumpDistance()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getJumpForce(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpForce()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getJumpDescentSteepness(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpDescentSteepness()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getJumpBlending(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpBlending()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getJumpDescentBlending(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpDescentBlending()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk">MotionControllerWalk</a>$DescentAnimationType getDescentAnimationType(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescentAnimationType()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MotionControllerWalk.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionControllerWalk">MotionControllerWalk</a>$AscentAnimationType getAscentAnimationType(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAscentAnimationType()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getDescentSteepness(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescentSteepness()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getDescentBlending(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescentBlending()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMinDescentAnimationHeight(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMinDescentAnimationHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double[] getJumpRange(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getJumpRange()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SpawnTestResult.html" class="type-link" data-full-name="com.hypixel.hytale.server.spawning.SpawnTestResult">SpawnTestResult</a> canSpawn(<a href="SpawningContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.spawning.SpawningContext">SpawningContext</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canSpawn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Class">Class</a><? extends <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>> getClassType()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClassType()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Builder.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.Builder">Builder</a> readConfig(com.google.gson.JsonElement)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readConfig()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> build(<a href="BuilderSupport.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.asset.builder.BuilderSupport">BuilderSupport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>build()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$11(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$11()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$10(float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$10()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$9(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$8(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$7(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$6(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$5(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$4(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$3(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$2(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$1(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$readConfig$0(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$readConfig$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

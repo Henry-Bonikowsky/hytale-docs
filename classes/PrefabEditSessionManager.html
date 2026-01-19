@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrefabEditSessionManager - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">builtin</a>
+<span class="separator">›</span>
+<a href="index.html">buildertools</a>
+<span class="separator">›</span>
+<a href="index.html">prefabeditor</a>
+<span class="separator">›</span>
+<span class="current">PrefabEditSessionManager</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">PrefabEditSessionManager</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="PrefabEditSessionManager.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSessionManager">PrefabEditSessionManager</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>PrefabEditSessionManager</code> is a class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> LOGGER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>LOGGER</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="Message.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.Message">Message</a> MESSAGE_COMMANDS_PREFAB_EDIT_SESSION_MANAGER_EXISTING_EDIT_SESSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MESSAGE_COMMANDS_PREFAB_EDIT_SESSION_MANAGER_EXISTING_EDIT_SESSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="Message.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.Message">Message</a> MESSAGE_COMMANDS_EDIT_PREFAB_SOMETHING_WENT_WRONG</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MESSAGE_COMMANDS_EDIT_PREFAB_SOMETHING_WENT_WRONG</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final float NOON_TIME</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>NOON_TIME</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> DEFAULT_NEW_WORLD_ZERO_COORDINATE_BLOCK_NAME</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_NEW_WORLD_ZERO_COORDINATE_BLOCK_NAME</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> DEFAULT_ENVIRONMENT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_ENVIRONMENT</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> PREFAB_SELECTOR_TOOL_ID</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>PREFAB_SELECTOR_TOOL_ID</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> DEFAULT_CHUNK_ENVIRONMENT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_CHUNK_ENVIRONMENT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> PREFAB_EDITING_WORLD_NAME_PREFIX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>PREFAB_EDITING_WORLD_NAME_PREFIX</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="Color.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Color">Color</a> DEFAULT_TINT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_TINT</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final long PROGRESS_UPDATE_INTERVAL_NANOS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>PROGRESS_UPDATE_INTERVAL_NANOS</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> DEFAULT_GRASS_TINT_HEX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_GRASS_TINT_HEX</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>> activeEditSessions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>activeEditSessions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.HashSet">HashSet</a><<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>> prefabsBeingEdited</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>prefabsBeingEdited</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>> inProgressTeleportations</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>inProgressTeleportations</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.HashSet">HashSet</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>> inProgressLoading</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>inProgressLoading</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.HashSet">HashSet</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>> cancelledLoading</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cancelledLoading</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="PrefabEditSessionManager.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSessionManager">PrefabEditSessionManager</a>(<a href="JavaPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.plugin.JavaPlugin">JavaPlugin</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>PrefabEditSessionManager</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onPlayerReady(<a href="PlayerReadyEvent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent">PlayerReadyEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onPlayerReady()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void givePrefabSelectorTool(<a href="Player.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.Player">Player</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>givePrefabSelectorTool()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void onPlayerAddedToWorld(<a href="AddPlayerToWorldEvent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorldEvent">AddPlayerToWorldEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onPlayerAddedToWorld()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void updatePathOfLoadedPrefab(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updatePathOfLoadedPrefab()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isEditingAPrefab(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isEditingAPrefab()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a> getPrefabEditSession(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPrefabEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>> getActiveEditSessions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getActiveEditSessions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean hasInProgressLoading(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasInProgressLoading()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void cancelLoading(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cancelLoading()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isLoadingCancelled(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isLoadingCancelled()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void clearLoadingState(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clearLoadingState()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> createEditSessionForNewPrefab(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Player.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.Player">Player</a>, <a href="PrefabEditorCreationSettings.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings">PrefabEditorCreationSettings</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>createEditSessionForNewPrefab()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> loadPrefabAndCreateEditSession(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Player.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.Player">Player</a>, <a href="PrefabEditorCreationSettings.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings">PrefabEditorCreationSettings</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadPrefabAndCreateEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> loadPrefabAndCreateEditSession(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Player.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.Player">Player</a>, <a href="PrefabEditorCreationSettings.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationSettings">PrefabEditorCreationSettings</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>loadPrefabAndCreateEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void notifyProgress(<a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>notifyProgress()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> createEditSession(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, boolean, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>createEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> createEditSession(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, boolean, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>createEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>> getWorldCreatingFuture(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="WorldConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.WorldConfig">WorldConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getWorldCreatingFuture()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getWorldName(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getWorldName()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getWeatherFromEnvironment(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getWeatherFromEnvironment()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a> getSavePath(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSavePath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void applyWorldGenWorldConfig(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, int, <a href="WorldConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.WorldConfig">WorldConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>applyWorldGenWorldConfig()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>> getPrefabCreatingCompletableFuture(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="WorldConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.WorldConfig">WorldConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPrefabCreatingCompletableFuture()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>> getPrefabLoadingCompletableFuture(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="WorldConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.WorldConfig">WorldConfig</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPrefabLoadingCompletableFuture()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int[] calculateRowGroups(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>calculateRowGroups()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int getAmountOfBlocksBelowPrefab(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAmountOfBlocksBelowPrefab()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> exitEditSession(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>exitEditSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> cleanupCancelledSession(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cleanupCancelledSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>> cleanupCancelledSession(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cleanupCancelledSession()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a><<a href="IPrefabBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer">IPrefabBuffer</a>> getPrefabBuffer(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPrefabBuffer()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="IPrefabBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer">IPrefabBuffer</a> lambda$getPrefabBuffer$0(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabBuffer$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$cleanupCancelledSession$0(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$cleanupCancelledSession$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$exitEditSession$1(<a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$exitEditSession$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$exitEditSession$0(<a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>, <a href="Teleport.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.entity.teleport.Teleport">Teleport</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$exitEditSession$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletionStage">CompletionStage</a> lambda$getPrefabLoadingCompletableFuture$2(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="Tri.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.Tri">Tri</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabLoadingCompletableFuture$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a> lambda$getPrefabLoadingCompletableFuture$3(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="Tri.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.Tri">Tri</a>, <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabLoadingCompletableFuture$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Tri.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.Tri">Tri</a> lambda$getPrefabLoadingCompletableFuture$1(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletableFuture">CompletableFuture</a>[], <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="WorldConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.WorldConfig">WorldConfig</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabLoadingCompletableFuture$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="IPrefabBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer">IPrefabBuffer</a> lambda$getPrefabLoadingCompletableFuture$0(<a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="IPrefabBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.buffer.impl.IPrefabBuffer">IPrefabBuffer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabLoadingCompletableFuture$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.concurrent.CompletionStage">CompletionStage</a> lambda$getPrefabCreatingCompletableFuture$0(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabCreatingCompletableFuture$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a> lambda$getPrefabCreatingCompletableFuture$1(<a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getPrefabCreatingCompletableFuture$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$getWeatherFromEnvironment$0(double[], <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[], <a href="WeatherForecast.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.environment.config.WeatherForecast">WeatherForecast</a>, double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getWeatherFromEnvironment$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$createEditSession$5(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>, <a href="#" class="type-link" data-full-name="java.lang.Throwable">Throwable</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$createEditSession$4(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabEditorCreationContext.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditorCreationContext">PrefabEditorCreationContext</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$createEditSession$1(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$createEditSession$3(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$createEditSession$2(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a> lambda$createEditSession$0(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="PrefabLoadingState.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabLoadingState">PrefabLoadingState</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>, <a href="#" class="type-link" data-full-name="java.lang.Throwable">Throwable</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$createEditSession$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$scheduleAnchorEntityRecreation$0(<a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$scheduleAnchorEntityRecreation$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$scheduleAnchorEntityRecreation$1(<a href="PrefabEditSession.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession">PrefabEditSession</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$scheduleAnchorEntityRecreation$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$onPlayerAddedToWorld$0(<a href="AddPlayerToWorldEvent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorldEvent">AddPlayerToWorldEvent</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onPlayerAddedToWorld$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$onPlayerReady$0(<a href="Store.html" class="type-link" data-full-name="com.hypixel.hytale.component.Store">Store</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onPlayerReady$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

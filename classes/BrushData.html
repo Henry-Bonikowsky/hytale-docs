@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrushData - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">asset</a>
+<span class="separator">›</span>
+<a href="index.html">type</a>
+<span class="separator">›</span>
+<a href="index.html">buildertool</a>
+<span class="separator">›</span>
+<a href="index.html">config</a>
+<span class="separator">›</span>
+<span class="current">BrushData</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">BrushData</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> implements <a href="NetworkSerializable.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.io.NetworkSerializable">NetworkSerializable</a><<a href="BuilderToolBrushData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.buildertools.BuilderToolBrushData">BuilderToolBrushData</a>></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>BrushData</code> is a class that extends <code>Object</code> and implements <code>NetworkSerializable</code> and <code>BuilderToolBrushData</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> WIDTH_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>WIDTH_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> HEIGHT_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>HEIGHT_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> SHAPE_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SHAPE_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> THICKNESS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>THICKNESS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> CAPPED_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CAPPED_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ORIGIN_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ORIGIN_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ORIGIN_ROTATION_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ORIGIN_ROTATION_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ROTATION_AXIS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROTATION_AXIS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ROTATION_ANGLE_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROTATION_ANGLE_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MIRROR_AXIS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MIRROR_AXIS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MATERIAL_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MATERIAL_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> FAVORITE_MATERIALS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>FAVORITE_MATERIALS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_ABOVE_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_ABOVE_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_NOT_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_NOT_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_BELOW_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_BELOW_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_ADJACENT_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_ADJACENT_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_NEIGHBOR_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_NEIGHBOR_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_COMMANDS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_COMMANDS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> USE_MASK_COMMANDS_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>USE_MASK_COMMANDS_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> INVERT_MASK_KEY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INVERT_MASK_KEY</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> WIDTH_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>WIDTH_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> HEIGHT_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>HEIGHT_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> THICKNESS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>THICKNESS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> CAPPED_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CAPPED_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> SHAPE_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SHAPE_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ORIGIN_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ORIGIN_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ORIGIN_ROTATION_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ORIGIN_ROTATION_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ROTATION_AXIS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROTATION_AXIS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ROTATION_ANGLE_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROTATION_ANGLE_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MIRROR_AXIS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MIRROR_AXIS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MATERIAL_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MATERIAL_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> FAVORITE_MATERIALS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>FAVORITE_MATERIALS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_ABOVE_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_ABOVE_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_NOT_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_NOT_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_BELOW_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_BELOW_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_ADJACENT_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_ADJACENT_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_NEIGHBOR_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_NEIGHBOR_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MASK_COMMANDS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MASK_COMMANDS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> USE_MASK_COMMANDS_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>USE_MASK_COMMANDS_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> INVERT_MASK_DOC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INVERT_MASK_DOC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_WIDTH</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_WIDTH</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_HEIGHT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_HEIGHT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a> DEFAULT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_FAVORITE_MATERIALS_CAPACITY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_FAVORITE_MATERIALS_CAPACITY</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.util.regex.Pattern">Pattern</a> NEWLINES_PATTERN</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>NEWLINES_PATTERN</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>> CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> width</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>width</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> height</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>height</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> thickness</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>thickness</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> capped</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>capped</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushShapeArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushShapeArg">BrushShapeArg</a> shape</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>shape</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushOriginArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushOriginArg">BrushOriginArg</a> origin</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>origin</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> originRotation</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>originRotation</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> rotationAxis</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>rotationAxis</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushRotationArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushRotationArg">BrushRotationArg</a> rotationAngle</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>rotationAngle</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> mirrorAxis</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>mirrorAxis</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a> material</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>material</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[] favoriteMaterials</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>favoriteMaterials</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> mask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>mask</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> maskAbove</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskAbove</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> maskNot</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskNot</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> maskBelow</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskBelow</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> maskAdjacent</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskAdjacent</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> maskNeighbor</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskNeighbor</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[] maskCommands</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maskCommands</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> useMaskCommands</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>useMaskCommands</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> invertMask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>invertMask</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BrushData</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>(<a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>, <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>, <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>, <a href="BrushShapeArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushShapeArg">BrushShapeArg</a>, <a href="BrushOriginArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushOriginArg">BrushOriginArg</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>, <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a>, <a href="BrushRotationArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushRotationArg">BrushRotationArg</a>, <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a>, <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>, <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[], <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>, <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[], <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BrushData</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> getWidth()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getWidth()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> getHeight()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> getThickness()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getThickness()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> getCapped()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCapped()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushShapeArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushShapeArg">BrushShapeArg</a> getShape()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getShape()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushOriginArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushOriginArg">BrushOriginArg</a> getOrigin()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOrigin()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> getOriginRotation()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOriginRotation()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> getRotationAxis()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getRotationAxis()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushRotationArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushRotationArg">BrushRotationArg</a> getRotationAngle()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getRotationAngle()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> getMirrorAxis()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMirrorAxis()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a> getMaterial()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[] getFavoriteMaterials()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFavoriteMaterials()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMask()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMask()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMaskAbove()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskAbove()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMaskNot()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskNot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMaskBelow()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskBelow()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMaskAdjacent()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskAdjacent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> getMaskNeighbor()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskNeighbor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[] getMaskCommands()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaskCommands()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> getUseMaskCommands()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getUseMaskCommands()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> getInvertMask()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getInvertMask()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void updateArgValue(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>$Values, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>) throws <a href="ToolArgException.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.ToolArgException">ToolArgException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateArgValue()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BuilderToolBrushData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.buildertools.BuilderToolBrushData">BuilderToolBrushData</a> toPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> toPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BuilderToolStringArg.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.buildertools.BuilderToolStringArg">BuilderToolStringArg</a>[] lambda$toPacket$1(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BuilderToolBlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.buildertools.BuilderToolBlockArg">BuilderToolBlockArg</a>[] lambda$toPacket$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockPattern.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockPattern">BlockPattern</a>[] lambda$updateArgValue$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$updateArgValue$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> lambda$static$41(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$41()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$40(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$40()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> lambda$static$39(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$39()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$38(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$38()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[] lambda$static$37(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$37()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$36(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$36()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="StringArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.StringArg">StringArg</a>[] lambda$CODEC$1(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$CODEC$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$35(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$35()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$34(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$34()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$33(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$33()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$32(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$32()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$31(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$31()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$30(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$30()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$29(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$29()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$28(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$28()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$27(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$27()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$26(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$26()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a> lambda$static$25(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$25()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$24(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="MaskArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.MaskArg">MaskArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$24()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[] lambda$static$23(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$23()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$22(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$22()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>[] lambda$CODEC$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$CODEC$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a> lambda$static$21(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$21()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$20(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BlockArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BlockArg">BlockArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$20()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> lambda$static$19(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$19()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$18(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$18()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BrushRotationArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushRotationArg">BrushRotationArg</a> lambda$static$17(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$17()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$16(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BrushRotationArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushRotationArg">BrushRotationArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$16()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a> lambda$static$15(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$15()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$14(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BrushAxisArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushAxisArg">BrushAxisArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$14()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> lambda$static$13(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$13()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$12(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$12()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BrushOriginArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushOriginArg">BrushOriginArg</a> lambda$static$11(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$11()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$10(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BrushOriginArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushOriginArg">BrushOriginArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$10()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BrushShapeArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushShapeArg">BrushShapeArg</a> lambda$static$9(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$8(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BrushShapeArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BrushShapeArg">BrushShapeArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a> lambda$static$7(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$6(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="BoolArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.BoolArg">BoolArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> lambda$static$5(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$4(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> lambda$static$3(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$2(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a> lambda$static$1(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$0(<a href="BrushData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.BrushData">BrushData</a>, <a href="IntArg.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.buildertool.config.args.IntArg">IntArg</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

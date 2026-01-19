@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockSelection - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">prefab</a>
+<span class="separator">›</span>
+<a href="index.html">selection</a>
+<span class="separator">›</span>
+<a href="index.html">standard</a>
+<span class="separator">›</span>
+<span class="current">BlockSelection</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">BlockSelection</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> implements <a href="NetworkSerializable.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.io.NetworkSerializable">NetworkSerializable</a><<a href="EditorBlocksChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.EditorBlocksChange">EditorBlocksChange</a>>, <a href="MetricProvider.html" class="type-link" data-full-name="com.hypixel.hytale.metrics.MetricProvider">MetricProvider</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>BlockSelection</code> is an interface that extends <code>Object</code> and implements <code>NetworkSerializable</code>, <code>EditorBlocksChange</code> and <code>MetricProvider</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>> DEFAULT_ENTITY_CONSUMER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_ENTITY_CONSUMER</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="MetricsRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.metrics.MetricsRegistry">MetricsRegistry</a><<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>> METRICS_REGISTRY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>METRICS_REGISTRY</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> LOGGER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>LOGGER</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int x</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>x</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int y</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>y</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int z</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>z</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int anchorX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>anchorX</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int anchorY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>anchorY</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int anchorZ</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>anchorZ</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int prefabId</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>prefabId</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> min</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>min</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> max</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>max</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder> blocks</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blocks</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$FluidHolder> fluids</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fluids</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>> entities</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>entities</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.ReentrantReadWriteLock">ReentrantReadWriteLock</a> blocksLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blocksLock</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.ReentrantReadWriteLock">ReentrantReadWriteLock</a> entitiesLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>entitiesLock</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BlockSelection</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BlockSelection</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>BlockSelection</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getX()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getX()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getY()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getY()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getZ()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getZ()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getAnchorX()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAnchorX()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getAnchorY()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAnchorY()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getAnchorZ()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAnchorZ()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> getSelectionMin()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSelectionMin()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> getSelectionMax()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSelectionMax()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean hasSelectionBounds()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasSelectionBounds()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getBlockCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getFluidCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getSelectionVolume()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSelectionVolume()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getEntityCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEntityCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setPosition(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setAnchorAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setAnchorAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setAnchor(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setAnchor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setSelectionArea(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setSelectionArea()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setPrefabId(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setPrefabId()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void copyPropertiesFrom(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>copyPropertiesFrom()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canPlace(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, it.unimi.dsi.fastutil.ints.IntList)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canPlace()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean matches(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>matches()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean compare(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockComparingIterator)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>compare()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean hasBlockAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasBlockAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean hasBlockAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasBlockAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getBlockAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int getBlockAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder getBlockHolderAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockHolderAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder getBlockHolderAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockHolderAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getFluidAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int getFluidAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public byte getFluidLevelAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidLevelAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private byte getFluidLevelAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidLevelAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getSupportValueAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSupportValueAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int getSupportValueAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSupportValueAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>> getStateAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStateAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>> getStateAtLocalPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStateAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void forEachBlock(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockIterator)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachBlock()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void forEachFluid(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$FluidIterator)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachFluid()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void forEachEntity(<a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachEntity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void copyFromAtWorld(int, int, int, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, <a href="BlockPhysics.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.blocktype.component.BlockPhysics">BlockPhysics</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>copyFromAtWorld()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addEmptyAtWorldPos(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addEmptyAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addBlockAtWorldPos(int, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlockAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addBlockAtWorldPos(int, int, int, int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlockAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addBlockAtLocalPos(int, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlockAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addBlockAtLocalPos(int, int, int, int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlockAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void addBlock0(int, int, int, int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlock0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void addBlock0(int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addBlock0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addFluidAtWorldPos(int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addFluidAtWorldPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addFluidAtLocalPos(int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addFluidAtLocalPos()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void addFluid0(int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addFluid0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void addEntity0(<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addEntity0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void reserializeBlockStates(<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>reserializeBlockStates()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addEntityFromWorld(<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addEntityFromWorld()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addEntityHolderRaw(<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addEntityHolderRaw()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void sortEntitiesByPosition()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sortEntitiesByPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void placeNoReturn(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void placeNoReturn(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void placeNoReturn(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void placeNoReturn(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeBlockNoReturn(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="BlockType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType">BlockType</a>>, int, int, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeBlockNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeFluidNoReturn(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="BlockType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType">BlockType</a>>, int, int, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, byte, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeFluidNoReturn()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void clearFluidAtPosition(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clearFluidAtPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> place(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>place()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> place(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>place()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> place(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>place()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> place(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>place()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeBlock(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="BlockType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType">BlockType</a>>, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeBlock()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeFluid(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="IndexedLookupTableAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap">IndexedLookupTableAssetMap</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Fluid.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.fluid.Fluid">Fluid</a>>, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeFluid()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeEntities(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeEntities()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void placeEntities(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeEntities()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>> placeEntity(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>placeEntity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> rotate(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>rotate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> rotate(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>rotate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> rotateArbitrary(float, float, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>rotateArbitrary()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> flip(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>flip()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> relativize()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>relativize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> relativize(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>relativize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a> cloneSelection()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cloneSelection()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void add(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>add()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MetricResults.html" class="type-link" data-full-name="com.hypixel.hytale.metrics.MetricResults">MetricResults</a> toMetricResults()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toMetricResults()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EditorBlocksChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.EditorBlocksChange">EditorBlocksChange</a> toPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EditorBlocksChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.EditorBlocksChange">EditorBlocksChange</a> toSelectionPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toSelectionPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EditorBlocksChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.EditorBlocksChange">EditorBlocksChange</a> toPacketWithSelection()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacketWithSelection()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void tryFixFiller(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryFixFiller()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void reserializeEntities(<a href="Store.html" class="type-link" data-full-name="com.hypixel.hytale.component.Store">Store</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, boolean) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>reserializeEntities()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> toPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$tryFixFiller$0(int, int, int, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, boolean, <a href="BlockType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType">BlockType</a>, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$tryFixFiller$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="FluidChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.FluidChange">FluidChange</a>[] lambda$toPacket$3(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockChange.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interface_.BlockChange">BlockChange</a>[] lambda$toPacket$2(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$toPacket$1(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$toPacket$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toPacket$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$add$2(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$add$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$add$1(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$add$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$add$0(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$add$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$cloneSelection$1(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$cloneSelection$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$cloneSelection$0(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$cloneSelection$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$relativize$1(int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$relativize$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$relativize$0(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$relativize$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$flip$1(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$flip$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$flip$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$flip$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$rotateArbitrary$0(<a href="Matrix4d.html" class="type-link" data-full-name="com.hypixel.hytale.math.matrix.Matrix4d">Matrix4d</a>, float, float, float, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$rotateArbitrary$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$rotate$3(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$rotate$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$rotate$2(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3f">Vector3f</a>, <a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int, <a href="Rotation.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation">Rotation</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$rotate$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$rotate$1(<a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$rotate$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$rotate$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="Axis.html" class="type-link" data-full-name="com.hypixel.hytale.math.Axis">Axis</a>, int, <a href="Rotation.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation">Rotation</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$rotate$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$placeEntity$0(<a href="Store.html" class="type-link" data-full-name="com.hypixel.hytale.component.Store">Store</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeEntity$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$place$9(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$place$8(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$place$7(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="IndexedLookupTableAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.IndexedLookupTableAssetMap">IndexedLookupTableAssetMap</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$FluidHolder, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$place$6(<a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$5(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$4(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$3(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$2(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$1(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$place$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$place$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$placeNoReturn$9(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$placeNoReturn$8(<a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$placeNoReturn$7(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a>, int, <a href="#" class="type-link" data-full-name="java.util.concurrent.atomic.AtomicInteger">AtomicInteger</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$FluidHolder, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$placeNoReturn$6(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CommandSender.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.command.system.CommandSender">CommandSender</a>, <a href="FeedbackConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.FeedbackConsumer">FeedbackConsumer</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockMask.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.mask.BlockMask">BlockMask</a>, it.unimi.dsi.fastutil.longs.LongSet, <a href="BlockTypeAssetMap.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.map.BlockTypeAssetMap">BlockTypeAssetMap</a>, int, <a href="#" class="type-link" data-full-name="java.util.concurrent.atomic.AtomicInteger">AtomicInteger</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder, long, <a href="WorldChunk.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk">WorldChunk</a>, int, int, int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$5(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$4(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$3(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$2(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$1(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lambda$placeNoReturn$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$placeNoReturn$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static int lambda$sortEntitiesByPosition$0(<a href="ComponentType.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentType">ComponentType</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$sortEntitiesByPosition$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder lambda$reserializeBlockStates$0(<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>, boolean, <a href="#" class="type-link" data-full-name="java.lang.Long">Long</a>, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$reserializeBlockStates$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$forEachFluid$0(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$FluidIterator, it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$forEachFluid$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$forEachBlock$0(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockIterator, it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$forEachBlock$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$matches$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$matches$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$canPlace$0(<a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a>, <a href="World.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.World">World</a>, it.unimi.dsi.fastutil.ints.IntList, int, int, int, <a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>$BlockHolder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canPlace$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> lambda$static$4(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3i.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3i">Vector3i</a> lambda$static$3(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$2(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$1(<a href="BlockSelection.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.prefab.selection.standard.BlockSelection">BlockSelection</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$0(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

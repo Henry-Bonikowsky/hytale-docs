@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectileComponent - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">entity</a>
+<span class="separator">›</span>
+<a href="index.html">entities</a>
+<span class="separator">›</span>
+<span class="current">ProjectileComponent</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">ProjectileComponent</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> implements <a href="Component.html" class="type-link" data-full-name="com.hypixel.hytale.component.Component">Component</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>ProjectileComponent</code> is a class that extends <code>Object</code> and implements <code>Component</code> and <code>EntityStore</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>> CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final double DEFAULT_DESPAWN_SECONDS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_DESPAWN_SECONDS</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private transient <a href="SimplePhysicsProvider.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.physics.SimplePhysicsProvider">SimplePhysicsProvider</a> simplePhysicsProvider</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>simplePhysicsProvider</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private transient <a href="#" class="type-link" data-full-name="java.lang.String">String</a> appearance</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>appearance</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private transient <a href="Projectile.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.projectile.config.Projectile">Projectile</a> projectile</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>projectile</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> projectileAssetName</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>projectileAssetName</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private float brokenDamageModifier</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>brokenDamageModifier</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private double deadTimer</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>deadTimer</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a> creatorUuid</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>creatorUuid</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean haveHit</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>haveHit</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> lastBouncePosition</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lastBouncePosition</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>ProjectileComponent</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>ProjectileComponent</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>ProjectileComponent</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="ComponentType.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentType">ComponentType</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>, <a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>> getComponentType()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getComponentType()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>> assembleDefaultProjectile(<a href="TimeResource.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.time.TimeResource">TimeResource</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>assembleDefaultProjectile()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean initialize()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initialize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void initializePhysics(<a href="BoundingBox.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.entity.component.BoundingBox">BoundingBox</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initializePhysics()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void onProjectileBounce(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onProjectileBounce()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onProjectileHitEvent(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onProjectileHitEvent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean consumeDeadTimer(float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>consumeDeadTimer()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void bounceHandler(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>bounceHandler()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void impactHandler(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>impactHandler()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onProjectileMissEvent(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onProjectileMissEvent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void onProjectileDeath(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onProjectileDeath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void shoot(<a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, double, double, double, float, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>shoot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void computeStartOffset(boolean, double, double, double, float, float, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>computeStartOffset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isOnGround()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isOnGround()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Projectile.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.projectile.config.Projectile">Projectile</a> getProjectile()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getProjectile()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getAppearance()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAppearance()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getProjectileAssetName()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getProjectileAssetName()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SimplePhysicsProvider.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.physics.SimplePhysicsProvider">SimplePhysicsProvider</a> getSimplePhysicsProvider()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSimplePhysicsProvider()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void applyBrokenPenalty(float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>applyBrokenPenalty()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Component.html" class="type-link" data-full-name="com.hypixel.hytale.component.Component">Component</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>> clone()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> clone() throws <a href="#" class="type-link" data-full-name="java.lang.CloneNotSupportedException">CloneNotSupportedException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> lambda$static$17(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$17()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$16(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$16()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$15(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$15()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$14(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$14()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$13(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$13()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$12(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$12()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> lambda$static$11(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$11()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$10(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$10()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$9(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$8(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a> lambda$static$7(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$6(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$5(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$4(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$3(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$2(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$1(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$0(<a href="ProjectileComponent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.entities.ProjectileComponent">ProjectileComponent</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

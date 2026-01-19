@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItemContainer - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">inventory</a>
+<span class="separator">›</span>
+<a href="index.html">container</a>
+<span class="separator">›</span>
+<span class="current">ItemContainer</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">ItemContainer</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> <span class="modifier abstract">abstract</span> class <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>ItemContainer</code> is an abstract class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="CodecMapCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.lookup.CodecMapCodec">CodecMapCodec</a><<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>> CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final boolean DEFAULT_ADD_ALL_OR_NOTHING</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_ADD_ALL_OR_NOTHING</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final boolean DEFAULT_REMOVE_ALL_OR_NOTHING</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_REMOVE_ALL_OR_NOTHING</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final boolean DEFAULT_FULL_STACKS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_FULL_STACKS</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final boolean DEFAULT_EXACT_AMOUNT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_EXACT_AMOUNT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final boolean DEFAULT_FILTER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_FILTER</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> LOGGER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>LOGGER</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="SyncEventBusRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.event.SyncEventBusRegistry">SyncEventBusRegistry</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>$ItemContainerChangeEvent> externalChangeEventRegistry</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>externalChangeEventRegistry</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="SyncEventBusRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.event.SyncEventBusRegistry">SyncEventBusRegistry</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>$ItemContainerChangeEvent> internalChangeEventRegistry</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internalChangeEventRegistry</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>ItemContainer</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract short getCapacity()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCapacity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract void setGlobalFilter(<a href="FilterType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.filter.FilterType">FilterType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setGlobalFilter()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract void setSlotFilter(<a href="FilterActionType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.filter.FilterActionType">FilterActionType</a>, short, <a href="SlotFilter.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.filter.SlotFilter">SlotFilter</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setSlotFilter()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public abstract <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a> clone()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <V extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> V readAction(<a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><V>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readAction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <X extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, V extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> V readAction(<a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><X, V>, X)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readAction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <V extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> V writeAction(<a href="#" class="type-link" data-full-name="java.util.function.Supplier">Supplier</a><V>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeAction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <X extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>, V extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> V writeAction(<a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><X, V>, X)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeAction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <a href="ClearTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ClearTransaction">ClearTransaction</a> internal_clear()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_clear()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a> internal_getSlot(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_getSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a> internal_setSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_setSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a> internal_removeSlot(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_removeSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract boolean cantAddToSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cantAddToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract boolean cantRemoveFromSlot(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cantRemoveFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract boolean cantDropFromSlot(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cantDropFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier abstract">abstract</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected abstract boolean cantMoveToSlot(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cantMoveToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="InventorySection.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InventorySection">InventorySection</a> toPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>, <a href="ItemWithAllMetadata.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemWithAllMetadata">ItemWithAllMetadata</a>> toProtocolMap()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toProtocolMap()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EventRegistration.html" class="type-link" data-full-name="com.hypixel.hytale.event.EventRegistration">EventRegistration</a> registerChangeEvent(<a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>$ItemContainerChangeEvent>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>registerChangeEvent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EventRegistration.html" class="type-link" data-full-name="com.hypixel.hytale.event.EventRegistration">EventRegistration</a> registerChangeEvent(<a href="EventPriority.html" class="type-link" data-full-name="com.hypixel.hytale.event.EventPriority">EventPriority</a>, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>$ItemContainerChangeEvent>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>registerChangeEvent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="EventRegistration.html" class="type-link" data-full-name="com.hypixel.hytale.event.EventRegistration">EventRegistration</a> registerChangeEvent(short, <a href="#" class="type-link" data-full-name="java.util.function.Consumer">Consumer</a><<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>$ItemContainerChangeEvent>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>registerChangeEvent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ClearTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ClearTransaction">ClearTransaction</a> clear()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clear()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canAddItemStackToSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAddItemStackToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> addItemStackToSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStackToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> addItemStackToSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStackToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> setItemStackForSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setItemStackForSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> setItemStackForSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setItemStackForSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a> getItemStack(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> replaceItemStackInSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>replaceItemStackInSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> replaceAll(<a href="SlotReplacementFunction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SlotReplacementFunction">SlotReplacementFunction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>replaceAll()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> replaceAll(<a href="SlotReplacementFunction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SlotReplacementFunction">SlotReplacementFunction</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>replaceAll()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> internal_replaceItemStack(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_replaceItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a> removeItemStackFromSlot(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a> removeItemStackFromSlot(short, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> removeItemStackFromSlot(short, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> removeItemStackFromSlot(short, int, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> internal_removeItemStack(short, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_removeItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> removeItemStackFromSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> removeItemStackFromSlot(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, int, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaterialSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction">MaterialSlotTransaction</a> removeMaterialFromSlot(short, <a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterialFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaterialSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction">MaterialSlotTransaction</a> removeMaterialFromSlot(short, <a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterialFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ResourceSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceSlotTransaction">ResourceSlotTransaction</a> removeResourceFromSlot(short, <a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResourceFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ResourceSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceSlotTransaction">ResourceSlotTransaction</a> removeResourceFromSlot(short, <a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResourceFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="TagSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.TagSlotTransaction">TagSlotTransaction</a> removeTagFromSlot(short, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeTagFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="TagSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.TagSlotTransaction">TagSlotTransaction</a> removeTagFromSlot(short, int, int, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeTagFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> moveItemStackFromSlot(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> moveItemStackFromSlot(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> moveItemStackFromSlot(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> internal_moveItemStackFromSlot(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> moveItemStackFromSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> moveItemStackFromSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> internal_moveItemStackFromSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveItemStackFromSlot(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveItemStackFromSlot(short, boolean, boolean, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> internal_moveItemStackFromSlot(short, boolean, boolean, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveItemStackFromSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveItemStackFromSlot(short, int, boolean, boolean, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> internal_moveItemStackFromSlot(short, int, boolean, boolean, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> moveItemStackFromSlotToSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlotToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> moveItemStackFromSlotToSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveItemStackFromSlotToSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> internal_moveItemStackFromSlot(short, int, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveItemStackFromSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveAllItemStacksTo(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveAllItemStacksTo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> moveAllItemStacksTo(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>moveAllItemStacksTo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> internal_moveAllItemStacksTo(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_moveAllItemStacksTo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>>> quickStackTo(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>quickStackTo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>>> combineItemStacksIntoSlot(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>combineItemStacksIntoSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>>> internal_combineItemStacksIntoSlot(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_combineItemStacksIntoSlot()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>>> swapItems(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>swapItems()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>>> internal_swapItems(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_swapItems()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> internal_swapItems(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_swapItems()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canAddItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAddItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canAddItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAddItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a> addItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a> addItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canAddItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAddItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canAddItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAddItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> addItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> addItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> addItemStacksOrdered(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacksOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> addItemStacksOrdered(short, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacksOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> addItemStacksOrdered(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacksOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a>> addItemStacksOrdered(short, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addItemStacksOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a> removeItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a> removeItemStack(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> removeItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ItemStackTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction">ItemStackTransaction</a>> removeItemStacks(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveTag(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveTag()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveTag(int, int, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveTag()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="TagTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.TagTransaction">TagTransaction</a> removeTag(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeTag()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="TagTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.TagTransaction">TagTransaction</a> removeTag(int, int, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeTag()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveResource(<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveResource()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveResource(<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveResource()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ResourceTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceTransaction">ResourceTransaction</a> removeResource(<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResource()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ResourceTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceTransaction">ResourceTransaction</a> removeResource(<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResource()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveResources(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveResources()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveResources(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveResources()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ResourceTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceTransaction">ResourceTransaction</a>> removeResources(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResources()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="ResourceTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ResourceTransaction">ResourceTransaction</a>> removeResources(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeResources()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveMaterial(<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveMaterial(<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaterialTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction">MaterialTransaction</a> removeMaterial(<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaterialTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction">MaterialTransaction</a> removeMaterial(<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveMaterials(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveMaterials()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRemoveMaterials(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRemoveMaterials()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="TestRemoveItemSlotResult.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.TestRemoveItemSlotResult">TestRemoveItemSlotResult</a>> getSlotMaterialsToRemove(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSlotMaterialsToRemove()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MaterialTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction">MaterialTransaction</a>> removeMaterials(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterials()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MaterialTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialTransaction">MaterialTransaction</a>> removeMaterials(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterials()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MaterialSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction">MaterialSlotTransaction</a>> removeMaterialsOrdered(short, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterialsOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MaterialSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction">MaterialSlotTransaction</a>> removeMaterialsOrdered(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterialsOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="MaterialSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MaterialSlotTransaction">MaterialSlotTransaction</a>> removeMaterialsOrdered(short, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>>, boolean, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeMaterialsOrdered()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isEmpty()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isEmpty()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int countItemStacks(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>countItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean containsItemStacksStackableWith(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>containsItemStacksStackableWith()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void forEach(<a href="ShortObjectConsumer.html" class="type-link" data-full-name="com.hypixel.hytale.function.consumer.ShortObjectConsumer">ShortObjectConsumer</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEach()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> void forEachWithMeta(com.hypixel.fastutil.shorts.Short2ObjectConcurrentHashMap$ShortBiObjConsumer<<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, T>, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachWithMeta()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>> removeAllItemStacks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeAllItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>> dropAllItemStacks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>dropAllItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>> dropAllItemStacks(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>dropAllItemStacks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> sortItems(<a href="SortType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SortType">SortType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sortItems()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a><<a href="SlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction">SlotTransaction</a>> internal_sortItems(<a href="SortType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SortType">SortType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>internal_sortItems()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void sendUpdate(<a href="Transaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.Transaction">Transaction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendUpdate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean containsContainer(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>containsContainer()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void doMigration(<a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>doMigration()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="ItemResourceType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemResourceType">ItemResourceType</a> getMatchingResourceType(<a href="Item.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.item.config.Item">Item</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMatchingResourceType()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void validateQuantity(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validateQuantity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void validateSlotIndex(short, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validateSlotIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>> T copy(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, T, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>copy()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <T extends <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>> T ensureContainerCapacity(T, short, com.hypixel.fastutil.shorts.Short2ObjectConcurrentHashMap$ShortFunction<T>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ensureContainerCapacity()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a> getNewContainer(short, com.hypixel.fastutil.shorts.Short2ObjectConcurrentHashMap$ShortFunction<<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getNewContainer()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> clone() throws <a href="#" class="type-link" data-full-name="java.lang.CloneNotSupportedException">CloneNotSupportedException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$copy$0(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a>, short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$copy$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> lambda$doMigration$0(<a href="#" class="type-link" data-full-name="java.util.function.Function">Function</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$doMigration$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$internal_sortItems$0(<a href="SortType.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SortType">SortType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_sortItems$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$dropAllItemStacks$0(boolean, <a href="#" class="type-link" data-full-name="java.util.List">List</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$dropAllItemStacks$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$removeAllItemStacks$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$removeAllItemStacks$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$containsItemStacksStackableWith$0(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$containsItemStacksStackableWith$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$countItemStacks$0(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$countItemStacks$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$isEmpty$0()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$isEmpty$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.List">List</a> lambda$getSlotMaterialsToRemove$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean, <a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getSlotMaterialsToRemove$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveMaterials$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveMaterials$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveMaterial$0(<a href="MaterialQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.MaterialQuantity">MaterialQuantity</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveMaterial$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveResources$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveResources$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveResource$0(<a href="ResourceQuantity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ResourceQuantity">ResourceQuantity</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveResource$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveTag$0(int, int, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveTag$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveItemStacks$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveItemStacks$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canRemoveItemStack$0(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canRemoveItemStack$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canAddItemStacks$0(<a href="#" class="type-link" data-full-name="java.util.List">List</a>, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canAddItemStacks$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canAddItemStack$0(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, boolean, int, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canAddItemStack$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$internal_swapItems$0(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, short, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_swapItems$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$internal_swapItems$1(short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_swapItems$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$internal_combineItemStacksIntoSlot$0(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_combineItemStacksIntoSlot$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static boolean lambda$quickStackTo$0(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>[], <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$quickStackTo$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$internal_moveAllItemStacksTo$0(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a>, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveAllItemStacksTo$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$4(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, short, int, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$5(boolean, short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, int, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$2(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, short, int, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$3(boolean, short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, int, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$0(<a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean, short, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="MoveTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction">MoveTransaction</a> lambda$internal_moveItemStackFromSlot$1(boolean, short, <a href="ItemContainer.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.ItemContainer">ItemContainer</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_moveItemStackFromSlot$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ItemStackSlotTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ItemStackSlotTransaction">ItemStackSlotTransaction</a> lambda$internal_replaceItemStack$0(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$internal_replaceItemStack$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ListTransaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.transaction.ListTransaction">ListTransaction</a> lambda$replaceAll$0(boolean, <a href="SlotReplacementFunction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.container.SlotReplacementFunction">SlotReplacementFunction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$replaceAll$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a> lambda$getItemStack$0(short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$getItemStack$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$canAddItemStackToSlot$0(<a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, short, boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$canAddItemStackToSlot$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$toProtocolMap$0(short, <a href="ItemStack.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.inventory.ItemStack">ItemStack</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$toProtocolMap$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

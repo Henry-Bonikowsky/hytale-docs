@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollisionResult - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">modules</a>
+<span class="separator">›</span>
+<a href="index.html">collision</a>
+<span class="separator">›</span>
+<span class="current">CollisionResult</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">CollisionResult</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="CollisionResult.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionResult">CollisionResult</a> implements <a href="BoxBlockIterator.html" class="type-link" data-full-name="com.hypixel.hytale.math.iterator.BoxBlockIterator">BoxBlockIterator</a>$BoxIterationConsumer</code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>CollisionResult</code> is a class that implements <code>BoxBlockIterator</code> and <code>BoxIterationConsumer</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.util.Comparator">Comparator</a><<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>> BLOCK_COLLISION_DATA_COMPARATOR</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>BLOCK_COLLISION_DATA_COMPARATOR</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CollisionConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionConfig">CollisionConfig</a> collisionConfig</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>collisionConfig</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CollisionDataArray.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionDataArray">CollisionDataArray</a><<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>> blockCollisions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blockCollisions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CollisionDataArray.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionDataArray">CollisionDataArray</a><<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>> blockSlides</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blockSlides</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CollisionDataArray.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionDataArray">CollisionDataArray</a><<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>> blockTriggers</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blockTriggers</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CollisionDataArray.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionDataArray">CollisionDataArray</a><<a href="CharacterCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CharacterCollisionData">CharacterCollisionData</a>> characterCollisions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>characterCollisions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="MovingBoxBoxCollisionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.MovingBoxBoxCollisionEvaluator">MovingBoxBoxCollisionEvaluator</a> movingBoxBoxCollision</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>movingBoxBoxCollision</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="BoxBlockIntersectionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BoxBlockIntersectionEvaluator">BoxBlockIntersectionEvaluator</a> boxBlockIntersection</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>boxBlockIntersection</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="Entity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.Entity">Entity</a>> collisionEntities</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>collisionEntities</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean continueAfterCollision</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>continueAfterCollision</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean haveNoCollision</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>haveNoCollision</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> logger</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>logger</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double slideStart</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>slideStart</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double slideEnd</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>slideEnd</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isSliding</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isSliding</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int validate</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>validate</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean checkForCharacterCollisions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>checkForCharacterCollisions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int walkableMaterialMask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkableMaterialMask</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="CollisionConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionConfig">CollisionConfig</a>> isNonWalkable</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isNonWalkable</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private it.unimi.dsi.fastutil.longs.LongSet lastTriggers</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lastTriggers</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private it.unimi.dsi.fastutil.longs.LongSet newTriggers</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>newTriggers</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CollisionResult.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionResult">CollisionResult</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>CollisionResult</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CollisionResult.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionResult">CollisionResult</a>(boolean, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>CollisionResult</code>.</p>
+                    </div>
+
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void processCollisionResult(boolean, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>CollisionResult</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CollisionConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionConfig">CollisionConfig</a> getConfig()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getConfig()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="Entity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.Entity">Entity</a>> getCollisionEntities()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCollisionEntities()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setCollisionEntities(<a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="Entity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.Entity">Entity</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setCollisionEntities()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BoxBlockIntersectionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BoxBlockIntersectionEvaluator">BoxBlockIntersectionEvaluator</a> getBoxBlockIntersection()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBoxBlockIntersection()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MovingBoxBoxCollisionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.MovingBoxBoxCollisionEvaluator">MovingBoxBoxCollisionEvaluator</a> getMovingBoxBoxCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMovingBoxBoxCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CharacterCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CharacterCollisionData">CharacterCollisionData</a> allocCharacterCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>allocCharacterCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addCollision(<a href="IBlockCollisionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.IBlockCollisionEvaluator">IBlockCollisionEvaluator</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> newCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>newCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addSlide(<a href="IBlockCollisionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.IBlockCollisionEvaluator">IBlockCollisionEvaluator</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addSlide()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> newSlide()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>newSlide()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void addTrigger(<a href="IBlockCollisionEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.IBlockCollisionEvaluator">IBlockCollisionEvaluator</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addTrigger()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> newTrigger()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>newTrigger()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void reset()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>reset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void process()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>process()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getBlockCollisionCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockCollisionCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> getBlockCollision(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> getFirstBlockCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFirstBlockCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a> forgetFirstBlockCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forgetFirstBlockCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getCharacterCollisionCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCharacterCollisionCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CharacterCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CharacterCollisionData">CharacterCollisionData</a> getFirstCharacterCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFirstCharacterCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CharacterCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CharacterCollisionData">CharacterCollisionData</a> forgetFirstCharacterCollision()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forgetFirstCharacterCollision()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void pruneTriggerBlocks(double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>pruneTriggerBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CollisionDataArray.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionDataArray">CollisionDataArray</a><<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>> getTriggerBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getTriggerBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int defaultTriggerBlocksProcessing(<a href="InteractionManager.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionManager">InteractionManager</a>, <a href="Entity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.Entity">Entity</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, boolean, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>defaultTriggerBlocksProcessing()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void doCollisionInteraction(<a href="InteractionManager.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionManager">InteractionManager</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="BlockPosition.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.BlockPosition">BlockPosition</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>doCollisionInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean next()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>next()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean accept(long, long, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>accept()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void iterateBlocks(<a href="Box.html" class="type-link" data-full-name="com.hypixel.hytale.math.shape.Box">Box</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, double, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>iterateBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void acquireCollisionModule()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>acquireCollisionModule()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void disableSlides()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>disableSlides()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void enableSlides()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>enableSlides()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void disableCharacterCollisions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>disableCharacterCollisions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void enableCharacterCollsions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>enableCharacterCollsions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isCheckingForCharacterCollisions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isCheckingForCharacterCollisions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void enableTriggerBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>enableTriggerBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void disableTriggerBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>disableTriggerBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isCheckingTriggerBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isCheckingTriggerBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void enableDamageBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>enableDamageBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void disableDamageBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>disableDamageBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isCheckingDamageBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isCheckingDamageBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean setDamageBlocking(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDamageBlocking()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isDamageBlocking()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isDamageBlocking()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setCollisionByMaterial(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setCollisionByMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setCollisionByMaterial(int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setCollisionByMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getCollisionByMaterial()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCollisionByMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultCollisionBehaviour()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultCollisionBehaviour()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultBlockCollisionPredicate()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultBlockCollisionPredicate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultNonWalkablePredicate()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultNonWalkablePredicate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setNonWalkablePredicate(<a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="CollisionConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionConfig">CollisionConfig</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setNonWalkablePredicate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setWalkableByMaterial(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setWalkableByMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void updateDamageWalkableFlag()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateDamageWalkableFlag()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultWalkableBehaviour()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultWalkableBehaviour()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultPlayerSettings()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultPlayerSettings()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isComputeOverlaps()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isComputeOverlaps()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setComputeOverlaps(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setComputeOverlaps()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> getLogger()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLogger()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean shouldLog()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>shouldLog()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setLogger(<a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setLogger()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$setDefaultNonWalkablePredicate$0(<a href="CollisionConfig.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.CollisionConfig">CollisionConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$setDefaultNonWalkablePredicate$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static double lambda$static$1(<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static double lambda$static$0(<a href="BlockCollisionData.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.collision.BlockCollisionData">BlockCollisionData</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

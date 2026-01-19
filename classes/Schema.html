@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schema - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">codec</a>
+<span class="separator">›</span>
+<a href="index.html">schema</a>
+<span class="separator">›</span>
+<a href="index.html">config</a>
+<span class="separator">›</span>
+<span class="current">Schema</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">Schema</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>Schema</code> is a class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ObjectCodecMapCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.lookup.ObjectCodecMapCodec">ObjectCodecMapCodec</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ArrayCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.array.ArrayCodec">ArrayCodec</a><<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> ARRAY_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ARRAY_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> BASE_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>BASE_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> id</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>id</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] types</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>types</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> title</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>title</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> description</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>description</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> markdownDescription</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>markdownDescription</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] anyOf</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>anyOf</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] oneOf</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>oneOf</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] allOf</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>allOf</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> not</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>not</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] required</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>required</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] enumDescriptions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>enumDescriptions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] markdownEnumDescriptions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>markdownEnumDescriptions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> definitions</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>definitions</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> ref</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ref</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> data</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>data</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private org.bson.BsonDocument default_</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>default_</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> if_</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>if_</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> then</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>then</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> else_</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>else_</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$HytaleMetadata hytale</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hytale</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$InheritSettings hytaleParent</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hytaleParent</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$SchemaTypeField hytaleSchemaTypeField</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hytaleSchemaTypeField</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> hytaleAssetRef</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hytaleAssetRef</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.String">String</a> hytaleCustomAssetRef</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hytaleCustomAssetRef</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> doNotSuggest</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>doNotSuggest</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>Schema</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getId()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getId()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setId(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setId()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] getTypes()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getTypes()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setTypes(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setTypes()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getTitle()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getTitle()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setTitle(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setTitle()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getDescription()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDescription(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getMarkdownDescription()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMarkdownDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setMarkdownDescription(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setMarkdownDescription()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] getEnumDescriptions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEnumDescriptions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setEnumDescriptions(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setEnumDescriptions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] getMarkdownEnumDescriptions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMarkdownEnumDescriptions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setMarkdownEnumDescriptions(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setMarkdownEnumDescriptions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] getAnyOf()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAnyOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setAnyOf(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setAnyOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] getOneOf()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOneOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setOneOf(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setOneOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] getAllOf()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAllOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setAllOf(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setAllOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] getRequired()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getRequired()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setRequired(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setRequired()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public org.bson.BsonDocument getDefaultRaw()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDefaultRaw()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefaultRaw(org.bson.BsonDocument)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefaultRaw()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> getDefinitions()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDefinitions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDefinitions(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDefinitions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getRef()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setRef(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getData()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getData()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setData(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setData()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> getIf()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getIf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setIf(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setIf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> getThen()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getThen()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setThen(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setThen()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> getElse()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getElse()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setElse(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setElse()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setElse(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setElse()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> isDoNotSuggest()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isDoNotSuggest()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setDoNotSuggest(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setDoNotSuggest()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$HytaleMetadata getHytale()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytale()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$HytaleMetadata getHytale(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytale()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getHytaleAssetRef()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytaleAssetRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setHytaleAssetRef(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setHytaleAssetRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$InheritSettings getHytaleParent()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytaleParent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setHytaleParent(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$InheritSettings)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setHytaleParent()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$SchemaTypeField getHytaleSchemaTypeField()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytaleSchemaTypeField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setHytaleSchemaTypeField(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$SchemaTypeField)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setHytaleSchemaTypeField()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getHytaleCustomAssetRef()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHytaleCustomAssetRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setHytaleCustomAssetRef(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setHytaleCustomAssetRef()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> ref(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ref()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> data(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>data()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> anyOf(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>...)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>anyOf()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> not(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>not()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean equals(<a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>equals()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int hashCode()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashCode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void init()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>init()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$HytaleMetadata lambda$static$49(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$49()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$48(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$HytaleMetadata)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$48()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$SchemaTypeField lambda$static$47(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$47()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$46(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$SchemaTypeField)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$46()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$InheritSettings lambda$static$45(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$45()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$44(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>$InheritSettings)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$44()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$43(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$43()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$42(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$42()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$41(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$41()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$40(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$40()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$39(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$39()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$38(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$38()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$37(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$37()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$36(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$36()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$35(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$35()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$34(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$34()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Map">Map</a> lambda$static$33(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$33()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$32(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$32()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static org.bson.BsonDocument lambda$static$31(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$31()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$30(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, org.bson.BsonDocument)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$30()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] lambda$static$29(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$29()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$28(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$28()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> lambda$static$27(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$27()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$26(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$26()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> lambda$static$25(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$25()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$24(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$24()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> lambda$static$23(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$23()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$22(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$22()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> lambda$static$21(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$21()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$20(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$20()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] lambda$static$19(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$19()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$18(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$18()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] lambda$static$17(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$17()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$16(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$16()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] lambda$static$15(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$15()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$14(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$14()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] lambda$static$13(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$13()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$12(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$12()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] lambda$static$11(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$11()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$10(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$10()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$9(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$8(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$7(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$6(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$5(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$4(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] lambda$static$3(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$2(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$1(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$0(<a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>[] lambda$ARRAY_CODEC$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$ARRAY_CODEC$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtocolCodecs - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">codec</a>
+<span class="separator">›</span>
+<span class="current">ProtocolCodecs</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">ProtocolCodecs</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> <span class="modifier final">final</span> class <a href="ProtocolCodecs.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.codec.ProtocolCodecs">ProtocolCodecs</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>ProtocolCodecs</code> is a final class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>> DIRECTION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DIRECTION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>> VECTOR2F</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>VECTOR2F</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>> VECTOR3F</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>VECTOR3F</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>> COLOR_LIGHT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>COLOR_LIGHT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ColorCodec.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.codec.protocol.ColorCodec">ColorCodec</a> COLOR</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>COLOR</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ArrayCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.array.ArrayCodec">ArrayCodec</a><<a href="Color.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Color">Color</a>> COLOR_ARRAY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>COLOR_ARRAY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ColorAlphaCodec.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.codec.protocol.ColorAlphaCodec">ColorAlphaCodec</a> COLOR_AlPHA</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>COLOR_AlPHA</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="GameMode.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.GameMode">GameMode</a>> GAMEMODE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>GAMEMODE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="GameMode.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.GameMode">GameMode</a>> GAMEMODE_LEGACY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>GAMEMODE_LEGACY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Size.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Size">Size</a>> SIZE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SIZE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Range.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Range">Range</a>> RANGE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RANGE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Rangeb.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangeb">Rangeb</a>> RANGEB</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RANGEB</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>> RANGEF</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RANGEF</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="RangeVector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector2f">RangeVector2f</a>> RANGE_VECTOR2F</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RANGE_VECTOR2F</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>> RANGE_VECTOR3F</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RANGE_VECTOR3F</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>> INITIAL_VELOCITY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INITIAL_VELOCITY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>> UV_MOTION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>UV_MOTION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="IntersectionHighlight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.IntersectionHighlight">IntersectionHighlight</a>> INTERSECTION_HIGHLIGHT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INTERSECTION_HIGHLIGHT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="SavedMovementStates.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.SavedMovementStates">SavedMovementStates</a>> SAVED_MOVEMENT_STATES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SAVED_MOVEMENT_STATES</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>> CONTEXT_MENU_ITEM</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CONTEXT_MENU_ITEM</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ArrayCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.array.ArrayCodec">ArrayCodec</a><<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>> CONTEXT_MENU_ITEM_ARRAY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CONTEXT_MENU_ITEM_ARRAY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>> MARKER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MARKER</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="ArrayCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.array.ArrayCodec">ArrayCodec</a><<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>> MARKER_ARRAY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MARKER_ARRAY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>> ITEM_ANIMATION_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ITEM_ANIMATION_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="ChangeStatBehaviour.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ChangeStatBehaviour">ChangeStatBehaviour</a>> CHANGE_STAT_BEHAVIOUR_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CHANGE_STAT_BEHAVIOUR_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="AccumulationMode.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.AccumulationMode">AccumulationMode</a>> ACCUMULATION_MODE_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ACCUMULATION_MODE_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="EasingType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.EasingType">EasingType</a>> EASING_TYPE_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EASING_TYPE_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="EnumCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.codecs.EnumCodec">EnumCodec</a><<a href="ChangeVelocityType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ChangeVelocityType">ChangeVelocityType</a>> CHANGE_VELOCITY_TYPE_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CHANGE_VELOCITY_TYPE_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>> RAIL_POINT_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RAIL_POINT_CODEC</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="BuilderCodec.html" class="type-link" data-full-name="com.hypixel.hytale.codec.builder.BuilderCodec">BuilderCodec</a><<a href="RailConfig.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailConfig">RailConfig</a>> RAIL_CONFIG_CODEC</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>RAIL_CONFIG_CODEC</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ProtocolCodecs.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.codec.ProtocolCodecs">ProtocolCodecs</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>ProtocolCodecs</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$124(<a href="RailConfig.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailConfig">RailConfig</a>, <a href="RailConfig.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailConfig">RailConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$124()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>[] lambda$static$123(<a href="RailConfig.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailConfig">RailConfig</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$123()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$122(<a href="RailConfig.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailConfig">RailConfig</a>, <a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$122()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>[] lambda$RAIL_CONFIG_CODEC$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$RAIL_CONFIG_CODEC$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$121(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$121()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$120(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>, <a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$120()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a> lambda$static$119(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$119()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$118(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$118()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$117(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>, <a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$117()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a> lambda$static$116(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$116()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$115(<a href="RailPoint.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RailPoint">RailPoint</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$115()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$114(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$114()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$113(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$113()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$112(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$112()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$111(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$111()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$110(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$110()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$109(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$109()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$108(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$108()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$107(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$107()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$106(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$106()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$105(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$105()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$104(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$104()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$103(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$103()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$102(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$102()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$101(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$101()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$100(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$100()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$99(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$99()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$98(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$98()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$97(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$97()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$96(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$96()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$95(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$95()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$94(<a href="ItemAnimation.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ItemAnimation">ItemAnimation</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$94()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>[] lambda$MARKER_ARRAY$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$MARKER_ARRAY$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>[] lambda$static$93(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$93()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$92(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>, <a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$92()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Transform.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Transform">Transform</a> lambda$static$91(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$91()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$90(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>, <a href="Transform.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Transform">Transform</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$90()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$89(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$89()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$88(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$88()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$87(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$87()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$86(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$86()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$85(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$85()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$84(<a href="MapMarker.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.MapMarker">MapMarker</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$84()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>[] lambda$CONTEXT_MENU_ITEM_ARRAY$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$CONTEXT_MENU_ITEM_ARRAY$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$83(<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$83()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$82(<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$82()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$81(<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$81()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$80(<a href="ContextMenuItem.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.worldmap.ContextMenuItem">ContextMenuItem</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$80()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$79(<a href="SavedMovementStates.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.SavedMovementStates">SavedMovementStates</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$79()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$78(<a href="SavedMovementStates.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.SavedMovementStates">SavedMovementStates</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$78()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Color.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Color">Color</a> lambda$static$77(<a href="IntersectionHighlight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.IntersectionHighlight">IntersectionHighlight</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$77()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$76(<a href="IntersectionHighlight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.IntersectionHighlight">IntersectionHighlight</a>, <a href="Color.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Color">Color</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$76()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$75(<a href="IntersectionHighlight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.IntersectionHighlight">IntersectionHighlight</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$75()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$74(<a href="IntersectionHighlight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.IntersectionHighlight">IntersectionHighlight</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$74()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$73(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$73()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$72(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$72()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="UVMotionCurveType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotionCurveType">UVMotionCurveType</a> lambda$static$71(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$71()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$70(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="UVMotionCurveType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotionCurveType">UVMotionCurveType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$70()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$69(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$69()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$68(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$68()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$67(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$67()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$66(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$66()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$65(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$65()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$64(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$64()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a> lambda$static$63(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$63()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$62(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.Boolean">Boolean</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$62()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> lambda$static$61(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$61()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$60(<a href="UVMotion.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.UVMotion">UVMotion</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$60()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$59(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$59()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$58(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$58()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$57(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$57()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$56(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$56()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$55(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$55()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$54(<a href="InitialVelocity.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InitialVelocity">InitialVelocity</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$54()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$53(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$53()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$52(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$52()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$51(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$51()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$50(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$50()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$49(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$49()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$48(<a href="RangeVector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector3f">RangeVector3f</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$48()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$47(<a href="RangeVector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector2f">RangeVector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$47()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$46(<a href="RangeVector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector2f">RangeVector2f</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$46()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a> lambda$static$45(<a href="RangeVector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector2f">RangeVector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$45()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$44(<a href="RangeVector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.RangeVector2f">RangeVector2f</a>, <a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$44()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$43(<a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$43()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$42(<a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$42()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a> lambda$static$41(<a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$41()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$40(<a href="Rangef.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangef">Rangef</a>, <a href="#" class="type-link" data-full-name="java.lang.Double">Double</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$40()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a> lambda$static$39(<a href="Rangeb.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangeb">Rangeb</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$39()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$38(<a href="Rangeb.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangeb">Rangeb</a>, <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$38()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a> lambda$static$37(<a href="Rangeb.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangeb">Rangeb</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$37()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$36(<a href="Rangeb.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Rangeb">Rangeb</a>, <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$36()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$35(<a href="Range.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Range">Range</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$35()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$34(<a href="Range.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Range">Range</a>, <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$34()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$33(<a href="Range.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Range">Range</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$33()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$32(<a href="Range.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Range">Range</a>, <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$32()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$31(<a href="Size.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Size">Size</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$31()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$30(<a href="Size.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Size">Size</a>, <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$30()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$29(<a href="Size.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Size">Size</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$29()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$28(<a href="Size.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Size">Size</a>, <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$28()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="Color.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Color">Color</a>[] lambda$COLOR_ARRAY$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$COLOR_ARRAY$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$27(<a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>, <a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$27()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a> lambda$static$26(<a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$26()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$25(<a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>, <a href="#" class="type-link" data-full-name="java.lang.Byte">Byte</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$25()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$24(<a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>, <a href="ColorLight.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ColorLight">ColorLight</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$24()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$23(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$23()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$22(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$22()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$21(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$21()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$20(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$20()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$19(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$19()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$18(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$18()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$17(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$17()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$16(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$16()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$15(<a href="Vector3f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector3f">Vector3f</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$15()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$14(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>, <a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$14()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$13(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$13()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$12(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$12()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$11(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>, <a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$11()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$10(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$10()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$9(<a href="Vector2f.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Vector2f">Vector2f</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$9()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$8(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$8()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$7(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$7()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$6(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$5(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$4(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$3(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$2(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a> lambda$static$1(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static void lambda$static$0(<a href="Direction.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Direction">Direction</a>, <a href="#" class="type-link" data-full-name="java.lang.Float">Float</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

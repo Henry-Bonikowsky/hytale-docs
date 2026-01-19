@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaveType - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">worldgen</a>
+<span class="separator">›</span>
+<a href="index.html">cave</a>
+<span class="separator">›</span>
+<span class="current">CaveType</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">CaveType</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="CaveType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveType">CaveType</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>CaveType</code> is a class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> name</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>name</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="CaveNodeType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveNodeType">CaveNodeType</a> entryNodeType</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>entryNodeType</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a> yaw</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>yaw</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a> pitch</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>pitch</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a> depth</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>depth</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IHeightThresholdInterpreter.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.IHeightThresholdInterpreter">IHeightThresholdInterpreter</a> heightFactors</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>heightFactors</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IPointGenerator.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.logic.point.IPointGenerator">IPointGenerator</a> pointGenerator</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>pointGenerator</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Int2FlagsCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.flag.Int2FlagsCondition">Int2FlagsCondition</a> biomeMask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>biomeMask</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="BlockMaskCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.BlockMaskCondition">BlockMaskCondition</a> blockMask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blockMask</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="ICoordinateCondition.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.ICoordinateCondition">ICoordinateCondition</a> mapCondition</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>mapCondition</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="ICoordinateCondition.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.ICoordinateCondition">ICoordinateCondition</a> heightCondition</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>heightCondition</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="IDoubleRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IDoubleRange">IDoubleRange</a> fixedEntryHeight</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fixedEntryHeight</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="NoiseProperty.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.property.NoiseProperty">NoiseProperty</a> fixedEntryHeightNoise</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fixedEntryHeightNoise</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="CaveType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveType">CaveType</a>$FluidLevel fluidLevel</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fluidLevel</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final int environment</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>environment</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean surfaceLimited</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>surfaceLimited</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final boolean submerge</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>submerge</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final double maximumSize</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maximumSize</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final int hashCode</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashCode</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CaveType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveType">CaveType</a>(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="CaveNodeType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveNodeType">CaveNodeType</a>, <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a>, <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a>, <a href="IFloatRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IFloatRange">IFloatRange</a>, <a href="IHeightThresholdInterpreter.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.IHeightThresholdInterpreter">IHeightThresholdInterpreter</a>, <a href="IPointGenerator.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.logic.point.IPointGenerator">IPointGenerator</a>, <a href="Int2FlagsCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.flag.Int2FlagsCondition">Int2FlagsCondition</a>, <a href="BlockMaskCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.BlockMaskCondition">BlockMaskCondition</a>, <a href="ICoordinateCondition.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.ICoordinateCondition">ICoordinateCondition</a>, <a href="ICoordinateCondition.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.ICoordinateCondition">ICoordinateCondition</a>, <a href="IDoubleRange.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.supplier.IDoubleRange">IDoubleRange</a>, <a href="NoiseProperty.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.property.NoiseProperty">NoiseProperty</a>, <a href="CaveType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveType">CaveType</a>$FluidLevel, int, boolean, boolean, double)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>CaveType</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> getName()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getName()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CaveNodeType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveNodeType">CaveNodeType</a> getEntryNode()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEntryNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getModifiedStartHeight(int, int, int, int, <a href="#" class="type-link" data-full-name="java.util.Random">Random</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getModifiedStartHeight()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getStartPitch(<a href="#" class="type-link" data-full-name="java.util.Random">Random</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStartPitch()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getStartYaw(<a href="#" class="type-link" data-full-name="java.util.Random">Random</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStartYaw()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getStartDepth(<a href="#" class="type-link" data-full-name="java.util.Random">Random</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStartDepth()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getHeightRadiusFactor(int, double, double, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHeightRadiusFactor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="ICoordinateCondition.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.condition.ICoordinateCondition">ICoordinateCondition</a> getHeightCondition()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getHeightCondition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="IPointGenerator.html" class="type-link" data-full-name="com.hypixel.hytale.procedurallib.logic.point.IPointGenerator">IPointGenerator</a> getEntryPointGenerator()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEntryPointGenerator()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Int2FlagsCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.flag.Int2FlagsCondition">Int2FlagsCondition</a> getBiomeMask()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBiomeMask()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="BlockMaskCondition.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.util.condition.BlockMaskCondition">BlockMaskCondition</a> getBlockMask()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlockMask()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="CaveType.html" class="type-link" data-full-name="com.hypixel.hytale.server.worldgen.cave.CaveType">CaveType</a>$FluidLevel getFluidLevel()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidLevel()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getEnvironment()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEnvironment()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isSurfaceLimited()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isSurfaceLimited()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isSubmerge()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isSubmerge()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isEntryThreshold(int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isEntryThreshold()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isHeightThreshold(int, int, int, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isHeightThreshold()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public double getMaximumSize()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaximumSize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int _hashCode()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>_hashCode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int hashCode()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashCode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaterialCache - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">builtin</a>
+<span class="separator">›</span>
+<a href="index.html">hytalegenerator</a>
+<span class="separator">›</span>
+<a href="index.html">material</a>
+<span class="separator">›</span>
+<span class="current">MaterialCache</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">MaterialCache</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="MaterialCache.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache">MaterialCache</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>MaterialCache</code> is a class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>, <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a>> hashToSolidMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashToSolidMap</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>, <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a>> hashToFluidMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashToFluidMap</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a>, <a href="Material.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.Material">Material</a>> hashToMaterialMap</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hashToMaterialMap</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> EMPTY_AIR</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY_AIR</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> ROCK_STONE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROCK_STONE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> SOIL_GRASS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SOIL_GRASS</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> SOIL_DIRT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SOIL_DIRT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> SOIL_MUD</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SOIL_MUD</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> SOIL_NEEDLES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SOIL_NEEDLES</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> SOIL_GRAVEL</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SOIL_GRAVEL</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> ROCK_QUARTZITE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROCK_QUARTZITE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> ROCK_MARBLE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROCK_MARBLE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> ROCK_SHALE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ROCK_SHALE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> FLUID_WATER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>FLUID_WATER</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> BEDROCK</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>BEDROCK</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a> UNKNOWN_FLUID</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>UNKNOWN_FLUID</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a> EMPTY_FLUID</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY_FLUID</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public final <a href="Material.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.Material">Material</a> EMPTY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="MaterialCache.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.MaterialCache">MaterialCache</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>MaterialCache</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Material.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.Material">Material</a> getMaterial(<a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a>, <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a> getFluidMaterial(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a> getFluidMaterial(int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getFluidMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="FluidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.FluidMaterial">FluidMaterial</a> getOrRegisterFluid(int, byte)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOrRegisterFluid()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> getSolidMaterial(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSolidMaterial()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> getSolidMaterialRotatedY(<a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a>, <a href="Rotation.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.type.blocktype.config.Rotation">Rotation</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSolidMaterialRotatedY()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="SolidMaterial.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.hytalegenerator.material.SolidMaterial">SolidMaterial</a> getSolidMaterial(int, int, int, int, <a href="Holder.html" class="type-link" data-full-name="com.hypixel.hytale.component.Holder">Holder</a><<a href="ChunkStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.ChunkStore">ChunkStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSolidMaterial()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

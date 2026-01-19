@@ -1,0 +1,73 @@
+site_name: Hytale Plugin API Documentation
+site_description: Complete API reference for Hytale server plugins
+site_url: https://hytale-docs.dev
+
+repo_name: hytale-docs
+repo_url: https://github.com/Henry-Bonikowsky/hytale-docs
+edit_uri: edit/main/docs/
+
+copyright: Not affiliated with Hypixel Studios. Generated from hytale-server-2026.01.15.jar
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - def_list
+  - tables
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Quick Start: getting-started/quickstart.md
+      - Installation: getting-started/installation.md
+  - API Reference:
+      - Overview: api-reference.md
+  - Guides:
+      - Creating Your First Plugin: guides/first-plugin.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Henry-Bonikowsky/hytale-docs

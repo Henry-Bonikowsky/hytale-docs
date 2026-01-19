@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InteractionManager - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">core</a>
+<span class="separator">›</span>
+<a href="index.html">entity</a>
+<span class="separator">›</span>
+<span class="current">InteractionManager</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">InteractionManager</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="InteractionManager.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionManager">InteractionManager</a> extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> implements <a href="Component.html" class="type-link" data-full-name="com.hypixel.hytale.component.Component">Component</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>InteractionManager</code> is a class that extends <code>Object</code> and implements <code>Component</code> and <code>EntityStore</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final double MAX_REACH_DISTANCE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MAX_REACH_DISTANCE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final float[] DEFAULT_CHARGE_TIMES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_CHARGE_TIMES</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a> LOGGER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>LOGGER</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>> chains</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>chains</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>> unmodifiableChains</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>unmodifiableChains</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="CooldownHandler.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler">CooldownHandler</a> cooldownHandler</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cooldownHandler</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="LivingEntity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.LivingEntity">LivingEntity</a> entity</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>entity</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a> playerRef</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>playerRef</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean hasRemoteClient</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>hasRemoteClient</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="IInteractionSimulationHandler.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.IInteractionSimulationHandler">IInteractionSimulationHandler</a> interactionSimulationHandler</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>interactionSimulationHandler</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.objects.ObjectList<<a href="InteractionSyncData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionSyncData">InteractionSyncData</a>> tempSyncDataList</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tempSyncDataList</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lastServerChainId</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lastServerChainId</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int lastClientChainId</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lastClientChainId</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private long packetQueueTime</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>packetQueueTime</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final float[] globalTimeShift</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>globalTimeShift</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final boolean[] globalTimeShiftDirty</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>globalTimeShiftDirty</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean timeShiftsDirty</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>timeShiftsDirty</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.objects.ObjectList<<a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>> syncPackets</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>syncPackets</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private long currentTime</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>currentTime</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final it.unimi.dsi.fastutil.objects.ObjectList<<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>> chainStartQueue</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>chainStartQueue</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.function.Predicate">Predicate</a><<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>> cachedTickChain</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cachedTickChain</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>> commandBuffer</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>commandBuffer</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="InteractionManager.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionManager">InteractionManager</a>(<a href="LivingEntity.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.LivingEntity">LivingEntity</a>, <a href="PlayerRef.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.PlayerRef">PlayerRef</a>, <a href="IInteractionSimulationHandler.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.IInteractionSimulationHandler">IInteractionSimulationHandler</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>InteractionManager</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public it.unimi.dsi.fastutil.ints.Int2ObjectMap<<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>> getChains()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getChains()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="IInteractionSimulationHandler.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.IInteractionSimulationHandler">IInteractionSimulationHandler</a> getInteractionSimulationHandler()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getInteractionSimulationHandler()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private long getOperationTimeoutThreshold()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOperationTimeoutThreshold()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean waitingForClient(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>waitingForClient()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setHasRemoteClient(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setHasRemoteClient()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void copyFrom(<a href="InteractionManager.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionManager">InteractionManager</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>copyFrom()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void tick(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tick()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean tryConsumePacketQueue(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="#" class="type-link" data-full-name="java.util.Deque">Deque</a><<a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryConsumePacketQueue()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a> getChain(int, <a href="ForkedChainId.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ForkedChainId">ForkedChainId</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean tickChain(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tickChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void handleCancelledChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleCancelledChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void doTickChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>doTickChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="InteractionSyncData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionSyncData">InteractionSyncData</a> serverTick(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>serverTick()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void removeInteractionIfFinished(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, <a href="InteractionEntry.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionEntry">InteractionEntry</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeInteractionIfFinished()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void simulationTick(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>simulationTick()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean syncStart(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>syncStart()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void sync(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="ChainSyncStorage.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.ChainSyncStorage">ChainSyncStorage</a>, <a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sync()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRun(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRun()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean canRun(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, short, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canRun()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean applyRules(<a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="InteractionChainData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionChainData">InteractionChainData</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>applyRules()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void cancelChains(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>cancelChains()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static boolean applyRules(<a href="InteractionChainData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionChainData">InteractionChainData</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, int, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><?, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>applyRules()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean tryStartChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryStartChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void startChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>startChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a> initChain(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a> initChain(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, int, <a href="BlockPosition.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.BlockPosition">BlockPosition</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a> initChain(<a href="InteractionChainData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionChainData">InteractionChainData</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, <a href="#" class="type-link" data-full-name="java.lang.Runnable">Runnable</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void queueExecuteChain(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>queueExecuteChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void executeChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>executeChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void executeChain0(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>executeChain0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean isOnCooldown(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isOnCooldown()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void tryRunHeldInteraction(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryRunHeldInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void tryRunHeldInteraction(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="CommandBuffer.html" class="type-link" data-full-name="com.hypixel.hytale.component.CommandBuffer">CommandBuffer</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, short)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryRunHeldInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void sendSyncPacket(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, int, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="InteractionSyncData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionSyncData">InteractionSyncData</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendSyncPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a> makeSyncPacket(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, int, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="InteractionSyncData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionSyncData">InteractionSyncData</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>makeSyncPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void sendCancelPacket(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendCancelPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void sendCancelPacket(int, <a href="ForkedChainId.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.ForkedChainId">ForkedChainId</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendCancelPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void clear()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clear()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void clearAllGlobalTimeShift(float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clearAllGlobalTimeShift()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setGlobalTimeShift(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setGlobalTimeShift()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float getGlobalTimeShift(<a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getGlobalTimeShift()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> T forEachInteraction(<a href="TriFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.TriFunction">TriFunction</a><<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, <a href="Interaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction">Interaction</a>, T, T>, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> T forEachInteraction(<a href="#" class="type-link" data-full-name="java.util.Map">Map</a><?, <a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>>, <a href="TriFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.TriFunction">TriFunction</a><<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, <a href="Interaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction">Interaction</a>, T, T>, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>forEachInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void walkChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Collector.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector">Collector</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void walkChain(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Collector.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector">Collector</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static void walkChain(<a href="Collector.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector">Collector</a>, <a href="InteractionType.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionType">InteractionType</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="RootInteraction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.RootInteraction">RootInteraction</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkChain()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static boolean walkInteractions(<a href="Collector.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector">Collector</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="CollectorTag.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.CollectorTag">CollectorTag</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkInteractions()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static boolean walkInteraction(<a href="Collector.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.Collector">Collector</a>, <a href="InteractionContext.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionContext">InteractionContext</a>, <a href="CollectorTag.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.data.CollectorTag">CollectorTag</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>walkInteraction()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public it.unimi.dsi.fastutil.objects.ObjectList<<a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>> getSyncPackets()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSyncPackets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Component.html" class="type-link" data-full-name="com.hypixel.hytale.component.Component">Component</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>> clone()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> clone() throws <a href="#" class="type-link" data-full-name="java.lang.CloneNotSupportedException">CloneNotSupportedException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clone()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a> lambda$clear$0(<a href="InteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.entity.InteractionChain">InteractionChain</a>, <a href="Interaction.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction">Interaction</a>, <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$clear$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="InteractionSyncData.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.InteractionSyncData">InteractionSyncData</a>[] lambda$makeSyncPacket$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$makeSyncPacket$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$tryConsumePacketQueue$0(<a href="SyncInteractionChain.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain">SyncInteractionChain</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$tryConsumePacketQueue$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

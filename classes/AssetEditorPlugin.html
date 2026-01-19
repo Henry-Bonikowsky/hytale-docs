@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetEditorPlugin - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">builtin</a>
+<span class="separator">›</span>
+<a href="index.html">asseteditor</a>
+<span class="separator">›</span>
+<span class="current">AssetEditorPlugin</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">AssetEditorPlugin</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="AssetEditorPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetEditorPlugin">AssetEditorPlugin</a> extends <a href="JavaPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.plugin.JavaPlugin">JavaPlugin</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>AssetEditorPlugin</code> is a class that extends <code>JavaPlugin</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="AssetEditorPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetEditorPlugin">AssetEditorPlugin</a> instance</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>instance</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a> globalEditLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>globalEditLock</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>>> uuidToEditorClients</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>uuidToEditorClients</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>> clientOpenAssetPathMapping</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clientOpenAssetPathMapping</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>> clientsSubscribedToModifiedAssetsChanges</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clientsSubscribedToModifiedAssetsChanges</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a>> schemas</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>schemas</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="AssetEditorSetupSchemas.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorSetupSchemas">AssetEditorSetupSchemas</a> setupSchemasPacket</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setupSchemasPacket</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a> initLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initLock</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>> initQueue</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initQueue</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="AssetEditorPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetEditorPlugin">AssetEditorPlugin</a>$InitState initState</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initState</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.ScheduledFuture">ScheduledFuture</a><?> scheduledReinitFuture</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>scheduledReinitFuture</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a>> assetPackDataSources</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>assetPackDataSources</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="AssetTypeRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetTypeRegistry">AssetTypeRegistry</a> assetTypeRegistry</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>assetTypeRegistry</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="UndoRedoManager.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.UndoRedoManager">UndoRedoManager</a> undoRedoManager</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>undoRedoManager</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.ScheduledFuture">ScheduledFuture</a><?> pingClientsTask</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>pingClientsTask</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetEditorPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetEditorPlugin">AssetEditorPlugin</a>(<a href="JavaPluginInit.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.plugin.JavaPluginInit">JavaPluginInit</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>AssetEditorPlugin</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="AssetEditorPlugin.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetEditorPlugin">AssetEditorPlugin</a> get()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>get()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void setup()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setup()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void start()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>start()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void shutdown()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>shutdown()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a> getDataSourceForPath(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDataSourceForPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a> getDataSourceForPack(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDataSourceForPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Collection">Collection</a><<a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a>> getDataSources()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getDataSources()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetTypeRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetTypeRegistry">AssetTypeRegistry</a> getAssetTypeRegistry()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getAssetTypeRegistry()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Schema.html" class="type-link" data-full-name="com.hypixel.hytale.codec.schema.config.Schema">Schema</a> getSchema(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSchema()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Map">Map</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>> getClientOpenAssetPathMapping()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClientOpenAssetPathMapping()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>> getEditorClients(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEditorClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void sendPingPackets()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendPingPackets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>> getClientsWithOpenAssetPath(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getClientsWithOpenAssetPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a> getOpenAssetPath(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOpenAssetPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onRegisterAssetPack(<a href="AssetPackRegisterEvent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.AssetPackRegisterEvent">AssetPackRegisterEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onRegisterAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onUnregisterAssetPack(<a href="AssetPackUnregisterEvent.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.asset.AssetPackUnregisterEvent">AssetPackUnregisterEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onUnregisterAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onI18nMessagesUpdated(<a href="MessagesUpdated.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.modules.i18n.event.MessagesUpdated">MessagesUpdated</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onI18nMessagesUpdated()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onRegisterAssetStore(<a href="RegisterAssetStoreEvent.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.event.RegisterAssetStoreEvent">RegisterAssetStoreEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onRegisterAssetStore()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onUnregisterAssetStore(<a href="RemoveAssetStoreEvent.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.event.RemoveAssetStoreEvent">RemoveAssetStoreEvent</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onUnregisterAssetStore()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void tryReinitializeAssetEditor()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tryReinitializeAssetEditor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void onAssetMonitor(<a href="AssetMonitorEvent.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.event.AssetMonitorEvent">AssetMonitorEvent</a><<a href="#" class="type-link" data-full-name="java.lang.Void">Void</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>onAssetMonitor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleInitializeEditor(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleInitializeEditor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleInitializeClient(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleInitializeClient()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void initializeAssetEditor(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initializeAssetEditor()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void initializeClient(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initializeClient()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleEditorClientDisconnected(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="PacketHandler.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.io.PacketHandler">PacketHandler</a>$DisconnectReason)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleEditorClientDisconnected()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleDeleteAssetPack(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleDeleteAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleUpdateAssetPack(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="AssetPackManifest.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetPackManifest">AssetPackManifest</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleUpdateAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleCreateAssetPack(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPackManifest.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetPackManifest">AssetPackManifest</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleCreateAssetPack()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="AssetPackManifest.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetPackManifest">AssetPackManifest</a> toManifestPacket(<a href="PluginManifest.html" class="type-link" data-full-name="com.hypixel.hytale.common.plugin.PluginManifest">PluginManifest</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toManifestPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void broadcastPackAddedOrUpdated(<a href="#" class="type-link" data-full-name="java.lang.String">String</a>, <a href="PluginManifest.html" class="type-link" data-full-name="com.hypixel.hytale.common.plugin.PluginManifest">PluginManifest</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>broadcastPackAddedOrUpdated()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleExportAssets(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleExportAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleSelectAsset(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleSelectAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleFetchLastModifiedAssets(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleFetchLastModifiedAssets()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleAssetUpdate(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, byte[], int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleAssetUpdate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleJsonAssetUpdate(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, int, <a href="JsonUpdateCommand.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.JsonUpdateCommand">JsonUpdateCommand</a>[], int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleJsonAssetUpdate()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleUndo(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleUndo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleRedo(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleRedo()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleFetchAsset(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleFetchAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleFetchJsonAssetWithParents(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, boolean, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleFetchJsonAssetWithParents()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleRequestChildIds(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleRequestChildIds()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleDeleteAsset(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleDeleteAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleSubscribeToModifiedAssetsChanges(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleSubscribeToModifiedAssetsChanges()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleUnsubscribeFromModifiedAssetsChanges(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleUnsubscribeFromModifiedAssetsChanges()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleRenameAsset(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleRenameAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleDeleteDirectory(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleDeleteDirectory()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleRenameDirectory(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleRenameDirectory()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleCreateDirectory(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleCreateDirectory()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void handleCreateAsset(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, byte[], <a href="AssetEditorRebuildCaches.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorRebuildCaches">AssetEditorRebuildCaches</a>, <a href="#" class="type-link" data-full-name="java.lang.String">String</a>, int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>handleCreateAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private org.bson.BsonDocument applyCommandsToAsset(byte[], <a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="JsonUpdateCommand.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.JsonUpdateCommand">JsonUpdateCommand</a>[], <a href="AssetUpdateQuery.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.AssetUpdateQuery">AssetUpdateQuery</a>$RebuildCacheBuilder)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>applyCommandsToAsset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void sendModifiedAssetsUpdateToConnectedUsers()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendModifiedAssetsUpdateToConnectedUsers()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void sendPacketToAllEditorUsers(<a href="Packet.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Packet">Packet</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendPacketToAllEditorUsers()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void sendPacketToAllEditorUsersExcept(<a href="Packet.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.Packet">Packet</a>, <a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>sendPacketToAllEditorUsersExcept()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void updateAssetForConnectedClients(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateAssetForConnectedClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void updateAssetForConnectedClients(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateAssetForConnectedClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void updateAssetForConnectedClients(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, byte[], <a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateAssetForConnectedClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void updateJsonAssetForConnectedClients(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="JsonUpdateCommand.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.JsonUpdateCommand">JsonUpdateCommand</a>[])</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateJsonAssetForConnectedClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void updateJsonAssetForConnectedClients(<a href="AssetPath.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.AssetPath">AssetPath</a>, <a href="JsonUpdateCommand.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.JsonUpdateCommand">JsonUpdateCommand</a>[], <a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateJsonAssetForConnectedClients()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="AssetEditorLastModifiedAssets.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorLastModifiedAssets">AssetEditorLastModifiedAssets</a> buildAssetEditorLastModifiedAssetsPacket()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildAssetEditorLastModifiedAssetsPacket()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.String">String</a>[] lambda$handleRequestChildIds$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleRequestChildIds$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="TimestampedAssetReference.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.TimestampedAssetReference">TimestampedAssetReference</a>[] lambda$handleExportAssets$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleExportAssets$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$handleEditorClientDisconnected$0(<a href="EditorClient.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.EditorClient">EditorClient</a>, <a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleEditorClientDisconnected$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$handleInitializeClient$1()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleInitializeClient$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.util.Set">Set</a> lambda$handleInitializeClient$0(<a href="#" class="type-link" data-full-name="java.util.UUID">UUID</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleInitializeClient$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$handleInitializeEditor$0()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$handleInitializeEditor$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="AssetEditorFileEntry.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorFileEntry">AssetEditorFileEntry</a>[] lambda$onAssetMonitor$4(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onAssetMonitor$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="AssetEditorFileEntry.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorFileEntry">AssetEditorFileEntry</a>[] lambda$onAssetMonitor$3(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onAssetMonitor$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$onAssetMonitor$2(<a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a>, it.unimi.dsi.fastutil.objects.ObjectArrayList, <a href="AssetMonitorEvent.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.event.AssetMonitorEvent">AssetMonitorEvent</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onAssetMonitor$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean lambda$onAssetMonitor$1(<a href="DataSource.html" class="type-link" data-full-name="com.hypixel.hytale.builtin.asseteditor.datasource.DataSource">DataSource</a>, <a href="AssetMonitorEvent.html" class="type-link" data-full-name="com.hypixel.hytale.assetstore.event.AssetMonitorEvent">AssetMonitorEvent</a>, <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onAssetMonitor$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="AssetEditorFileEntry.html" class="type-link" data-full-name="com.hypixel.hytale.protocol.packets.asseteditor.AssetEditorFileEntry">AssetEditorFileEntry</a>[] lambda$onAssetMonitor$0(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$onAssetMonitor$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$tryReinitializeAssetEditor$0()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$tryReinitializeAssetEditor$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

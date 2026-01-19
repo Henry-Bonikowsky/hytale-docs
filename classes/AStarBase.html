@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AStarBase - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">server</a>
+<span class="separator">›</span>
+<a href="index.html">npc</a>
+<span class="separator">›</span>
+<a href="index.html">navigation</a>
+<span class="separator">›</span>
+<span class="current">AStarBase</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">AStarBase</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>AStarBase</code> is a class.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final double FULL_STEP_THRESHOLD</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>FULL_STEP_THRESHOLD</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final double REQUIRED_TARGET_DISTANCE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>REQUIRED_TARGET_DISTANCE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final double HALF_STEP_THRESHOLD</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>HALF_STEP_THRESHOLD</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final double ON_GRID_THRESHOLD</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>ON_GRID_THRESHOLD</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final int INDEX_FRACTIONAL_BITS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INDEX_FRACTIONAL_BITS</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final int POSITION_BITS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>POSITION_BITS</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final int POSITION_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>POSITION_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected static final int POSITION_MASK</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>POSITION_MASK</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int maxPathLength</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>maxPathLength</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int openNodesLimit</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>openNodesLimit</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int totalNodesLimit</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>totalNodesLimit</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean canMoveDiagonal</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canMoveDiagonal</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean optimizedBuildPath</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>optimizedBuildPath</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean isAvoidingBlockDamage</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isAvoidingBlockDamage</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean isRelaxedMoveConstraints</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isRelaxedMoveConstraints</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> startPosition</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>startPosition</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="AStarEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarEvaluator">AStarEvaluator</a> evaluator</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>evaluator</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected double positionToIndexOffsetX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionToIndexOffsetX</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected double positionToIndexOffsetY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionToIndexOffsetY</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected double positionToIndexOffsetZ</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionToIndexOffsetZ</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long indexToPositionOffsetX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>indexToPositionOffsetX</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long indexToPositionOffsetY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>indexToPositionOffsetY</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long indexToPositionOffsetZ</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>indexToPositionOffsetZ</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long startPositionIndex</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>startPositionIndex</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean is2D</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>is2D</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean projectedX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>projectedX</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean projectedY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>projectedY</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean projectedZ</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>projectedZ</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> searchDirectionsWorldNormal</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>searchDirectionsWorldNormal</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean searchDirectionIsDiagonalMoves</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>searchDirectionIsDiagonalMoves</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected boolean searchDirectionIs2D</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>searchDirectionIs2D</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>[] searchDirections</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>searchDirections</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected double[] searchDirectionDistances</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>searchDirectionDistances</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int[] inverseSearchDirections</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>inverseSearchDirections</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int normalsPerDirection</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>normalsPerDirection</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int[] normalDirections</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>normalDirections</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="AStarNodePool.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNodePool">AStarNodePool</a> nodePool</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>nodePool</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>> openNodes</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>openNodes</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final it.unimi.dsi.fastutil.longs.Long2ObjectMap<<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>> visitedBlocks</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>visitedBlocks</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int iterations</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>iterations</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> path</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>path</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress progress</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>progress</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> pathEnd</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>pathEnd</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> tempPositionVector</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tempPositionVector</code> field.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected final <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> tempDirectionVector</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>tempDirectionVector</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>()</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>AStarBase</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setCanMoveDiagonal(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setCanMoveDiagonal()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setMaxPathLength(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setMaxPathLength()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setOpenNodesLimit(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setOpenNodesLimit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setTotalNodesLimit(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setTotalNodesLimit()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setStartPosition(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setStartPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> getStartPosition()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStartPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setOptimizedBuildPath(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setOptimizedBuildPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarEvaluator">AStarEvaluator</a> getEvaluator()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEvaluator()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.util.List">List</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>> getOpenNodes()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOpenNodes()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getOpenCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getOpenCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public it.unimi.dsi.fastutil.longs.Long2ObjectMap<<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>> getVisitedBlocks()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getVisitedBlocks()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public long getStartPositionIndex()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getStartPositionIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> getPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> getPosition()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getLength()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getLength()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getIterations()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getIterations()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> getEndPosition()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getEndPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void clearPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>clearPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress initComputePath(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="AStarEvaluator.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarEvaluator">AStarEvaluator</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>, <a href="ProbeMoveData.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData">ProbeMoveData</a>, <a href="AStarNodePoolProvider.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNodePoolProvider">AStarNodePoolProvider</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>initComputePath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress computePath(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>, <a href="ProbeMoveData.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData">ProbeMoveData</a>, int, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>computePath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress getProgress()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getProgress()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public boolean isComputing()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>isComputing()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float buildLongestPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildLongestPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public float buildFurthestPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildFurthestPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> buildBestPath(<a href="ToFloatFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.ToFloatFunction">ToFloatFunction</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>>, <a href="BiFloatPredicate.html" class="type-link" data-full-name="com.hypixel.hytale.function.predicate.BiFloatPredicate">BiFloatPredicate</a>, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildBestPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> findBestVisitedNode(<a href="ToFloatFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.ToFloatFunction">ToFloatFunction</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>>, <a href="BiFloatPredicate.html" class="type-link" data-full-name="com.hypixel.hytale.function.predicate.BiFloatPredicate">BiFloatPredicate</a>, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>findBestVisitedNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> buildBestPath(<a href="BiToFloatFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.BiToFloatFunction">BiToFloatFunction</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, T>, <a href="BiFloatPredicate.html" class="type-link" data-full-name="com.hypixel.hytale.function.predicate.BiFloatPredicate">BiFloatPredicate</a>, float, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildBestPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <T extends <a href="#" class="type-link" data-full-name="java.lang.Object">Object</a>> <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a> findBestVisitedNode(<a href="BiToFloatFunction.html" class="type-link" data-full-name="com.hypixel.hytale.function.function.BiToFloatFunction">BiToFloatFunction</a><<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, T>, <a href="BiFloatPredicate.html" class="type-link" data-full-name="com.hypixel.hytale.function.predicate.BiFloatPredicate">BiFloatPredicate</a>, float, T)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>findBestVisitedNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="AStarDebugBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarDebugBase">AStarDebugBase</a> createDebugHelper(<a href="HytaleLogger.html" class="type-link" data-full-name="com.hypixel.hytale.logger.HytaleLogger">HytaleLogger</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>createDebugHelper()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static long indexFromXYZ(long, long, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>indexFromXYZ()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static int zFromIndex(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>zFromIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static int yFromIndex(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>yFromIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static int xFromIndex(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>xFromIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="#" class="type-link" data-full-name="java.lang.String">String</a> positionIndexToString(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionIndexToString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress setProgress(<a href="AStarBase.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarBase">AStarBase</a>$Progress)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setProgress()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a> canAdvance(<a href="Ref.html" class="type-link" data-full-name="com.hypixel.hytale.component.Ref">Ref</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>, <a href="ProbeMoveData.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.ProbeMoveData">ProbeMoveData</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>canAdvance()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void addStartNode(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addStartNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void addOpenNode(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, int, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, long, float, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addOpenNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void addOpenNode(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addOpenNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void updateNode(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, int, <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void addOrUpdateNode(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, int, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>, <a href="ComponentAccessor.html" class="type-link" data-full-name="com.hypixel.hytale.component.ComponentAccessor">ComponentAccessor</a><<a href="EntityStore.html" class="type-link" data-full-name="com.hypixel.hytale.server.core.universe.world.storage.EntityStore">EntityStore</a>>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addOrUpdateNode()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void updateNodeCost(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, int, <a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>updateNodeCost()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long positionToIndex(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionToIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected float measureWalkCost(<a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="Vector3d.html" class="type-link" data-full-name="com.hypixel.hytale.math.vector.Vector3d">Vector3d</a>, <a href="MotionController.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.movement.controllers.MotionController">MotionController</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>measureWalkCost()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void buildPath(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>buildPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long addOffsetToIndex(long, long, long, long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>addOffsetToIndex()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static boolean lambda$buildFurthestPath$1(float, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$buildFurthestPath$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private float lambda$buildFurthestPath$0(<a href="AStarNode.html" class="type-link" data-full-name="com.hypixel.hytale.server.npc.navigation.AStarNode">AStarNode</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$buildFurthestPath$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static boolean lambda$buildLongestPath$0(float, float)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$buildLongestPath$0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private void lambda$clearPath$0(it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$clearPath$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>

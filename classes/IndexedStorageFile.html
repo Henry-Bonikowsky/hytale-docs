@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedStorageFile - Hytale Plugin API</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prism.js for syntax highlighting (dark theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../assets/css/javadoc-style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-breadcrumb">
+                <a href="index.html">com</a>
+<span class="separator">›</span>
+<a href="index.html">hypixel</a>
+<span class="separator">›</span>
+<a href="index.html">hytale</a>
+<span class="separator">›</span>
+<a href="index.html">storage</a>
+<span class="separator">›</span>
+<span class="current">IndexedStorageFile</span>
+            </div>
+            <a href="https://github.com/Henry-Bonikowsky/hytale-plugin-docs" class="navbar-github" target="_blank" title="View on GitHub">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- API Navigation Sidebar -->
+            <div class="col-auto">
+                <div class="sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-search">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search classes...">
+                    </div>
+
+                    <!-- Package Tree -->
+                    <nav class="sidebar-nav">
+                        <div class="package-group">
+                            <div class="package-title">com.hypixel.hytale.server.core</div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> plugin
+                                </div>
+                                <div class="package-classes">
+                                    <a href="JavaPlugin.html" class="class-link">JavaPlugin</a>
+                                    <a href="PluginBase.html" class="class-link">PluginBase</a>
+                                    <a href="PluginClassLoader.html" class="class-link">PluginClassLoader</a>
+                                    <a href="JavaPluginInit.html" class="class-link">JavaPluginInit</a>
+                                    <a href="PluginType.html" class="class-link">PluginType</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> asset
+                                </div>
+                                <div class="package-classes">
+                                    <a href="AssetModule.html" class="class-link">AssetModule</a>
+                                    <a href="AssetPackRegisterEvent.html" class="class-link">AssetPackRegisterEvent</a>
+                                </div>
+                            </div>
+
+                            <div class="package-section">
+                                <div class="package-name" data-toggle="collapse">
+                                    <span class="chevron">▼</span> event
+                                </div>
+                                <div class="package-classes">
+                                    <a href="EventRegistry.html" class="class-link">EventRegistry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="col">
+                <div class="content-wrapper">
+                <!-- Class header -->
+                <div class="class-header" id="overview">
+                    <h1 class="class-name">IndexedStorageFile</h1>
+
+                    <div class="class-signature">
+<pre><code class="language-java"><span class="modifier public">public</span> class <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> implements <a href="#" class="type-link" data-full-name="java.io.Closeable">Closeable</a></code></pre>
+                    </div>
+
+                    <p class="mt-3">
+                        <code>IndexedStorageFile</code> is a class that implements <code>Closeable</code>.
+                    </p>
+                </div>
+
+                <!-- Visibility toggle -->
+                <div class="visibility-toggle">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="show-private">
+                        <label class="form-check-label" for="show-private">
+                            Show private/protected members
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fields section -->
+                <div class="member-section" id="fields">
+                    <h2>Fields</h2>
+                    
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a>[] EMPTY_STAMPED_LOCKS</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>EMPTY_STAMPED_LOCKS</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="MetricsRegistry.html" class="type-link" data-full-name="com.hypixel.hytale.metrics.MetricsRegistry">MetricsRegistry</a><<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>> METRICS_REGISTRY</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>METRICS_REGISTRY</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.lang.String">String</a> MAGIC_STRING</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MAGIC_STRING</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int VERSION</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>VERSION</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_BLOB_COUNT</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_BLOB_COUNT</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_SEGMENT_SIZE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_SEGMENT_SIZE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int DEFAULT_COMPRESSION_LEVEL</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>DEFAULT_COMPRESSION_LEVEL</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int MAGIC_LENGTH</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MAGIC_LENGTH</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int MAGIC_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MAGIC_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int VERSION_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>VERSION_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int BLOB_COUNT_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>BLOB_COUNT_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int SEGMENT_SIZE_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SEGMENT_SIZE_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int HEADER_LENGTH</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>HEADER_LENGTH</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int SRC_LENGTH_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>SRC_LENGTH_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int COMPRESSED_LENGTH_OFFSET</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>COMPRESSED_LENGTH_OFFSET</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int BLOB_HEADER_LENGTH</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>BLOB_HEADER_LENGTH</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int INDEX_SIZE</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>INDEX_SIZE</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int UNASSIGNED_INDEX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>UNASSIGNED_INDEX</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final int FIRST_SEGMENT_INDEX</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>FIRST_SEGMENT_INDEX</code> field.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static final <a href="#" class="type-link" data-full-name="java.nio.file.attribute.FileAttribute">FileAttribute</a><?>[] NO_ATTRIBUTES</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>NO_ATTRIBUTES</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> MAGIC_BUFFER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>MAGIC_BUFFER</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static final <a href="#" class="type-link" data-full-name="java.lang.ThreadLocal">ThreadLocal</a><<a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a>> CACHED_TEMP_BUFFER</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>CACHED_TEMP_BUFFER</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a> path</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>path</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.nio.channels.FileChannel">FileChannel</a> fileChannel</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>fileChannel</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private boolean flushOnWrite</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>flushOnWrite</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int compressionLevel</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>compressionLevel</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int version</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>version</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int blobCount</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>blobCount</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private int segmentSize</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentSize</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a>[] indexLocks</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>indexLocks</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.nio.MappedByteBuffer">MappedByteBuffer</a> mappedBlobIndexes</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>mappedBlobIndexes</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a> segmentLocksLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentLocksLock</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a>[] segmentLocks</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentLocks</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a> usedSegmentsLock</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>usedSegmentsLock</code> field.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier final">final</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private final <a href="#" class="type-link" data-full-name="java.util.BitSet">BitSet</a> usedSegments</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>usedSegments</code> field.</p>
+                    </div>
+
+                </div>
+
+                <!-- Constructors section -->
+                <div class="member-section" id="constructors">
+                    <h2>Constructors</h2>
+                    
+                    <div class="member-item">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span>
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.nio.channels.FileChannel">FileChannel</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">Creates a new instance of <code>IndexedStorageFile</code>.</p>
+                    </div>
+
+                </div>
+
+                <!-- Methods section -->
+                <div class="member-section" id="methods">
+                    <h2>Methods</h2>
+                    
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> getTempBuffer(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getTempBuffer()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> allocateDirect(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>allocateDirect()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> open(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.nio.file.OpenOption">OpenOption</a>...) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>open()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> open(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><? extends <a href="#" class="type-link" data-full-name="java.nio.file.OpenOption">OpenOption</a>>, <a href="#" class="type-link" data-full-name="java.nio.file.attribute.FileAttribute">FileAttribute</a><?>...) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>open()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> open(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, int, int, <a href="#" class="type-link" data-full-name="java.nio.file.OpenOption">OpenOption</a>...) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>open()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public static <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> open(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, int, int, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><? extends <a href="#" class="type-link" data-full-name="java.nio.file.OpenOption">OpenOption</a>>, <a href="#" class="type-link" data-full-name="java.nio.file.attribute.FileAttribute">FileAttribute</a><?>...) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>open()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> migrateV0(<a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a>, int, int, <a href="#" class="type-link" data-full-name="java.util.Set">Set</a><? extends <a href="#" class="type-link" data-full-name="java.nio.file.OpenOption">OpenOption</a>>, <a href="#" class="type-link" data-full-name="java.nio.file.attribute.FileAttribute">FileAttribute</a><?>[], <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>migrateV0()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.nio.file.Path">Path</a> getPath()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getPath()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getBlobCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getBlobCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getSegmentSize()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSegmentSize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int getCompressionLevel()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getCompressionLevel()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setFlushOnWrite(boolean)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setFlushOnWrite()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void setCompressionLevel(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>setCompressionLevel()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a> create(int, int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>create()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void writeHeader(int, int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeHeader()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void readHeader() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readHeader()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void memoryMapBlobIndexes() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>memoryMapBlobIndexes()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected void readUsedSegments() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readUsedSegments()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public long size() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>size()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int segmentSize()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentSize()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int segmentCount()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentCount()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public it.unimi.dsi.fastutil.ints.IntList keys()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>keys()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int readBlobLength(int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readBlobLength()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public int readBlobCompressedLength(int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readBlobCompressedLength()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> readBlob(int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readBlob()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void readBlob(int, <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readBlob()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> readBlobHeader(int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readBlobHeader()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> readSegments(int, int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>readSegments()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void writeBlob(int, <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeBlob()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void removeBlob(int) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>removeBlob()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int writeSegments(<a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a>) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>writeSegments()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private <a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>$SegmentRangeWriteLock findFreeSegment(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>findFreeSegment()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected <a href="#" class="type-link" data-full-name="java.util.concurrent.locks.StampedLock">StampedLock</a> getSegmentLock(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>getSegmentLock()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long segmentsBase()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentsBase()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long segmentOffset(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentOffset()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected long segmentPosition(int)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>segmentPosition()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int positionToSegment(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>positionToSegment()</code> method.</p>
+                    </div>
+
+                    <div class="member-item protected-member">
+                        <div class="mb-2">
+                            <span class="modifier protected">protected</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">protected int requiredSegments(long)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>requiredSegments()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.nio.channels.FileLock">FileLock</a> lock() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lock()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void force(boolean) throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>force()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public void close() throws <a href="#" class="type-link" data-full-name="java.io.IOException">IOException</a></code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>close()</code> method.</p>
+                    </div>
+
+                    <div class="member-item ">
+                        <div class="mb-2">
+                            <span class="modifier public">public</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">public <a href="#" class="type-link" data-full-name="java.lang.String">String</a> toString()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>toString()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.nio.ByteBuffer">ByteBuffer</a> lambda$static$6()</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$6()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$5(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$5()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$4(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$4()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$3(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$3()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$2(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$2()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Integer">Integer</a> lambda$static$1(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$1()</code> method.</p>
+                    </div>
+
+                    <div class="member-item private-member">
+                        <div class="mb-2">
+                            <span class="modifier private">private</span> <span class="modifier static">static</span> 
+                        </div>
+                        <div class="member-signature">
+<code class="language-java">private static <a href="#" class="type-link" data-full-name="java.lang.Long">Long</a> lambda$static$0(<a href="IndexedStorageFile.html" class="type-link" data-full-name="com.hypixel.hytale.storage.IndexedStorageFile">IndexedStorageFile</a>)</code>
+                        </div>
+                        <p class="mt-2 mb-0">The <code>lambda$static$0()</code> method.</p>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    Generated from <code>hytale-server-2026.01.15.jar</code> using javap.<br>
+                    Not affiliated with Hypixel Studios.
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/javadoc-ui.js"></script>
+</body>
+</html>
