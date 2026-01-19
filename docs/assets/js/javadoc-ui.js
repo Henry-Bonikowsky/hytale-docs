@@ -124,13 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
         packageDisplay = '...' + packageParts.slice(-3).join('.');
       }
 
+      // Fix file paths - just use class name since we're in the same directory
       sidebarNav.innerHTML = `
         <div class="package-group">
           <div class="package-title" title="${currentClass.package}">${packageDisplay}</div>
           <div style="margin-top: 1rem;">
-            <a href="${currentClass.file}" class="class-link active">${currentClass.name}</a>
+            <a href="${currentClass.name}.html" class="class-link active">${currentClass.name}</a>
             ${nearbyClasses.map(entry => {
-              return `<a href="${entry.file}" class="class-link">${entry.name}</a>`;
+              return `<a href="${entry.name}.html" class="class-link">${entry.name}</a>`;
             }).join('')}
           </div>
         </div>
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="package-title">Search Results (${results.length})</div>
             <div style="margin-top: 1rem;">
               ${results.map(entry => {
-                return `<a href="${entry.file}" class="class-link">${entry.name}</a>`;
+                return `<a href="${entry.name}.html" class="class-link">${entry.name}</a>`;
               }).join('')}
             </div>
           </div>
