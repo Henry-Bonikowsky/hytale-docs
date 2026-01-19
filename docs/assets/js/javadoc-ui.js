@@ -60,43 +60,69 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Simple search filtering for sidebar
+  // Global search with autocomplete
   const searchInput = document.querySelector('.sidebar-search input');
   if (searchInput) {
+    let searchIndex = [];
+    let searchTimeout = null;
+
+    // Load search index
+    fetch('../assets/search-index.json')
+      .then(response => response.json())
+      .then(data => {
+        searchIndex = data;
+      })
+      .catch(err => console.error('Failed to load search index:', err));
+
+    // Create dropdown for results
+    const dropdown = document.createElement('div');
+    dropdown.style.cssText = 'position: absolute; top: 100%; left: 0; right: 0; background: #252b3d; border: 2px solid #A3B50B; border-top: none; border-radius: 0 0 6px 6px; max-height: 300px; overflow-y: auto; z-index: 1000; display: none;';
+    searchInput.parentElement.style.position = 'relative';
+    searchInput.parentElement.appendChild(dropdown);
+
     searchInput.addEventListener('input', function(e) {
-      const query = e.target.value.toLowerCase();
-      const packageSections = document.querySelectorAll('.package-section');
+      const query = e.target.value.trim();
 
-      packageSections.forEach(function(section) {
-        const classLinks = section.querySelectorAll('.class-link');
-        let hasVisibleLinks = false;
+      clearTimeout(searchTimeout);
 
-        classLinks.forEach(function(link) {
-          const text = link.textContent.toLowerCase();
+      if (query.length < 1) {
+        dropdown.style.display = 'none';
+        return;
+      }
 
-          if (text.includes(query) || query === '') {
-            link.style.display = '';
-            hasVisibleLinks = true;
-          } else {
-            link.style.display = 'none';
-          }
-        });
+      searchTimeout = setTimeout(() => {
+        const lowerQuery = query.toLowerCase();
+        const results = [];
 
-        // Hide entire package section if no visible links
-        if (!hasVisibleLinks) {
-          section.style.display = 'none';
-        } else {
-          section.style.display = '';
-          // Auto-expand if searching and has results
-          if (query !== '') {
-            section.classList.remove('collapsed');
-            const packageClasses = section.querySelector('.package-classes');
-            if (packageClasses) {
-              packageClasses.style.maxHeight = packageClasses.scrollHeight + 'px';
+        // Search for classes only (not methods)
+        for (const entry of searchIndex) {
+          if (entry.type === 'class') {
+            const lowerName = entry.name.toLowerCase();
+            if (lowerName.includes(lowerQuery)) {
+              results.push(entry);
+              if (results.length >= 10) break;
             }
           }
         }
-      });
+
+        if (results.length === 0) {
+          dropdown.style.display = 'none';
+          return;
+        }
+
+        dropdown.innerHTML = results.map(entry => {
+          return `<a href="${entry.file}" style="display: block; color: #A3B50B; text-decoration: none; padding: 8px 12px; border-bottom: 1px solid #2d3548; font-family: 'Courier New', monospace; transition: background 0.1s;" onmouseover="this.style.background='#2d3548'" onmouseout="this.style.background='transparent'">${entry.name}</a>`;
+        }).join('');
+
+        dropdown.style.display = 'block';
+      }, 150);
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+      }
     });
   }
 
