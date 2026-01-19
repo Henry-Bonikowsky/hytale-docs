@@ -1,8 +1,7 @@
 // Hytale Plugin Documentation - UI Interactions
 
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Package collapse/expand functionality
+// Extract collapse setup into reusable function
+function setupCollapseHandlers() {
   document.querySelectorAll('.package-name[data-toggle="collapse"]').forEach(function(packageName) {
     const packageSection = packageName.closest('.package-section');
     const packageClasses = packageSection.querySelector('.package-classes');
@@ -12,7 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
       packageClasses.style.maxHeight = packageClasses.scrollHeight + 'px';
     }
 
-    packageName.addEventListener('click', function() {
+    // Remove old listener if exists (to prevent duplicates)
+    const newPackageName = packageName.cloneNode(true);
+    packageName.parentNode.replaceChild(newPackageName, packageName);
+
+    newPackageName.addEventListener('click', function() {
       const isCollapsed = packageSection.classList.contains('collapsed');
 
       if (isCollapsed) {
@@ -26,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Package collapse/expand functionality
+  setupCollapseHandlers();
 
   // Toggle private/protected members visibility
   const visibilityToggle = document.getElementById('show-private');
@@ -67,7 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (searchInput && sidebarNav) {
     let searchIndex = [];
     let searchTimeout = null;
-    const originalContent = sidebarNav.innerHTML;
+    let originalContent = null;
+
+    // Save original content AFTER package collapse setup is done
+    setTimeout(() => {
+      originalContent = sidebarNav.innerHTML;
+    }, 100);
 
     // Load search index
     fetch('../assets/search-index.json')
@@ -84,7 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (query.length < 1) {
         // Restore original sidebar content
-        sidebarNav.innerHTML = originalContent;
+        if (originalContent) {
+          sidebarNav.innerHTML = originalContent;
+          // Re-setup collapse functionality after restore
+          setupCollapseHandlers();
+        }
         return;
       }
 
@@ -114,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="package-title">Search Results (${results.length})</div>
             <div style="margin-top: 1rem;">
               ${results.map(entry => {
-                return `<a href="${entry.file}" class="class-link" style="display: block; color: #A3B50B; text-decoration: none; padding: 0.375rem 0.75rem; margin: 0.125rem 0; border-radius: 0.25rem; transition: all 0.15s; font-family: 'Courier New', monospace;">${entry.name}</a>`;
+                return `<a href="${entry.file}" class="class-link">${entry.name}</a>`;
               }).join('')}
             </div>
           </div>

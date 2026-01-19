@@ -301,7 +301,8 @@ ul {
   max-height: calc(100vh - 2rem);
   overflow-y: auto;
   min-width: 250px;
-  width: 250px;
+  width: fit-content;
+  max-width: 400px;
   background: var(--hytale-bg-dark);
   border-radius: 0.5rem;
   padding: 1rem;
