@@ -1,0 +1,890 @@
+Classfile jar:file:///C:/Users/henry/.m2/repository/com/hypixel/hytale/hytale-server/2026.01.15/hytale-server-2026.01.15.jar!/com/hypixel/hytale/server/core/plugin/PluginClassLoader.class
+  Last modified Jan 17, 2026; size 6632 bytes
+  SHA-256 checksum fab0ba9b9a47ff20f30082745769812bf6944b797f1eb70455d77669c8b7065e
+  Compiled from "PluginClassLoader.java"
+public class com.hypixel.hytale.server.core.plugin.PluginClassLoader extends java.net.URLClassLoader
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #3                          // com/hypixel/hytale/server/core/plugin/PluginClassLoader
+  super_class: #8                         // java/net/URLClassLoader
+  interfaces: 0, fields: 4, methods: 10, attributes: 2
+Constant pool:
+    #1 = String             #2            // BuiltinPlugin
+    #2 = Utf8               BuiltinPlugin
+    #3 = Class              #4            // com/hypixel/hytale/server/core/plugin/PluginClassLoader
+    #4 = Utf8               com/hypixel/hytale/server/core/plugin/PluginClassLoader
+    #5 = String             #6            // ThirdPartyPlugin
+    #6 = Utf8               ThirdPartyPlugin
+    #7 = Methodref          #8.#9         // java/net/URLClassLoader."<init>":(Ljava/lang/String;[Ljava/net/URL;Ljava/lang/ClassLoader;)V
+    #8 = Class              #10           // java/net/URLClassLoader
+    #9 = NameAndType        #11:#12       // "<init>":(Ljava/lang/String;[Ljava/net/URL;Ljava/lang/ClassLoader;)V
+   #10 = Utf8               java/net/URLClassLoader
+   #11 = Utf8               <init>
+   #12 = Utf8               (Ljava/lang/String;[Ljava/net/URL;Ljava/lang/ClassLoader;)V
+   #13 = Fieldref           #3.#14        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.inServerClassPath:Z
+   #14 = NameAndType        #15:#16       // inServerClassPath:Z
+   #15 = Utf8               inServerClassPath
+   #16 = Utf8               Z
+   #17 = Fieldref           #3.#18        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+   #18 = NameAndType        #19:#20       // pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+   #19 = Utf8               pluginManager
+   #20 = Utf8               Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+   #21 = Fieldref           #3.#22        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+   #22 = NameAndType        #23:#24       // plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+   #23 = Utf8               plugin
+   #24 = Utf8               Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+   #25 = Methodref          #3.#26        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.loadClass0:(Ljava/lang/String;Z)Ljava/lang/Class;
+   #26 = NameAndType        #27:#28       // loadClass0:(Ljava/lang/String;Z)Ljava/lang/Class;
+   #27 = Utf8               loadClass0
+   #28 = Utf8               (Ljava/lang/String;Z)Ljava/lang/Class;
+   #29 = Class              #30           // com/hypixel/hytale/server/core/plugin/PluginManager
+   #30 = Utf8               com/hypixel/hytale/server/core/plugin/PluginManager
+   #31 = Methodref          #32.#33       // java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+   #32 = Class              #34           // java/lang/Class
+   #33 = NameAndType        #35:#36       // getClassLoader:()Ljava/lang/ClassLoader;
+   #34 = Utf8               java/lang/Class
+   #35 = Utf8               getClassLoader
+   #36 = Utf8               ()Ljava/lang/ClassLoader;
+   #37 = Methodref          #38.#39       // java/lang/ClassLoader.loadClass:(Ljava/lang/String;)Ljava/lang/Class;
+   #38 = Class              #40           // java/lang/ClassLoader
+   #39 = NameAndType        #41:#42       // loadClass:(Ljava/lang/String;)Ljava/lang/Class;
+   #40 = Utf8               java/lang/ClassLoader
+   #41 = Utf8               loadClass
+   #42 = Utf8               (Ljava/lang/String;)Ljava/lang/Class;
+   #43 = Class              #44           // java/lang/ClassNotFoundException
+   #44 = Utf8               java/lang/ClassNotFoundException
+   #45 = Methodref          #8.#46        // java/net/URLClassLoader.loadClass:(Ljava/lang/String;Z)Ljava/lang/Class;
+   #46 = NameAndType        #41:#28       // loadClass:(Ljava/lang/String;Z)Ljava/lang/Class;
+   #47 = Methodref          #29.#48       // com/hypixel/hytale/server/core/plugin/PluginManager.getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+   #48 = NameAndType        #49:#50       // getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+   #49 = Utf8               getBridgeClassLoader
+   #50 = Utf8               ()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+   #51 = Methodref          #52.#53       // com/hypixel/hytale/server/core/plugin/JavaPlugin.getManifest:()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+   #52 = Class              #54           // com/hypixel/hytale/server/core/plugin/JavaPlugin
+   #53 = NameAndType        #55:#56       // getManifest:()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+   #54 = Utf8               com/hypixel/hytale/server/core/plugin/JavaPlugin
+   #55 = Utf8               getManifest
+   #56 = Utf8               ()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+   #57 = Methodref          #58.#59       // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/lang/Class;
+   #58 = Class              #60           // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader
+   #59 = NameAndType        #27:#61       // loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/lang/Class;
+   #60 = Utf8               com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader
+   #61 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/lang/Class;
+   #62 = Methodref          #58.#63       // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/lang/Class;
+   #63 = NameAndType        #27:#64       // loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/lang/Class;
+   #64 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/lang/Class;
+   #65 = Methodref          #43.#66       // java/lang/ClassNotFoundException."<init>":(Ljava/lang/String;)V
+   #66 = NameAndType        #11:#67       // "<init>":(Ljava/lang/String;)V
+   #67 = Utf8               (Ljava/lang/String;)V
+   #68 = Methodref          #3.#69        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.getClassLoadingLock:(Ljava/lang/String;)Ljava/lang/Object;
+   #69 = NameAndType        #70:#71       // getClassLoadingLock:(Ljava/lang/String;)Ljava/lang/Object;
+   #70 = Utf8               getClassLoadingLock
+   #71 = Utf8               (Ljava/lang/String;)Ljava/lang/Object;
+   #72 = Methodref          #3.#73        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.findLoadedClass:(Ljava/lang/String;)Ljava/lang/Class;
+   #73 = NameAndType        #74:#42       // findLoadedClass:(Ljava/lang/String;)Ljava/lang/Class;
+   #74 = Utf8               findLoadedClass
+   #75 = Methodref          #3.#76        // com/hypixel/hytale/server/core/plugin/PluginClassLoader.getParent:()Ljava/lang/ClassLoader;
+   #76 = NameAndType        #77:#36       // getParent:()Ljava/lang/ClassLoader;
+   #77 = Utf8               getParent
+   #78 = Methodref          #38.#79       // java/lang/ClassLoader.getResource:(Ljava/lang/String;)Ljava/net/URL;
+   #79 = NameAndType        #80:#81       // getResource:(Ljava/lang/String;)Ljava/net/URL;
+   #80 = Utf8               getResource
+   #81 = Utf8               (Ljava/lang/String;)Ljava/net/URL;
+   #82 = Methodref          #8.#79        // java/net/URLClassLoader.getResource:(Ljava/lang/String;)Ljava/net/URL;
+   #83 = Methodref          #58.#84       // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/net/URL;
+   #84 = NameAndType        #85:#86       // getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/net/URL;
+   #85 = Utf8               getResource0
+   #86 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/net/URL;
+   #87 = Methodref          #58.#88       // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/net/URL;
+   #88 = NameAndType        #85:#89       // getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/net/URL;
+   #89 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/net/URL;
+   #90 = Class              #91           // it/unimi/dsi/fastutil/objects/ObjectArrayList
+   #91 = Utf8               it/unimi/dsi/fastutil/objects/ObjectArrayList
+   #92 = Methodref          #90.#93       // it/unimi/dsi/fastutil/objects/ObjectArrayList."<init>":()V
+   #93 = NameAndType        #11:#94       // "<init>":()V
+   #94 = Utf8               ()V
+   #95 = Methodref          #38.#96       // java/lang/ClassLoader.getResources:(Ljava/lang/String;)Ljava/util/Enumeration;
+   #96 = NameAndType        #97:#98       // getResources:(Ljava/lang/String;)Ljava/util/Enumeration;
+   #97 = Utf8               getResources
+   #98 = Utf8               (Ljava/lang/String;)Ljava/util/Enumeration;
+   #99 = InterfaceMethodref #100.#101     // java/util/Enumeration.hasMoreElements:()Z
+  #100 = Class              #102          // java/util/Enumeration
+  #101 = NameAndType        #103:#104     // hasMoreElements:()Z
+  #102 = Utf8               java/util/Enumeration
+  #103 = Utf8               hasMoreElements
+  #104 = Utf8               ()Z
+  #105 = InterfaceMethodref #100.#106     // java/util/Enumeration.nextElement:()Ljava/lang/Object;
+  #106 = NameAndType        #107:#108     // nextElement:()Ljava/lang/Object;
+  #107 = Utf8               nextElement
+  #108 = Utf8               ()Ljava/lang/Object;
+  #109 = Class              #110          // java/net/URL
+  #110 = Utf8               java/net/URL
+  #111 = Methodref          #90.#112      // it/unimi/dsi/fastutil/objects/ObjectArrayList.add:(Ljava/lang/Object;)Z
+  #112 = NameAndType        #113:#114     // add:(Ljava/lang/Object;)Z
+  #113 = Utf8               add
+  #114 = Utf8               (Ljava/lang/Object;)Z
+  #115 = Methodref          #8.#96        // java/net/URLClassLoader.getResources:(Ljava/lang/String;)Ljava/util/Enumeration;
+  #116 = Methodref          #58.#117      // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/util/Enumeration;
+  #117 = NameAndType        #118:#119     // getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/util/Enumeration;
+  #118 = Utf8               getResources0
+  #119 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/util/Enumeration;
+  #120 = Methodref          #58.#121      // com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/util/Enumeration;
+  #121 = NameAndType        #118:#122     // getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/util/Enumeration;
+  #122 = Utf8               (Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/util/Enumeration;
+  #123 = Methodref          #124.#125     // java/util/Collections.enumeration:(Ljava/util/Collection;)Ljava/util/Enumeration;
+  #124 = Class              #126          // java/util/Collections
+  #125 = NameAndType        #127:#128     // enumeration:(Ljava/util/Collection;)Ljava/util/Enumeration;
+  #126 = Utf8               java/util/Collections
+  #127 = Utf8               enumeration
+  #128 = Utf8               (Ljava/util/Collection;)Ljava/util/Enumeration;
+  #129 = Methodref          #130.#131     // java/lang/Throwable.getStackTrace:()[Ljava/lang/StackTraceElement;
+  #130 = Class              #132          // java/lang/Throwable
+  #131 = NameAndType        #133:#134     // getStackTrace:()[Ljava/lang/StackTraceElement;
+  #132 = Utf8               java/lang/Throwable
+  #133 = Utf8               getStackTrace
+  #134 = Utf8               ()[Ljava/lang/StackTraceElement;
+  #135 = Methodref          #136.#137     // java/lang/StackTraceElement.getClassLoaderName:()Ljava/lang/String;
+  #136 = Class              #138          // java/lang/StackTraceElement
+  #137 = NameAndType        #139:#140     // getClassLoaderName:()Ljava/lang/String;
+  #138 = Utf8               java/lang/StackTraceElement
+  #139 = Utf8               getClassLoaderName
+  #140 = Utf8               ()Ljava/lang/String;
+  #141 = Methodref          #142.#143     // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #142 = Class              #144          // java/lang/String
+  #143 = NameAndType        #145:#114     // equals:(Ljava/lang/Object;)Z
+  #144 = Utf8               java/lang/String
+  #145 = Utf8               equals
+  #146 = Methodref          #130.#147     // java/lang/Throwable.getCause:()Ljava/lang/Throwable;
+  #147 = NameAndType        #148:#149     // getCause:()Ljava/lang/Throwable;
+  #148 = Utf8               getCause
+  #149 = Utf8               ()Ljava/lang/Throwable;
+  #150 = Methodref          #3.#151       // com/hypixel/hytale/server/core/plugin/PluginClassLoader.registerAsParallelCapable:()Z
+  #151 = NameAndType        #152:#104     // registerAsParallelCapable:()Z
+  #152 = Utf8               registerAsParallelCapable
+  #153 = Utf8               THIRD_PARTY_LOADER_NAME
+  #154 = Utf8               Ljava/lang/String;
+  #155 = Utf8               ConstantValue
+  #156 = Utf8               RuntimeVisibleAnnotations
+  #157 = Utf8               Ljavax/annotation/Nonnull;
+  #158 = Utf8               Ljavax/annotation/Nullable;
+  #159 = Utf8               (Lcom/hypixel/hytale/server/core/plugin/PluginManager;Z[Ljava/net/URL;)V
+  #160 = Utf8               Code
+  #161 = Utf8               LineNumberTable
+  #162 = Utf8               LocalVariableTable
+  #163 = Utf8               this
+  #164 = Utf8               Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+  #165 = Utf8               urls
+  #166 = Utf8               [Ljava/net/URL;
+  #167 = Utf8               StackMapTable
+  #168 = Class              #166          // "[Ljava/net/URL;"
+  #169 = Utf8               RuntimeVisibleParameterAnnotations
+  #170 = Utf8               isInServerClassPath
+  #171 = Utf8               setPlugin
+  #172 = Utf8               (Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;)V
+  #173 = Utf8               name
+  #174 = Utf8               resolve
+  #175 = Utf8               Exceptions
+  #176 = Utf8               Signature
+  #177 = Utf8               (Ljava/lang/String;Z)Ljava/lang/Class<*>;
+  #178 = Utf8               Ljava/lang/Class;
+  #179 = Utf8               useBridge
+  #180 = Utf8               LocalVariableTypeTable
+  #181 = Utf8               Ljava/lang/Class<*>;
+  #182 = Utf8               loadLocalClass
+  #183 = Utf8               parent
+  #184 = Utf8               Ljava/lang/ClassLoader;
+  #185 = Utf8               loadedClass
+  #186 = Class              #187          // java/lang/Object
+  #187 = Utf8               java/lang/Object
+  #188 = Utf8               (Ljava/lang/String;)Ljava/lang/Class<*>;
+  #189 = Utf8               resource
+  #190 = Utf8               Ljava/net/URL;
+  #191 = Utf8               bridge
+  #192 = Utf8               Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+  #193 = Utf8               bridgeResources
+  #194 = Utf8               Ljava/util/Enumeration;
+  #195 = Utf8               results
+  #196 = Utf8               Lit/unimi/dsi/fastutil/objects/ObjectArrayList;
+  #197 = Utf8               serverResources
+  #198 = Utf8               pluginResources
+  #199 = Utf8               Ljava/util/Enumeration<Ljava/net/URL;>;
+  #200 = Utf8               Lit/unimi/dsi/fastutil/objects/ObjectArrayList<Ljava/net/URL;>;
+  #201 = Class              #202          // java/io/IOException
+  #202 = Utf8               java/io/IOException
+  #203 = Utf8               (Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;
+  #204 = Utf8               isFromThirdPartyPlugin
+  #205 = Utf8               (Ljava/lang/Throwable;)Z
+  #206 = Utf8               element
+  #207 = Utf8               Ljava/lang/StackTraceElement;
+  #208 = Utf8               throwable
+  #209 = Utf8               Ljava/lang/Throwable;
+  #210 = Class              #211          // "[Ljava/lang/StackTraceElement;"
+  #211 = Utf8               [Ljava/lang/StackTraceElement;
+  #212 = Utf8               <clinit>
+  #213 = Utf8               SourceFile
+  #214 = Utf8               PluginClassLoader.java
+  #215 = Utf8               InnerClasses
+  #216 = Utf8               PluginBridgeClassLoader
+{
+  public static final java.lang.String THIRD_PARTY_LOADER_NAME;
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String ThirdPartyPlugin
+
+  private final com.hypixel.hytale.server.core.plugin.PluginManager pluginManager;
+    descriptor: Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    RuntimeVisibleAnnotations:
+      0: #157()
+        javax.annotation.Nonnull
+
+  private final boolean inServerClassPath;
+    descriptor: Z
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private com.hypixel.hytale.server.core.plugin.JavaPlugin plugin;
+    descriptor: Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+    flags: (0x0002) ACC_PRIVATE
+    RuntimeVisibleAnnotations:
+      0: #158()
+        javax.annotation.Nullable
+
+  public com.hypixel.hytale.server.core.plugin.PluginClassLoader(com.hypixel.hytale.server.core.plugin.PluginManager, boolean, java.net.URL...);
+    descriptor: (Lcom/hypixel/hytale/server/core/plugin/PluginManager;Z[Ljava/net/URL;)V
+    flags: (0x0081) ACC_PUBLIC, ACC_VARARGS
+    Code:
+      stack=4, locals=4, args_size=4
+         0: aload_0
+         1: iload_2
+         2: ifeq          10
+         5: ldc           #1                  // String BuiltinPlugin
+         7: goto          12
+        10: ldc           #5                  // String ThirdPartyPlugin
+        12: aload_3
+        13: aconst_null
+        14: invokespecial #7                  // Method java/net/URLClassLoader."<init>":(Ljava/lang/String;[Ljava/net/URL;Ljava/lang/ClassLoader;)V
+        17: aload_0
+        18: iload_2
+        19: putfield      #13                 // Field inServerClassPath:Z
+        22: aload_0
+        23: aload_1
+        24: putfield      #17                 // Field pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+        27: return
+      LineNumberTable:
+        line 48: 0
+        line 49: 17
+        line 50: 22
+        line 51: 27
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      28     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0      28     1 pluginManager   Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+            0      28     2 inServerClassPath   Z
+            0      28     3  urls   [Ljava/net/URL;
+      StackMapTable: number_of_entries = 2
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ this ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 1
+          locals = [ this, class com/hypixel/hytale/server/core/plugin/PluginManager, int, class "[Ljava/net/URL;" ]
+          stack = [ this, class java/lang/String ]
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+      parameter 1:
+      parameter 2:
+        0: #157()
+          javax.annotation.Nonnull
+
+  public boolean isInServerClassPath();
+    descriptor: ()Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #13                 // Field inServerClassPath:Z
+         4: ireturn
+      LineNumberTable:
+        line 57: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+
+  void setPlugin(com.hypixel.hytale.server.core.plugin.JavaPlugin);
+    descriptor: (Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;)V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: putfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+         5: return
+      LineNumberTable:
+        line 66: 0
+        line 67: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0       6     1 plugin   Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+
+  protected java.lang.Class<?> loadClass(java.lang.String, boolean) throws java.lang.ClassNotFoundException;
+    descriptor: (Ljava/lang/String;Z)Ljava/lang/Class;
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=3, locals=3, args_size=3
+         0: aload_0
+         1: aload_1
+         2: iconst_1
+         3: invokevirtual #25                 // Method loadClass0:(Ljava/lang/String;Z)Ljava/lang/Class;
+         6: areturn
+      LineNumberTable:
+        line 73: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0       7     1  name   Ljava/lang/String;
+            0       7     2 resolve   Z
+    Exceptions:
+      throws java.lang.ClassNotFoundException
+    Signature: #177                         // (Ljava/lang/String;Z)Ljava/lang/Class<*>;
+    RuntimeVisibleAnnotations:
+      0: #157()
+        javax.annotation.Nonnull
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+      parameter 1:
+
+  private java.lang.Class<?> loadClass0(java.lang.String, boolean) throws java.lang.ClassNotFoundException;
+    descriptor: (Ljava/lang/String;Z)Ljava/lang/Class;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=4, locals=4, args_size=3
+         0: ldc           #29                 // class com/hypixel/hytale/server/core/plugin/PluginManager
+         2: invokevirtual #31                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+         5: aload_1
+         6: invokevirtual #37                 // Method java/lang/ClassLoader.loadClass:(Ljava/lang/String;)Ljava/lang/Class;
+         9: astore_3
+        10: aload_3
+        11: ifnull        16
+        14: aload_3
+        15: areturn
+        16: goto          20
+        19: astore_3
+        20: aload_0
+        21: aload_1
+        22: iconst_0
+        23: invokespecial #45                 // Method java/net/URLClassLoader.loadClass:(Ljava/lang/String;Z)Ljava/lang/Class;
+        26: astore_3
+        27: aload_3
+        28: ifnull        33
+        31: aload_3
+        32: areturn
+        33: goto          37
+        36: astore_3
+        37: iload_2
+        38: ifeq          104
+        41: aload_0
+        42: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+        45: ifnull        81
+        48: aload_0
+        49: getfield      #17                 // Field pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+        52: invokevirtual #47                 // Method com/hypixel/hytale/server/core/plugin/PluginManager.getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+        55: aload_1
+        56: aload_0
+        57: aload_0
+        58: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+        61: invokevirtual #51                 // Method com/hypixel/hytale/server/core/plugin/JavaPlugin.getManifest:()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+        64: invokevirtual #57                 // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/lang/Class;
+        67: astore_3
+        68: aload_3
+        69: ifnull        74
+        72: aload_3
+        73: areturn
+        74: goto          104
+        77: astore_3
+        78: goto          104
+        81: aload_0
+        82: getfield      #17                 // Field pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+        85: invokevirtual #47                 // Method com/hypixel/hytale/server/core/plugin/PluginManager.getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+        88: aload_1
+        89: aload_0
+        90: invokevirtual #62                 // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.loadClass0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/lang/Class;
+        93: astore_3
+        94: aload_3
+        95: ifnull        100
+        98: aload_3
+        99: areturn
+       100: goto          104
+       103: astore_3
+       104: new           #43                 // class java/lang/ClassNotFoundException
+       107: dup
+       108: aload_1
+       109: invokespecial #65                 // Method java/lang/ClassNotFoundException."<init>":(Ljava/lang/String;)V
+       112: athrow
+      Exception table:
+         from    to  target type
+             0    15    19   Class java/lang/ClassNotFoundException
+            20    32    36   Class java/lang/ClassNotFoundException
+            48    73    77   Class java/lang/ClassNotFoundException
+            81    99   103   Class java/lang/ClassNotFoundException
+      LineNumberTable:
+        line 88: 0
+        line 89: 10
+        line 91: 16
+        line 90: 19
+        line 95: 20
+        line 96: 27
+        line 98: 33
+        line 97: 36
+        line 100: 37
+        line 101: 41
+        line 104: 48
+        line 105: 68
+        line 107: 74
+        line 106: 77
+        line 107: 78
+        line 111: 81
+        line 112: 94
+        line 114: 100
+        line 113: 103
+        line 118: 104
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           10       6     3 loadClass   Ljava/lang/Class;
+           27       6     3 loadClass   Ljava/lang/Class;
+           68       6     3 loadClass   Ljava/lang/Class;
+           94       6     3 loadClass   Ljava/lang/Class;
+            0     113     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0     113     1  name   Ljava/lang/String;
+            0     113     2 useBridge   Z
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           10       6     3 loadClass   Ljava/lang/Class<*>;
+           27       6     3 loadClass   Ljava/lang/Class<*>;
+           68       6     3 loadClass   Ljava/lang/Class<*>;
+           94       6     3 loadClass   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 12
+        frame_type = 16 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ClassNotFoundException ]
+        frame_type = 0 /* same */
+        frame_type = 12 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ClassNotFoundException ]
+        frame_type = 0 /* same */
+        frame_type = 36 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ClassNotFoundException ]
+        frame_type = 3 /* same */
+        frame_type = 18 /* same */
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ClassNotFoundException ]
+        frame_type = 0 /* same */
+    Exceptions:
+      throws java.lang.ClassNotFoundException
+    Signature: #177                         // (Ljava/lang/String;Z)Ljava/lang/Class<*>;
+    RuntimeVisibleAnnotations:
+      0: #157()
+        javax.annotation.Nonnull
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+      parameter 1:
+
+  public java.lang.Class<?> loadLocalClass(java.lang.String) throws java.lang.ClassNotFoundException;
+    descriptor: (Ljava/lang/String;)Ljava/lang/Class;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=6, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokevirtual #68                 // Method getClassLoadingLock:(Ljava/lang/String;)Ljava/lang/Object;
+         5: dup
+         6: astore_2
+         7: monitorenter
+         8: aload_0
+         9: aload_1
+        10: invokevirtual #72                 // Method findLoadedClass:(Ljava/lang/String;)Ljava/lang/Class;
+        13: astore_3
+        14: aload_3
+        15: ifnonnull     52
+        18: aload_0
+        19: invokevirtual #75                 // Method getParent:()Ljava/lang/ClassLoader;
+        22: astore        4
+        24: aload         4
+        26: ifnull        36
+        29: aload         4
+        31: aload_1
+        32: invokevirtual #37                 // Method java/lang/ClassLoader.loadClass:(Ljava/lang/String;)Ljava/lang/Class;
+        35: astore_3
+        36: goto          41
+        39: astore        4
+        41: aload_3
+        42: ifnonnull     52
+        45: aload_0
+        46: aload_1
+        47: iconst_0
+        48: invokevirtual #25                 // Method loadClass0:(Ljava/lang/String;Z)Ljava/lang/Class;
+        51: astore_3
+        52: aload_3
+        53: aload_2
+        54: monitorexit
+        55: areturn
+        56: astore        5
+        58: aload_2
+        59: monitorexit
+        60: aload         5
+        62: athrow
+      Exception table:
+         from    to  target type
+            18    36    39   Class java/lang/ClassNotFoundException
+             8    55    56   any
+            56    60    56   any
+      LineNumberTable:
+        line 130: 0
+        line 132: 8
+        line 133: 14
+        line 135: 18
+        line 136: 24
+        line 137: 29
+        line 142: 36
+        line 139: 39
+        line 144: 41
+        line 145: 45
+        line 148: 52
+        line 149: 56
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           24      12     4 parent   Ljava/lang/ClassLoader;
+           14      42     3 loadedClass   Ljava/lang/Class;
+            0      63     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0      63     1  name   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           14      42     3 loadedClass   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 5
+        frame_type = 253 /* append */
+          offset_delta = 36
+          locals = [ class java/lang/Object, class java/lang/Class ]
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ClassNotFoundException ]
+        frame_type = 1 /* same */
+        frame_type = 10 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class com/hypixel/hytale/server/core/plugin/PluginClassLoader, class java/lang/String, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+    Exceptions:
+      throws java.lang.ClassNotFoundException
+    Signature: #188                         // (Ljava/lang/String;)Ljava/lang/Class<*>;
+    RuntimeVisibleAnnotations:
+      0: #157()
+        javax.annotation.Nonnull
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+
+  public java.net.URL getResource(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/net/URL;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=2
+         0: ldc           #29                 // class com/hypixel/hytale/server/core/plugin/PluginManager
+         2: invokevirtual #31                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+         5: aload_1
+         6: invokevirtual #78                 // Method java/lang/ClassLoader.getResource:(Ljava/lang/String;)Ljava/net/URL;
+         9: astore_2
+        10: aload_2
+        11: ifnull        16
+        14: aload_2
+        15: areturn
+        16: aload_0
+        17: aload_1
+        18: invokespecial #82                 // Method java/net/URLClassLoader.getResource:(Ljava/lang/String;)Ljava/net/URL;
+        21: astore_2
+        22: aload_2
+        23: ifnull        28
+        26: aload_2
+        27: areturn
+        28: aload_0
+        29: getfield      #17                 // Field pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+        32: invokevirtual #47                 // Method com/hypixel/hytale/server/core/plugin/PluginManager.getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+        35: astore_3
+        36: aload_0
+        37: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+        40: ifnull        60
+        43: aload_3
+        44: aload_1
+        45: aload_0
+        46: aload_0
+        47: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+        50: invokevirtual #51                 // Method com/hypixel/hytale/server/core/plugin/JavaPlugin.getManifest:()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+        53: invokevirtual #83                 // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/net/URL;
+        56: astore_2
+        57: goto          67
+        60: aload_3
+        61: aload_1
+        62: aload_0
+        63: invokevirtual #87                 // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResource0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/net/URL;
+        66: astore_2
+        67: aload_2
+        68: areturn
+      LineNumberTable:
+        line 156: 0
+        line 157: 10
+        line 160: 16
+        line 161: 22
+        line 164: 28
+        line 165: 36
+        line 166: 43
+        line 168: 60
+        line 170: 67
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      69     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0      69     1  name   Ljava/lang/String;
+           10      59     2 resource   Ljava/net/URL;
+           36      33     3 bridge   Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 16
+          locals = [ class java/net/URL ]
+        frame_type = 11 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 31
+          locals = [ class com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader ]
+        frame_type = 6 /* same */
+    RuntimeVisibleAnnotations:
+      0: #158()
+        javax.annotation.Nullable
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+
+  public java.util.Enumeration<java.net.URL> getResources(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/util/Enumeration;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=7, args_size=2
+         0: new           #90                 // class it/unimi/dsi/fastutil/objects/ObjectArrayList
+         3: dup
+         4: invokespecial #92                 // Method it/unimi/dsi/fastutil/objects/ObjectArrayList."<init>":()V
+         7: astore_2
+         8: ldc           #29                 // class com/hypixel/hytale/server/core/plugin/PluginManager
+        10: invokevirtual #31                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+        13: aload_1
+        14: invokevirtual #95                 // Method java/lang/ClassLoader.getResources:(Ljava/lang/String;)Ljava/util/Enumeration;
+        17: astore_3
+        18: aload_3
+        19: invokeinterface #99,  1           // InterfaceMethod java/util/Enumeration.hasMoreElements:()Z
+        24: ifeq          44
+        27: aload_2
+        28: aload_3
+        29: invokeinterface #105,  1          // InterfaceMethod java/util/Enumeration.nextElement:()Ljava/lang/Object;
+        34: checkcast     #109                // class java/net/URL
+        37: invokevirtual #111                // Method it/unimi/dsi/fastutil/objects/ObjectArrayList.add:(Ljava/lang/Object;)Z
+        40: pop
+        41: goto          18
+        44: aload_0
+        45: aload_1
+        46: invokespecial #115                // Method java/net/URLClassLoader.getResources:(Ljava/lang/String;)Ljava/util/Enumeration;
+        49: astore        4
+        51: aload         4
+        53: invokeinterface #99,  1           // InterfaceMethod java/util/Enumeration.hasMoreElements:()Z
+        58: ifeq          79
+        61: aload_2
+        62: aload         4
+        64: invokeinterface #105,  1          // InterfaceMethod java/util/Enumeration.nextElement:()Ljava/lang/Object;
+        69: checkcast     #109                // class java/net/URL
+        72: invokevirtual #111                // Method it/unimi/dsi/fastutil/objects/ObjectArrayList.add:(Ljava/lang/Object;)Z
+        75: pop
+        76: goto          51
+        79: aload_0
+        80: getfield      #17                 // Field pluginManager:Lcom/hypixel/hytale/server/core/plugin/PluginManager;
+        83: invokevirtual #47                 // Method com/hypixel/hytale/server/core/plugin/PluginManager.getBridgeClassLoader:()Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+        86: astore        5
+        88: aload_0
+        89: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+        92: ifnull        114
+        95: aload         5
+        97: aload_1
+        98: aload_0
+        99: aload_0
+       100: getfield      #21                 // Field plugin:Lcom/hypixel/hytale/server/core/plugin/JavaPlugin;
+       103: invokevirtual #51                 // Method com/hypixel/hytale/server/core/plugin/JavaPlugin.getManifest:()Lcom/hypixel/hytale/common/plugin/PluginManifest;
+       106: invokevirtual #116                // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;Lcom/hypixel/hytale/common/plugin/PluginManifest;)Ljava/util/Enumeration;
+       109: astore        6
+       111: goto          123
+       114: aload         5
+       116: aload_1
+       117: aload_0
+       118: invokevirtual #120                // Method com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader.getResources0:(Ljava/lang/String;Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;)Ljava/util/Enumeration;
+       121: astore        6
+       123: aload         6
+       125: invokeinterface #99,  1           // InterfaceMethod java/util/Enumeration.hasMoreElements:()Z
+       130: ifeq          151
+       133: aload_2
+       134: aload         6
+       136: invokeinterface #105,  1          // InterfaceMethod java/util/Enumeration.nextElement:()Ljava/lang/Object;
+       141: checkcast     #109                // class java/net/URL
+       144: invokevirtual #111                // Method it/unimi/dsi/fastutil/objects/ObjectArrayList.add:(Ljava/lang/Object;)Z
+       147: pop
+       148: goto          123
+       151: aload_2
+       152: invokestatic  #123                // Method java/util/Collections.enumeration:(Ljava/util/Collection;)Ljava/util/Enumeration;
+       155: areturn
+      LineNumberTable:
+        line 176: 0
+        line 179: 8
+        line 180: 18
+        line 181: 27
+        line 185: 44
+        line 186: 51
+        line 187: 61
+        line 191: 79
+        line 193: 88
+        line 194: 95
+        line 196: 114
+        line 198: 123
+        line 199: 133
+        line 202: 151
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          111       3     6 bridgeResources   Ljava/util/Enumeration;
+            0     156     0  this   Lcom/hypixel/hytale/server/core/plugin/PluginClassLoader;
+            0     156     1  name   Ljava/lang/String;
+            8     148     2 results   Lit/unimi/dsi/fastutil/objects/ObjectArrayList;
+           18     138     3 serverResources   Ljava/util/Enumeration;
+           51     105     4 pluginResources   Ljava/util/Enumeration;
+           88      68     5 bridge   Lcom/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader;
+          123      33     6 bridgeResources   Ljava/util/Enumeration;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+          111       3     6 bridgeResources   Ljava/util/Enumeration<Ljava/net/URL;>;
+            8     148     2 results   Lit/unimi/dsi/fastutil/objects/ObjectArrayList<Ljava/net/URL;>;
+           18     138     3 serverResources   Ljava/util/Enumeration<Ljava/net/URL;>;
+           51     105     4 pluginResources   Ljava/util/Enumeration<Ljava/net/URL;>;
+          123      33     6 bridgeResources   Ljava/util/Enumeration<Ljava/net/URL;>;
+      StackMapTable: number_of_entries = 7
+        frame_type = 253 /* append */
+          offset_delta = 18
+          locals = [ class it/unimi/dsi/fastutil/objects/ObjectArrayList, class java/util/Enumeration ]
+        frame_type = 25 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 6
+          locals = [ class java/util/Enumeration ]
+        frame_type = 27 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader ]
+        frame_type = 252 /* append */
+          offset_delta = 8
+          locals = [ class java/util/Enumeration ]
+        frame_type = 27 /* same */
+    Exceptions:
+      throws java.io.IOException
+    Signature: #203                         // (Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;
+    RuntimeVisibleAnnotations:
+      0: #157()
+        javax.annotation.Nonnull
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #157()
+          javax.annotation.Nonnull
+
+  public static boolean isFromThirdPartyPlugin(java.lang.Throwable);
+    descriptor: (Ljava/lang/Throwable;)Z
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=1
+         0: aload_0
+         1: ifnull        64
+         4: aload_0
+         5: invokevirtual #129                // Method java/lang/Throwable.getStackTrace:()[Ljava/lang/StackTraceElement;
+         8: astore_1
+         9: aload_1
+        10: arraylength
+        11: istore_2
+        12: iconst_0
+        13: istore_3
+        14: iload_3
+        15: iload_2
+        16: if_icmpge     45
+        19: aload_1
+        20: iload_3
+        21: aaload
+        22: astore        4
+        24: ldc           #5                  // String ThirdPartyPlugin
+        26: aload         4
+        28: invokevirtual #135                // Method java/lang/StackTraceElement.getClassLoaderName:()Ljava/lang/String;
+        31: invokevirtual #141                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        34: ifeq          39
+        37: iconst_1
+        38: ireturn
+        39: iinc          3, 1
+        42: goto          14
+        45: aload_0
+        46: invokevirtual #146                // Method java/lang/Throwable.getCause:()Ljava/lang/Throwable;
+        49: aload_0
+        50: if_acmpne     56
+        53: goto          64
+        56: aload_0
+        57: invokevirtual #146                // Method java/lang/Throwable.getCause:()Ljava/lang/Throwable;
+        60: astore_0
+        61: goto          0
+        64: iconst_0
+        65: ireturn
+      LineNumberTable:
+        line 210: 0
+        line 211: 4
+        line 212: 24
+        line 213: 37
+        line 211: 39
+        line 216: 45
+        line 217: 56
+        line 219: 64
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           24      15     4 element   Ljava/lang/StackTraceElement;
+            0      66     0 throwable   Ljava/lang/Throwable;
+      StackMapTable: number_of_entries = 6
+        frame_type = 0 /* same */
+        frame_type = 254 /* append */
+          offset_delta = 13
+          locals = [ class "[Ljava/lang/StackTraceElement;", int, int ]
+        frame_type = 24 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 5
+        frame_type = 10 /* same */
+        frame_type = 7 /* same */
+    RuntimeVisibleParameterAnnotations:
+      parameter 0:
+        0: #158()
+          javax.annotation.Nullable
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: invokestatic  #150                // Method registerAsParallelCapable:()Z
+         3: pop
+         4: return
+      LineNumberTable:
+        line 18: 0
+        line 19: 4
+}
+SourceFile: "PluginClassLoader.java"
+InnerClasses:
+  public static #216= #58 of #29;         // PluginBridgeClassLoader=class com/hypixel/hytale/server/core/plugin/PluginManager$PluginBridgeClassLoader of class com/hypixel/hytale/server/core/plugin/PluginManager
