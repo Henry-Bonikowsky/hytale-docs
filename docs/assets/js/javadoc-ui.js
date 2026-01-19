@@ -116,10 +116,17 @@ document.addEventListener('DOMContentLoaded', function() {
       nearbyClasses.sort((a, b) => a.name.localeCompare(b.name));
 
       // Replace sidebar content with nearby classes
-      const packageDisplay = currentClass.package || 'Default Package';
+      // Shorten package name to last 2-3 segments
+      let packageDisplay = currentClass.package || 'Default Package';
+      const packageParts = packageDisplay.split('.');
+      if (packageParts.length > 3) {
+        // Show last 3 segments (e.g., "universe.world.events" instead of "com.hypixel.hytale.server.core.universe.world.events")
+        packageDisplay = '...' + packageParts.slice(-3).join('.');
+      }
+
       sidebarNav.innerHTML = `
         <div class="package-group">
-          <div class="package-title">${packageDisplay}</div>
+          <div class="package-title" title="${currentClass.package}">${packageDisplay}</div>
           <div style="margin-top: 1rem;">
             <a href="${currentClass.file}" class="class-link active">${currentClass.name}</a>
             ${nearbyClasses.map(entry => {
