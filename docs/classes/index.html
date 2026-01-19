@@ -176,7 +176,9 @@
                 }
 
                 container.innerHTML = matchingClasses.map(classEntry => {
-                    return `<a href="${classEntry.file}" class="class-link-item">${classEntry.name}<span style="color: #6c717d; font-size: 12px; margin-left: 8px;">${classEntry.package || ''}</span></a>`;
+                    // Fix path: remove 'classes/' prefix since we're already in /classes/
+                    const fixedPath = classEntry.file.replace('classes/', '');
+                    return `<a href="${fixedPath}" class="class-link-item">${classEntry.name}<span style="color: #6c717d; font-size: 12px; margin-left: 8px;">${classEntry.package || ''}</span></a>`;
                 }).join('');
 
                 document.getElementById('stats').textContent = `${matchingClasses.length} matching classes`;
@@ -188,7 +190,9 @@
                     totalClasses += classes.length;
 
                     const classesHtml = classes.map(c => {
-                        return `<a href="${c.file}" class="class-link-item">${c.name}</a>`;
+                        // Fix path: remove 'classes/' prefix since we're already in /classes/
+                        const fixedPath = c.file.replace('classes/', '');
+                        return `<a href="${fixedPath}" class="class-link-item">${c.name}</a>`;
                     }).join('');
 
                     return `
