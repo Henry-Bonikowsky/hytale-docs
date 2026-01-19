@@ -124,14 +124,16 @@ document.addEventListener('DOMContentLoaded', function() {
         packageDisplay = '...' + packageParts.slice(-3).join('.');
       }
 
-      // Fix file paths - just use class name since we're in the same directory
+      // Fix file paths - extract just the filename from the full path
+      const getCurrentFileName = (file) => file.split('/').pop();
+
       sidebarNav.innerHTML = `
         <div class="package-group">
           <div class="package-title" title="${currentClass.package}">${packageDisplay}</div>
           <div style="margin-top: 1rem;">
-            <a href="${currentClass.name}.html" class="class-link active">${currentClass.name}</a>
+            <a href="${getCurrentFileName(currentClass.file)}" class="class-link active">${currentClass.name}</a>
             ${nearbyClasses.map(entry => {
-              return `<a href="${entry.name}.html" class="class-link">${entry.name}</a>`;
+              return `<a href="${getCurrentFileName(entry.file)}" class="class-link">${entry.name}</a>`;
             }).join('')}
           </div>
         </div>
@@ -174,12 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Replace sidebar content with search results
+        const getFileName = (file) => file.split('/').pop();
+
         sidebarNav.innerHTML = `
           <div class="package-group">
             <div class="package-title">Search Results (${results.length})</div>
             <div style="margin-top: 1rem;">
               ${results.map(entry => {
-                return `<a href="${entry.name}.html" class="class-link">${entry.name}</a>`;
+                return `<a href="${getFileName(entry.file)}" class="class-link">${entry.name}</a>`;
               }).join('')}
             </div>
           </div>
