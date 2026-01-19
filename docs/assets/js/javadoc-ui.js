@@ -105,39 +105,84 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (!currentClass || !currentClass.package) return;
 
-      // Find all classes in the same package
-      const nearbyClasses = searchIndex.filter(entry => {
-        if (entry.type !== 'class') return false;
-        if (entry.name === pageTitle) return false;
-        return entry.package === currentClass.package;
+      // Build package tree with related packages
+      const currentPackage = currentClass.package;
+      const packageParts = currentPackage.split('.');
+
+      // Get parent package and sibling packages
+      const relatedPackages = new Set();
+
+      // Add current package
+      relatedPackages.add(currentPackage);
+
+      // Add sibling packages (same parent)
+      if (packageParts.length > 1) {
+        const parentPackage = packageParts.slice(0, -1).join('.');
+        searchIndex.forEach(entry => {
+          if (entry.type === 'class' && entry.package && entry.package.startsWith(parentPackage + '.')) {
+            const pkgParts = entry.package.split('.');
+            if (pkgParts.length === packageParts.length) {
+              relatedPackages.add(entry.package);
+            }
+          }
+        });
+      }
+
+      // Add child packages (direct children only)
+      searchIndex.forEach(entry => {
+        if (entry.type === 'class' && entry.package && entry.package.startsWith(currentPackage + '.')) {
+          const pkgParts = entry.package.split('.');
+          if (pkgParts.length === packageParts.length + 1) {
+            relatedPackages.add(entry.package);
+          }
+        }
       });
 
-      // Sort alphabetically
-      nearbyClasses.sort((a, b) => a.name.localeCompare(b.name));
-
-      // Replace sidebar content with nearby classes
-      // Shorten package name to last 2-3 segments
-      let packageDisplay = currentClass.package || 'Default Package';
-      const packageParts = packageDisplay.split('.');
-      if (packageParts.length > 3) {
-        // Show last 3 segments (e.g., "universe.world.events" instead of "com.hypixel.hytale.server.core.universe.world.events")
-        packageDisplay = '...' + packageParts.slice(-3).join('.');
-      }
+      // Build package tree
+      const packageTree = {};
+      relatedPackages.forEach(pkg => {
+        const classes = searchIndex.filter(entry => entry.type === 'class' && entry.package === pkg);
+        if (classes.length > 0) {
+          packageTree[pkg] = classes.sort((a, b) => a.name.localeCompare(b.name));
+        }
+      });
 
       // Fix file paths - extract just the filename from the full path
       const getCurrentFileName = (file) => file.split('/').pop();
 
-      sidebarNav.innerHTML = `
-        <div class="package-group">
-          <div class="package-title" title="${currentClass.package}">${packageDisplay}</div>
-          <div style="margin-top: 1rem;">
-            <a href="${getCurrentFileName(currentClass.file)}" class="class-link active">${currentClass.name}</a>
-            ${nearbyClasses.map(entry => {
-              return `<a href="${getCurrentFileName(entry.file)}" class="class-link">${entry.name}</a>`;
-            }).join('')}
+      // Render collapsible package tree
+      const packages = Object.keys(packageTree).sort();
+      sidebarNav.innerHTML = packages.map(pkg => {
+        const classes = packageTree[pkg];
+        const isCurrentPackage = pkg === currentPackage;
+
+        // Shorten package name for display
+        let packageDisplay = pkg;
+        const pkgParts = pkg.split('.');
+        if (pkgParts.length > 3) {
+          packageDisplay = '...' + pkgParts.slice(-3).join('.');
+        }
+
+        const classesHtml = classes.map(entry => {
+          const isActive = entry.name === pageTitle;
+          return `<a href="${getCurrentFileName(entry.file)}" class="class-link ${isActive ? 'active' : ''}">${entry.name}</a>`;
+        }).join('');
+
+        return `
+          <div class="package-section ${isCurrentPackage ? '' : 'collapsed'}">
+            <div class="package-name" data-toggle="collapse" title="${pkg}">
+              <span class="chevron">▼</span>
+              ${packageDisplay} (${classes.length})
+            </div>
+            <div class="package-classes" style="max-height: ${isCurrentPackage ? classes.length * 40 : 0}px;">
+              ${classesHtml}
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      }).join('');
+
+      // Re-setup collapse handlers for the new content
+      setupCollapseHandlers();
     }
 
     searchInput.addEventListener('input', function(e) {
