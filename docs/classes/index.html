@@ -80,6 +80,12 @@
             background: #252b3d;
             padding-left: 20px;
         }
+        .package-hint {
+            color: #6c717d;
+            font-size: 12px;
+            margin-left: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
         .expand-all-btn {
             background: #252b3d;
             border: 2px solid #A3B50B;
@@ -176,9 +182,8 @@
                 }
 
                 container.innerHTML = matchingClasses.map(classEntry => {
-                    // Fix path: remove 'classes/' prefix since we're already in /classes/
-                    const fixedPath = classEntry.file.replace('classes/', '');
-                    return `<a href="${fixedPath}" class="class-link-item">${classEntry.name}<span style="color: #6c717d; font-size: 12px; margin-left: 8px;">${classEntry.package || ''}</span></a>`;
+                    // Fix path: just use class name since we're in /classes/
+                    return `<a href="${classEntry.name}.html" class="class-link-item">${classEntry.name}<span class="package-hint">${classEntry.package || ''}</span></a>`;
                 }).join('');
 
                 document.getElementById('stats').textContent = `${matchingClasses.length} matching classes`;
