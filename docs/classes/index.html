@@ -4817,10 +4817,37 @@
 
         searchBox.addEventListener('input', filterClasses);
 
-        // Check for query parameter from landing page
+        // Check for query parameters
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q');
-        if (query) {
+        const packageFilter = urlParams.get('package');
+
+        if (packageFilter) {
+            // Filter by package - need to load search index for package info
+            fetch('../assets/search-index.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Filter classes by package prefix
+                    const filteredClasses = classes.filter(className => {
+                        const classEntry = data.find(e => e.type === 'class' && e.name === className);
+                        if (!classEntry) return false;
+                        // Check if class package starts with the filter package
+                        return classEntry.package && classEntry.package.startsWith(packageFilter);
+                    });
+
+                    // Update header to show what we're filtering
+                    const header = document.querySelector('.header p');
+                    if (header) {
+                        header.textContent = `Classes in ${packageFilter}.* (${filteredClasses.length} classes)`;
+                    }
+
+                    renderClasses(filteredClasses);
+                })
+                .catch(err => {
+                    console.error('Failed to load search index:', err);
+                    renderClasses(classes);
+                });
+        } else if (query) {
             searchBox.value = query;
             filterClasses();
         } else {

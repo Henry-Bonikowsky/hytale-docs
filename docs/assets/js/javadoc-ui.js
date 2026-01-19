@@ -187,6 +187,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Make breadcrumb navigation functional
+  const breadcrumb = document.querySelector('.navbar-breadcrumb');
+  if (breadcrumb) {
+    const breadcrumbLinks = breadcrumb.querySelectorAll('a');
+    breadcrumbLinks.forEach((link, index) => {
+      // Build cumulative package path up to this link
+      const packageParts = [];
+      for (let i = 0; i <= index; i++) {
+        packageParts.push(breadcrumbLinks[i].textContent.trim());
+      }
+      const packagePath = packageParts.join('.');
+
+      // Update link to go to class browser filtered by this package
+      link.href = `index.html?package=${encodeURIComponent(packagePath)}`;
+    });
+  }
+
   // Add tooltip for type links (show full qualified name)
   document.querySelectorAll('.type-link').forEach(function(link) {
     const fullName = link.getAttribute('data-full-name');
